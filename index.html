@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
-	<link href="dist/css/tabulator.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/dist/css/style.css"/>
+	<link rel="stylesheet" href="dist/css/tabulator.css">
 	<title>OM Matrix</title>
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -12,72 +12,74 @@
   </head>
   <body>
 <B>Title</B>
-<div class="col-lg-12"></div>
-	<div id="tabulator-controls" class="table-controls  hidden-xs">
-		<i class="fa fa-filter fa-fw"></i> <input name="feature" type="text" placeholder="Filter Table By Feature">
+</br>
+	<div class="col-lg-1"></div>
+		<div id="tabulator-controls" class="table-controls  hidden-xs">
+			<i class="fa fa-filter fa-fw"></i>
+		</br>
+			<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
+		</div>
+		<div id="tabulator-example"></div>
 	</div>
-	<div id="tabulator-example"></div>
-</div>
-
 <h3>Placeholder text</h3>
 <script type="text/javascript">
 	//define data
 	
 	var tabledata = [
-	{feature:"Flag importance",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Flag for Follow up",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"SMIME",o365:"Y",o365gcc:"Y",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Shared mailbox",o365:"Y",o365gcc:"Y",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Delegate mailbox",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Signature (plain text only)",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Sort by conversation",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Alert on sender VIP alerts with custom notifications	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Conversation view	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Inline editing of Messages",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"View embedded .msg files	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Attach documents",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Open zip file (iOS) (cannot open natively)",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Open Password protected files	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Purge deleted items",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Sort by sender / date / unread",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Rich text support	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"HTML support	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Time an email was received",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Multi-select in the inbox	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Focused Inbox	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Customizeable Swipe Triage actions	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Suggested Folders (Smart Move)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Show folders (deleted, sent, junk...)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"IRM (Azure RMS only)",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"at-mentions (compose)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"at-mentions (read)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Likes	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Hashtags	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"TxP Cards (travel, dining, packages)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Mark as spam	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Badge count - Android	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"y",imap:"y",imapcc:"y"},
-	{feature:"Badge count - iOS	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Add-ins (mail read)",o365:"N",o365gcc:"N",outlook:"Y",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Actionable messages	",o365:"Y",o365gcc:"Y",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Open embedded attachments	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Open embedded MSG files	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Do not disturb", o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Message for disabling background restriction (Android only)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Draft sync	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Set Autoreply (OOO)	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Offer to compress/resize large images in compose	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Favorites 	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Block external images in emails	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Lens integration: camera in compose and quick reply - Android	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Lens integration - camera in compose and quick reply, inking, gallery entry point - iOS",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Lens integration - scan business card",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Lens integration - inking and gallery entry point - Andorid	",o365:"N",o365gcc:"N",outlook:"N",onprem:"N",onpremopcc:"N",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
-	{feature:"Samsung Note device S Pen hover	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Appended Carrier signatures",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Video compression	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Suggested Replies	",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"N",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"Y"},
-	{feature:"Dex mode: Three pane layout, flexible nav pane, multi-window",o365:"Y",o365gcc:"Y",outlook:"Y",onprem:"Y",onpremopcc:"Y",icloud:"Y",icloudcc:"Y",gmail:"Y",gmailcc:"Y",imap:"Y",imapcc:"Y"},
-	{feature:"Play My Emails",o365:"Y",o365gcc:"Y",outlook:"N",onprem:"Y",onpremopcc:"Y",icloud:"N",icloudcc:"N",gmail:"N",gmailcc:"N",imap:"N",imapcc:"N"},
+	{feature:"Flag importance",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Flag for Follow up",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"SMIME",o365:"✓",o365gcc:"✓",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Shared mailbox",o365:"✓",o365gcc:"✓",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Delegate mailbox",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Signature (plain text only)",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Sort by conversation",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Alert on sender VIP alerts with custom notifications	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Conversation view	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Inline editing of Messages",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"View embedded .msg files	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Attach documents",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Open zip file (iOS) (cannot open natively)",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Open Password protected files	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Purge deleted items",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Sort by sender / date / unread",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Rich text support	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"HTML support	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Time an email was received",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Multi-select in the inbox	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Focused Inbox	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Customizeable Swipe Triage actions	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Suggested Folders (Smart Move)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Show folders (deleted, sent, junk...)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"IRM (Azure RMS only)",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"at-mentions (compose)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"at-mentions (read)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Likes	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Hashtags	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"TxP Cards (travel, dining, packages)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Mark as spam	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Badge count - Android	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Badge count - iOS	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Add-ins (mail read)",o365:"X",o365gcc:"X",outlook:"✓",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Actionable messages	",o365:"✓",o365gcc:"✓",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Open embedded attachments	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Open embedded MSG files	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Do not disturb", o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Message for disabling background restriction (Android only)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Draft sync	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Set Autoreply (OOO)	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Offer to compress/resize large images in compose	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Favorites 	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Block external images in emails	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Lens integration: camera in compose and quick reply - Android	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Lens integration - camera in compose and quick reply, inking, gallery entry point - iOS",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Lens integration - scan business card",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Lens integration - inking and gallery entry point - Andorid	",o365:"X",o365gcc:"X",outlook:"X",onprem:"X",onpremopcc:"X",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
+	{feature:"Samsung Note device S Pen hover	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Appended Carrier signatures",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Video compression	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Suggested Replies	",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"X",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"✓"},
+	{feature:"Dex mode: Three pane layout, flexible nav pane, multi-window",o365:"✓",o365gcc:"✓",outlook:"✓",onprem:"✓",onpremopcc:"✓",icloud:"✓",icloudcc:"✓",gmail:"✓",gmailcc:"✓",imap:"✓",imapcc:"✓"},
+	{feature:"Play My Emails",o365:"✓",o365gcc:"✓",outlook:"X",onprem:"✓",onpremopcc:"✓",icloud:"X",icloudcc:"X",gmail:"X",gmailcc:"X",imap:"X",imapcc:"X"},
 	];
 
     var table = new Tabulator("#tabulator-example", {

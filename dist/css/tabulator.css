@@ -8,6 +8,7 @@
   overflow: hidden;
   -ms-transform: translatez(0);
   transform: translatez(0);
+  font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .tabulator[tabulator-layout="fitDataFill"] .tabulator-tableHolder .tabulator-table {
@@ -62,7 +63,7 @@
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
   box-sizing: border-box;
   position: relative;
-  padding: 4px;
+  padding: 15px;
 }
 
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
@@ -85,7 +86,7 @@
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
   display: inline-block;
   position: absolute;
-  top: 9px;
+  top: 22px;
   right: 8px;
   width: 0;
   height: 0;
@@ -521,7 +522,7 @@
   display: inline-block;
   position: relative;
   box-sizing: border-box;
-  padding: 4px;
+  padding: 12px;
   border-right: 1px solid #aaa;
   vertical-align: middle;
   white-space: nowrap;

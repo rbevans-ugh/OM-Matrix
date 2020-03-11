@@ -1,0 +1,9 @@
+tabulator .tabulator-header{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+input[type="text" i] {
+    width: 100px;  
+    font-size: 5px;
+}
