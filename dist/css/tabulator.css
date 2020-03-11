@@ -9,6 +9,8 @@
   -ms-transform: translatez(0);
   transform: translatez(0);
   font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .tabulator[tabulator-layout="fitDataFill"] .tabulator-tableHolder .tabulator-table {
@@ -139,7 +141,7 @@
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
-  padding-right: 25px;
+  padding-right: 5px;
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {

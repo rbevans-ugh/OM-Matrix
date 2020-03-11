@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/dist/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
 	<link rel="stylesheet" href="dist/css/tabulator.css">
 	<title>OM Matrix</title>
 	<!-- jQuery -->
@@ -84,11 +84,11 @@
 
     var table = new Tabulator("#tabulator-example", {
       height:500,
-      data:tabledata,
+	  data:tabledata,
       layout:"fitColumns",
       responsiveLayout:"hide",
       tooltips:true,
-      addRowPos:"top",
+	  addRowPos:"top",
       history:true,
       movableColumns:true,
       resizableRows:true,
@@ -96,18 +96,18 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-      {title:"Feature", field:"feature", minWidth:80, width:300},
-	  {title:"O365", field:"o365", width:135,},
-	  {title:"Outlook.com", field:"outlook", width:135},
-	  {title:"O365 - GCC Mod", field:"o365gcc", width:135},
-	  {title:"Gmail", field:"gmail", width:135},
-	  {title:"Gmail - CC", field:"gmailcc", width:135},
-	  {title:"IMAP", field:"imap", width:135},
-	  {title:"IMAP - CC", field:"imapcc", width:135},
-	  {title:"iCloud", field:"icloud", width:135},
-	  {title:"iCloud - CC", field:"icloudcc", width:135},
-	  {title:"On-Prem", field:"onprem", width:135},
-	  {title:"On-Prem - OPCC", field:"onpremopcc", width:135},
+      {title:"Feature", field:"feature", minWidth:80, width:370},
+	  {title:"O365", field:"o365", width:120,align:"center"},
+	  {title:"Outlook.com", field:"outlook", width:120,align:"center"},
+	  {title:"O365 - GCC Mod", field:"o365gcc", width:120,align:"center"},
+	  {title:"Gmail", field:"gmail", width:120,align:"center"},
+	  {title:"Gmail - CC", field:"gmailcc", width:120,align:"center"},
+	  {title:"IMAP", field:"imap", width:120,align:"center"},
+	  {title:"IMAP - CC", field:"imapcc", width:120,align:"center"},
+	  {title:"iCloud", field:"icloud", width:120,align:"center"},
+	  {title:"iCloud - CC", field:"icloudcc", width:120,align:"center"},
+	  {title:"On-Prem", field:"onprem", width:120,align:"center"},
+	  {title:"On-Prem - OPCC", field:"onpremopcc", width:120,align:"center"},
       ],
     });
 

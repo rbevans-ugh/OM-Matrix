@@ -4,6 +4,16 @@ tabulator .tabulator-header{
 }
 
 input[type="text" i] {
-    width: 100px;  
-    font-size: 5px;
+    width: 600px;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-left: 1%;
+}
+
+div#tabulator-controls{
+    /* margin-left: 50%; */
 }
