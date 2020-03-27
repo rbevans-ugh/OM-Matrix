@@ -17,3 +17,9 @@ input[type="text" i] {
 div#tabulator-controls{
     /* margin-left: 50%; */
 }
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 79px;
+    margin-top: -63px;
+    border-bottom: 1.3px solid #ccc;
+}
