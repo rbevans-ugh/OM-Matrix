@@ -10,6 +10,16 @@
 
     <title>Hello, world!</title>
   </head>
+  <script type="text/javascript">
+   var url = 'https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/omdata.json'
+    fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+  })
+  console.log(url);
+  </script>
   <body>
 		  <div class="jumbotron text-center">
           <div class="container">
