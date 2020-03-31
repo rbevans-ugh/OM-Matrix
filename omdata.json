@@ -1,4 +1,4 @@
-$data = [
+[
 {
     feature: "Email Ð Read / Send create",
     o365: "Y",
@@ -17,5 +17,3 @@ $data = [
     pop3: "Y"
   },
 ]
-
-echo(json_encode($data));
