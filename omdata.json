@@ -2,7 +2,7 @@
   "data" : [
 {
   "feature": "Email Ð Read / Send create",
-  "o365": "Y"
+  "o365": "Y",
   "outlook": "Y",
   "o365gcc": "Y",
   "gmail": "Y",
