@@ -130,13 +130,13 @@
 	  {title:"On-Prem - OPCC", field:"onpremopcc", width:120,align:"center"},
 	  {title:"POP3", field:"pop3", width:120,align:"center"},
 	  ],
-	  
+
 	  ajaxResponse:function(url, params, response){
         //url - the URL of the request
         //params - the parameters passed with the request
         //response - the JSON object returned in the body of the response.
 
-        return response; //pass the data array into Tabulator
+        return response.data; //pass the data array into Tabulator
     },
 
 	});
