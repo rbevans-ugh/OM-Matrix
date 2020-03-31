@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
+	<link rel="stylesheet" href="dist/css/semantic-ui/tabulator_semantic-ui.css">
+	<title>OM Matrix</title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="dist/js/tabulator.min.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="dist/bootstrap/bootstrap.min.css">
+	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="dist/bootstrap/bootstrap.min.js"></script>
+  </head>
+  <body>
+	  <div class="jumbotron text-center">
+		  <div class="container">
+			  <img src="dist/om.png" alt="Hey yo" width=10%>
+			  <h1>Outlook Mobile Feature Matrix</h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div id="tabulator-controls" class="table-controls">
+				<i class="fa fa-filter fa-fw"></i>
+			<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
+			<div id="tabulator-example"></div>
+			<!-- Cards -->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+								<div class="card-body">
+									<h5 class="card-title">Feature 1 Rollout %</h5>
+									<p class="card-text">Feature Data.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+								</div>
+					</div>
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+								<div class="card-body">
+										<h5 class="card-title">Feature 2 Rollout %</h5>
+										<p class="card-text">Feature Data.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+								</div>
+					</div>
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+								<div class="card-body">
+										<h5 class="card-title">Feature 3 Rollout %</h5>
+										<p class="card-text">Feature Data.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+								</div>
+					  </div>
+					</div>
+				  </div>
+		<script type="text/javascript">
+	//define data
+	var data = [ ]
+
+    var table = new Tabulator("#tabulator-example", {
+        height:300,
+		//data:data,
+		ajaxConfig:{
+			method: 'GET'
+		},
+		ajaxURL:"omdata.json",
+        layout:"fitDataStretch",
+		// ajaxProgressiveLoad:"scroll",
+		// paginationSize:20,
+		placeholder:"No Data Set",
+        autoResize:true,
+		ajaxContentType : "application/json; charset=utf-8",
+		ajaxContentType:"json",
+        tooltips:true,
+        addRowPos:"top",
+        resizableRows:true,
+      initialSort:[
+         {column:"feature", dir:"asc"},,
+      ],
+      columns:[
+      {title:"Feature", field:"feature", minWidth:80, width:370},
+	  {title:"O365", field:"o365", width:120,align:"center"},
+	  {title:"Outlook.com", field:"outlook", width:120,align:"center"},
+	  {title:"O365 - GCC Mod", field:"o365gcc", width:120,align:"center"},
+	  {title:"Gmail", field:"gmail", width:120,align:"center"},
+	  {title:"Gmail - CC", field:"gmailcc", width:120,align:"center"},
+	  {title:"IMAP", field:"imap", width:120,align:"center"},
+	  {title:"IMAP - CC", field:"imapcc", width:120,align:"center"},
+	  {title:"Yahoo", field:"yahoo", width:120,align:"center"},
+	  {title:"Yahoo - CC", field:"yahoocc", width:120,align:"center"},
+	  {title:"iCloud", field:"icloud", width:120,align:"center"},
+	  {title:"iCloud - CC", field:"icloudcc", width:120,align:"center"},
+	  {title:"On-Prem", field:"onprem", width:120,align:"center"},
+	  {title:"On-Prem - OPCC", field:"onpremopcc", width:120,align:"center"},
+	  {title:"POP3", field:"pop3", width:120,align:"center"},
+	  ],
+
+	  ajaxResponse:function(url, params, response){
+        //url - the URL of the request
+        //params - the parameters passed with the request
+        //response - the JSON object returned in the body of the response.
+
+        return response.data; //pass the data array into Tabulator
+    },
+
+	});
+
+    $("#tabulator-controls input[name=feature]").on("keyup", function(){
+      table.setFilter( "feature", "like", $(this).val())
+	});
+</script>
+<p>Hey Dawg this is for FHL 2020 mock & data may not be accurate.</p>
+</body>
+</html>
