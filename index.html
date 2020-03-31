@@ -3,27 +3,35 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
-	<link rel="stylesheet" href="dist/css/tabulator.css">
+	<link rel="stylesheet" href="dist/css/semantic-ui/tabulator_semantic-ui.css">
 	<title>OM Matrix</title>
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="dist/js/tabulator.min.js"></script>
+	<!-- Bootstrap -->
+
+	<link rel="stylesheet" href="dist/bootstrap/bootstrap.min.css">
+	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="dist/bootstrap/bootstrap.min.js"></script>
   </head>
   <body>
-	  <div class="title">
-			<img src="dist/om.png" alt="Hey yo" width=5%>
-			<h1>Outlook Mobile Feature Matrix</h1>
+	  <div class="jumbotron text-center">
+		  <div class="container">
+			  <img src="dist/om.png" alt="Hey yo" width=5%>
+			  <h1>Outlook Mobile Feature Matrix</h1>
+			</div>
 		</div>
-	<div class="col-lg-1"></div>
-		<div id="tabulator-controls" class="table-controls  hidden-xs">
-			<i class="fa fa-filter fa-fw"></i>
-		</br>
+		<div class="container-fluid">
+			<div id="tabulator-controls" class="table-controls">
+				<i class="fa fa-filter fa-fw"></i>
+			</br>
 			<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
+			<div id="tabulator-example"></div>
+			</div>	
 		</div>
-		<div id="tabulator-example"></div>
-	</div>
-<script type="text/javascript">
+		<script type="text/javascript">
 	//define data
 	
 	var tabledata = [
@@ -84,15 +92,13 @@
 	];
 
     var table = new Tabulator("#tabulator-example", {
-      height:500,
-	  data:tabledata,
-      layout:"fitColumns",
-      responsiveLayout:"hide",
-      tooltips:true,
-	  addRowPos:"top",
-      history:true,
-      movableColumns:true,
-      resizableRows:true,
+        height:800,
+        data:tabledata,
+        layout:"fitDataStretch",
+        autoResize:true,
+        tooltips:true,
+        addRowPos:"top",
+        resizableRows:true,
       initialSort:[
          {column:"feature", dir:"asc"},,
       ],
