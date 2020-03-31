@@ -128,14 +128,6 @@
 	  {title:"POP3", field:"pop3", width:120,align:"center"},
       ],
     });
-	ajaxResponse:function(url, params, response){
-      //url - the URL of the request
-      //params - the parameters passed with the request
-      //response - the JSON object returned in the body of the response.
-
-      return response.data; //pass the data array into Tabulator
-   },
-});
 	//trigger AJAX load on "Load Data via AJAX" button click
 	document.getElementById("ajax-trigger").addEventListener("click", function(){
     table.setData("omdata.json");
