@@ -16,10 +16,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Flag importance",
@@ -37,10 +37,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Flag for Follow up",
@@ -58,10 +58,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Read SMIME Mail",
@@ -79,10 +79,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "SMIME",
@@ -100,10 +100,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Shared mailbox",
@@ -121,10 +121,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Delegate mailbox",
@@ -142,10 +142,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Signature (plain text only)",
@@ -163,10 +163,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sort by conversation",
@@ -184,10 +184,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Alert on sender VIP alerts with custom notifications",
@@ -205,10 +205,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Conversation view",
@@ -226,10 +226,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Inline editing of Messages",
@@ -247,10 +247,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "View embedded .msg files",
@@ -268,10 +268,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Attach documents",
@@ -289,10 +289,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Open zip file (iOS) (cannot open natively)",
@@ -310,10 +310,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Open Password protected files",
@@ -331,10 +331,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Purge deleted items",
@@ -352,10 +352,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sort by sender / date / unread",
@@ -373,10 +373,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Rich text support",
@@ -394,10 +394,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "HTML support",
@@ -415,10 +415,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Time an email was received",
@@ -436,10 +436,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Multi-select in the inbox",
@@ -457,10 +457,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Focused Inbox",
@@ -478,10 +478,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Customizeable Swipe Triage actions",
@@ -499,10 +499,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Suggested Folders (\"Smart Move\")",
@@ -520,10 +520,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Show folders (deleted, sent, junk...)",
@@ -541,10 +541,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "IRM (Azure RMS only)",
@@ -562,10 +562,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "at-mentions (compose)",
@@ -583,10 +583,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "at-mentions (read)",
@@ -604,10 +604,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Likes",
@@ -625,10 +625,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Hashtags",
@@ -646,10 +646,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "TxP Cards (travel, dining, packages)",
@@ -667,10 +667,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Mark as spam",
@@ -688,10 +688,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Badge count - Android",
@@ -709,10 +709,10 @@
       "onprem": "y",
       "onpremcc": "y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Badge count - iOS",
@@ -730,10 +730,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Add-ins (mail read)",
@@ -751,10 +751,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Actionable messages",
@@ -772,10 +772,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Open embedded attachments",
@@ -793,10 +793,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Open embedded MSG files",
@@ -814,10 +814,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Do not disturb",
@@ -835,10 +835,10 @@
       "onprem": "Android-only",
       "onpremcc": "Android-only",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Message for disabling background restriction (Android only)",
@@ -856,10 +856,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Draft sync",
@@ -877,10 +877,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Set Autoreply (OOO)",
@@ -898,10 +898,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Offer to compress/resize large images in compose",
@@ -919,10 +919,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Favorites",
@@ -940,10 +940,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Block external images in emails",
@@ -961,10 +961,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Lens integration: camera in compose and quick reply - Android",
@@ -982,10 +982,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Lens integration -Êcamera in compose and quick reply, inking, gallery entry point - iOS",
@@ -1003,10 +1003,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Lens integration - scan business card",
@@ -1024,10 +1024,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Lens integration - inking and gallery entry point - Andorid",
@@ -1045,10 +1045,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "[Samsung Note device] S Pen hover",
@@ -1066,10 +1066,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Appended Carrier signatures",
@@ -1087,10 +1087,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Video compression",
@@ -1108,10 +1108,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Suggested Replies",
@@ -1129,10 +1129,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Dex mode: Three pane layout, flexible nav pane, multi-window",
@@ -1150,10 +1150,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Play My Emails",
@@ -1171,10 +1171,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar - Add/Edit/Delete events",
@@ -1192,10 +1192,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Accept/Decline",
@@ -1213,10 +1213,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Create meetings (with people)",
@@ -1234,10 +1234,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Accept/Decline with comments",
@@ -1255,10 +1255,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Forward a meeting invite from inbox",
@@ -1276,10 +1276,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar attachment (WXP, pdf, eml)",
@@ -1297,10 +1297,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Scheduling assistant",
@@ -1318,10 +1318,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Recurring Events",
@@ -1339,10 +1339,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Create Skype Meeting (with join link)",
@@ -1360,10 +1360,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Join Skype Meeting (join button)",
@@ -1381,10 +1381,10 @@
       "onprem": "",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Interesting Calendars",
@@ -1402,10 +1402,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar TxP cards",
@@ -1423,10 +1423,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Time to Leave",
@@ -1444,10 +1444,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Sync local calendar to Outlook (read-only)",
@@ -1465,10 +1465,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sync local calendar to Outlook (edit)",
@@ -1486,10 +1486,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sync Outlook to local calendar",
@@ -1507,10 +1507,10 @@
       "onprem": "",
       "onpremcc": "",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar color sync (not categories)",
@@ -1528,10 +1528,10 @@
       "onprem": "",
       "onpremcc": "",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Recurring Events",
@@ -1549,10 +1549,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Set Free/Busy, Private",
@@ -1570,10 +1570,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Month view (iOS)",
@@ -1591,10 +1591,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Include comment when cancelling a meeting",
@@ -1612,10 +1612,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar LAS iOS (conf room availability)",
@@ -1633,10 +1633,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar LAS Android (conf room availability)",
@@ -1654,10 +1654,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Category Colors (iOS + Android)",
@@ -1675,10 +1675,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Propose New Time",
@@ -1696,10 +1696,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Respond to New Time Proposals",
@@ -1717,10 +1717,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Meeting Insights",
@@ -1738,10 +1738,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Up Next",
@@ -1759,10 +1759,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Week Numbers (iOS)",
@@ -1780,10 +1780,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Zero query - People, File (iOS)",
@@ -1801,10 +1801,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Zero query - TxP (iOS)",
@@ -1822,10 +1822,10 @@
       "onprem": "N",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Search by subject / Sender (KQL)",
@@ -1843,10 +1843,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Search by folder",
@@ -1864,10 +1864,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Mail search",
@@ -1885,10 +1885,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Calendar search",
@@ -1906,10 +1906,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Contact search",
@@ -1927,10 +1927,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "File entity search",
@@ -1948,10 +1948,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Infinity scroll (up to 1000)",
@@ -1969,10 +1969,10 @@
       "onprem": "Y",
       "onpremcc": "N",
       "pop3": "Y",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Search history (iOS only)",
@@ -1990,10 +1990,10 @@
       "onprem": "Y",
       "onpremcc": "Y",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Search suggestions",
@@ -2011,10 +2011,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Search in deleted items",
@@ -2032,10 +2032,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Tasks",
@@ -2053,10 +2053,10 @@
       "onprem": "",
       "onpremcc": "",
       "pop3": "",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Create",
@@ -2074,10 +2074,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Delete",
@@ -2095,10 +2095,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Set Date",
@@ -2116,10 +2116,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sort by Date / Sender",
@@ -2137,10 +2137,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Create",
@@ -2158,10 +2158,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Delete",
@@ -2179,10 +2179,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Set Date",
@@ -2200,10 +2200,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Sort by Date / Sender",
@@ -2221,10 +2221,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"N",
-      "Outlook Mac":"Y",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"N",
+      "mac":"Y",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Monetization",
@@ -2242,10 +2242,10 @@
       "onprem": "",
       "onpremcc": "",
       "pop3": "",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "In-app purchase",
@@ -2263,10 +2263,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "Ads (Android for now, iOS later)",
@@ -2284,10 +2284,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"Y",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"Y",
+      "desktop":"Y"
     },
     {
       "feature": "ToDo App (Separate app)",
@@ -2305,10 +2305,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"N",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"N",
+      "owa":"N",
+      "desktop":"Y"
     },
     {
       "feature": "Privacy Settings (25% commercial iOS)",
@@ -2326,10 +2326,10 @@
       "onprem": "N",
       "onpremcc": "N",
       "pop3": "N",
-      "Outlook Mobile":"Y",
-      "Outlook Mac":"Y",
-      "Outlook Web":"N",
-      "Outlook Desktop":"Y"
+      "om":"Y",
+      "mac":"Y",
+      "owa":"N",
+      "desktop":"Y"
     }
   ]
 } 
