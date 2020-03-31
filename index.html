@@ -94,8 +94,8 @@
 	// ];
 
     var table = new Tabulator("#tabulator-example", {
-        height:800,
-		data:data,
+        height:500,
+		//data:data,
 		ajaxConfig:{
 			method: 'GET'
 		},
@@ -130,6 +130,7 @@
 	  {title:"On-Prem - OPCC", field:"onpremopcc", width:120,align:"center"},
 	  {title:"POP3", field:"pop3", width:120,align:"center"},
 	  ],
+	  
 	  ajaxResponse:function(url, params, response){
         //url - the URL of the request
         //params - the parameters passed with the request
