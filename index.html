@@ -31,6 +31,9 @@
 			<div id="tabulator-example"></div>
 			</div>	
 		</div>
+		<div>
+				<button id="ajax-trigger">Load Data via AJAX</button>
+			</div>
 		<script type="text/javascript">
 	//define data
 	
@@ -96,9 +99,9 @@
         height:800,
         data:data,
         layout:"fitDataStretch",
-		ajaxURL:"omdata.php",
-		ajaxProgressiveLoad:"scroll",
-		paginationSize:20,
+		// ajaxURL:"omdata.php",
+		// ajaxProgressiveLoad:"scroll",
+		// paginationSize:20,
 		placeholder:"No Data Set",
         autoResize:true,
         tooltips:true,
@@ -125,6 +128,11 @@
 	  {title:"POP3", field:"pop3", width:120,align:"center"},
       ],
     });
+
+			//trigger AJAX load on "Load Data via AJAX" button click
+			document.getElementById("ajax-trigger").addEventListener("click", function(){
+    table.setData("omdata.php");
+});
 
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val())
