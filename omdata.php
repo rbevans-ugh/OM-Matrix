@@ -1,8 +1,9 @@
 $data = [
-  {
-      feature: "Email Ð Read / Send create",
-      o365: "Y",
-      outlook: "Y",
+  [
+      id=>1,
+      feature=> "Email & Read / Send create",
+      o365=> "Y",
+      <!-- outlook: "Y",
       o365gcc: "Y",
       gmail: "Y",
       gmailc: "Y",
@@ -14,8 +15,8 @@ $data = [
       icloudcc: "Y",
       onprem: "Y",
       onpremcc: "Y",
-      pop3: "Y"
-    },
-  ]
+      pop3: "Y" -->
+    ],
+  ];
   
   echo(json_encode($data));
