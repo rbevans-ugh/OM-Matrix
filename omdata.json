@@ -1055,23 +1055,6 @@
       "pop3": "N"
     },
     {
-      "feature": "",
-      "o365": "Y",
-      "outlook": "Y",
-      "o365gcc": "Y",
-      "gmail": "N",
-      "gmailcc": "Y",
-      "imap": "N",
-      "imapcc": "N",
-      "yahoo": "N",
-      "yahoocc": "N",
-      "icloud": "N",
-      "icloudcc": "N",
-      "onprem": "N",
-      "onpremcc": "Y",
-      "pop3": "N"
-    },
-    {
       "feature": "Calendar attachment (WXP, pdf, eml)",
       "o365": "Y",
       "outlook": "Y",
@@ -1307,23 +1290,6 @@
       "icloudcc": "?",
       "onprem": "N",
       "onpremcc": "Y",
-      "pop3": "N"
-    },
-    {
-      "feature": "",
-      "o365": "Y",
-      "outlook": "Y",
-      "o365gcc": "Y",
-      "gmail": "Y",
-      "gmailcc": "Y",
-      "imap": "N/A",
-      "imapcc": "N/A",
-      "yahoo": "Y",
-      "yahoocc": "Y",
-      "icloud": "Y",
-      "icloudcc": "Y",
-      "onprem": "Y",
-      "onpremcc": "C",
       "pop3": "N"
     },
     {
