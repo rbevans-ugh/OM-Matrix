@@ -1,5 +1,4 @@
-{
-  "data" : [
+
 {
   "feature": "Email Ð Read / Send create",
   "o365": "Y",
@@ -16,6 +15,4 @@
   "onprem": "Y",
   "onpremcc": "Y",
   "pop3": "Y"
-}
-]
 }
