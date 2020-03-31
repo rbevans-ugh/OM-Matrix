@@ -31,7 +31,7 @@
 			<div id="tabulator-example"></div>
 			</div>	
 		</div>
-		<div><button id="ajax-trigger">Load Data!</button></div>
+		<div><button id="ajax-trigger">Load Data</button></div>
 		<script type="text/javascript">
 	//define data
 	
@@ -97,7 +97,7 @@
         height:800,
         data:data,
         layout:"fitDataStretch",
-		//ajaxURL:"omdata.json",
+		 //ajaxURL:"omdata.json",
 		// ajaxProgressiveLoad:"scroll",
 		// paginationSize:20,
 		placeholder:"No Data Set",
@@ -135,7 +135,17 @@
 
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val())
-    });
+	});
+	
+	$("#tabulator-example").tabulator({
+    ajaxResponse:function(url, params, response){
+        url - "omdata.json"
+        //params - the parameters passed with the request
+        //response - the JSON object returned in the body of the response.
+
+        return response.data; //return the data property of a response json object
+    },
+});
 </script>
 <p>Hey Dawg this is for FHL 2020 mock & data may not be accurate.</p>
 </body>
