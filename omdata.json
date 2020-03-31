@@ -783,23 +783,6 @@
       "pop3": ""
     },
     {
-      "feature": "Aliases: Please see Table Below",
-      "o365": "",
-      "outlook": "",
-      "o365gcc": "",
-      "gmail": "",
-      "gmailcc": "",
-      "imap": "",
-      "imapcc": "",
-      "yahoo": "",
-      "yahoocc": "",
-      "icloud": "",
-      "icloudcc": "",
-      "onprem": "",
-      "onpremcc": "",
-      "pop3": ""
-    },
-    {
       "feature": "Lens integration: camera in compose and quick reply - Android",
       "o365": "Y",
       "outlook": "Y",
