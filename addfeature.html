@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="dist/bootstrap/bootstrap.min.css">
 
-    <title>Hello, world!</title>
+    <title>Add Feature!</title>
   </head>
   <script type="text/javascript">
    var url = 'https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/omdata.json?st=2020-03-31T20%3A50%3A59Z&se=2020-04-01T20%3A50%3A59Z&sp=racwl&sv=2018-03-28&sr=b&sig=JIIJCCq6xryDMh%2B%2BAMFPmTUxFcb7Gb2YPpjov%2F2Wir4%3D'
@@ -21,6 +21,31 @@
   console.log(url);
   </script>
   <body>
+    	  <!-- Nav Bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="index.html">One Outlook</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Client Matrix<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Client
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
+					<a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
+					<a class="dropdown-item" href="#">Outlook Web</a>
+					<a class="dropdown-item" href="#">Outlook Desktop</a>
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</nav>
 		  <div class="jumbotron text-center">
           <div class="container">
             <img src="dist/om.png" alt="Hey yo" width=10%>
@@ -28,74 +53,61 @@
           </div>
           </div>
           <div class="container-fluid">
-          <form>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Feature</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                  <label class="form-check-label" for="inlineCheckbox1">O365</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                  <label class="form-check-label" for="inlineCheckbox2">Outlook</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">O365 GCC</label>
+              <form>
+                  <div class="form-group">
+                    <label for="featureName">Feature Name:</label>
+                    <input type="email" class="form-control" id="featureName" placeholder="Shared Mailbox">
                   </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label" for="inlineCheckbox4">Gmail</label>
+                  <label for="subscription">Subscription Feature:</label>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="subscription" id="subscription" value="option1">
+                      <label class="form-check-label" for="subscription">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="option2">
+                        <label class="form-check-label" for="subscription">
+                          No
+                        </label>
+                      </div>
+                  <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
                   </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                    <label class="form-check-label" for="inlineCheckbox5">Gmail CC</label>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="DF %" class="form-control" placeholder="DF %">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="DF Build"  class="form-control" placeholder="DF Build">
+                      </div>
                   </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-                    <label class="form-check-label" for="inlineCheckbox6">IMAP</label>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="IF %"  class="form-control" placeholder="IF %">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="IF %"  class="form-control" placeholder="IF Build">
+                      </div>
                   </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
-                    <label class="form-check-label" for="inlineCheckbox7">IMAP CC</label>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="IS %"  class="form-control" placeholder="IS %">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="IS %"  class="form-control" placeholder="IS Build">
+                      </div>
                   </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
-                    <label class="form-check-label" for="inlineCheckbox8">Yahoo</label>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="PROD %"  class="form-control" placeholder="PROD %">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="PROD %"  class="form-control" placeholder="PROD Build">
+                      </div>
                   </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
-                      <label class="form-check-label" for="inlineCheckbox9">Yahoo CC</label>
-                    </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
-                      <label class="form-check-label" for="inlineCheckbox10">iCloud</label>
-                    </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
-                      <label class="form-check-label" for="inlineCheckbox11">iCloud CC</label>
-                    </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">
-                      <label class="form-check-label" for="inlineCheckbox12">On-Prem</label>
-                    </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13">
-                      <label class="form-check-label" for="inlineCheckbox13">On-Prem CC</label>
-                    </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option14">
-                      <label class="form-check-label" for="inlineCheckbox14">Pop3</label>
-                    </div>
-            </form>
+                </form>
           </div>  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
