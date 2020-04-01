@@ -2,7 +2,7 @@
     "data" : [
     {
       "Debut Build": "16.28 (190701)",
-      "Feature Description": "Dark Mode in Compose Window",
+      "feature": "Dark Mode in Compose Window",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.28 (190701)",
@@ -16,7 +16,7 @@
     },
     {
       "Debut Build": "16.26 (190518)",
-      "Feature Description": "Dark Mode in Reading Pane",
+      "feature": "Dark Mode in Reading Pane",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.26 (190518)",
@@ -30,7 +30,7 @@
     },
     {
       "Debut Build": "16.26 (190508)",
-      "Feature Description": "New Contact Card",
+      "feature": "New Contact Card",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.26 (190508)",
@@ -44,7 +44,7 @@
     },
     {
       "Debut Build": "16.24 (190226)",
-      "Feature Description": "Presence for users on Teams",
+      "feature": "Presence for users on Teams",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.24 (190226)",
@@ -58,7 +58,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Send email to OneNote",
+      "feature": "Send email to OneNote",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "",
@@ -72,7 +72,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "New app icons",
+      "feature": "New app icons",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "",
@@ -86,7 +86,7 @@
     },
     {
       "Debut Build": "16.18 (180924)",
-      "Feature Description": "CLP",
+      "feature": "CLP",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.18 (180924)",
@@ -100,7 +100,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Safe Links",
+      "feature": "Safe Links",
       "Subscription Only": "Yes",
       "DF %": "",
       "DF Build": "",
@@ -114,7 +114,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Delegation support for Teams meetings",
+      "feature": "Delegation support for Teams meetings",
       "Subscription Only": "",
       "DF %": "",
       "DF Build": "",
@@ -128,7 +128,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Preference to disable Dark Mode in Outlook",
+      "feature": "Preference to disable Dark Mode in Outlook",
       "Subscription Only": "",
       "DF %": "",
       "DF Build": "",
@@ -142,7 +142,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Dark Mode",
+      "feature": "Dark Mode",
       "Subscription Only": "Yes",
       "DF %": "",
       "DF Build": "",
@@ -156,7 +156,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Third TimeZone support",
+      "feature": "Third TimeZone support",
       "Subscription Only": "Yes",
       "DF %": "",
       "DF Build": "",
@@ -170,7 +170,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Calendar sharing",
+      "feature": "Calendar sharing",
       "Subscription Only": "Yes",
       "DF %": "",
       "DF Build": "",
@@ -184,7 +184,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Blocked WebEx version",
+      "feature": "Blocked WebEx version",
       "Subscription Only": "No",
       "DF %": "",
       "DF Build": "",
@@ -198,7 +198,7 @@
     },
     {
       "Debut Build": "16.17 (180606)",
-      "Feature Description": "TEAMS Integration",
+      "feature": "TEAMS Integration",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.17 (180606)",
@@ -212,7 +212,7 @@
     },
     {
       "Debut Build": "16.17 (180710)",
-      "Feature Description": "My Day",
+      "feature": "My Day",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.17 (180710)",
@@ -226,7 +226,7 @@
     },
     {
       "Debut Build": "",
-      "Feature Description": "Search history and suggestions",
+      "feature": "Search history and suggestions",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 0,
@@ -240,7 +240,7 @@
     },
     {
       "Debut Build": "16.17 (180705)",
-      "Feature Description": "Block Meeting Forwarding",
+      "feature": "Block Meeting Forwarding",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.17 (180705)",
@@ -254,7 +254,7 @@
     },
     {
       "Debut Build": "16.17 (180618)",
-      "Feature Description": "Send Bug Report",
+      "feature": "Send Bug Report",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": "16.17 (180618)",
@@ -268,7 +268,7 @@
     },
     {
       "Debut Build": "16.17 (180608)",
-      "Feature Description": "Manage O365 Group Members via the right click context menu",
+      "feature": "Manage O365 Group Members via the right click context menu",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.17 (180608)",
@@ -282,7 +282,7 @@
     },
     {
       "Debut Build": "16.14 (180430)",
-      "Feature Description": "Animated GIF support",
+      "feature": "Animated GIF support",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.14 (180430)",
@@ -296,7 +296,7 @@
     },
     {
       "Debut Build": "16.13 (180425)",
-      "Feature Description": "New Calendar Sidebar",
+      "feature": "New Calendar Sidebar",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.13 (180425)",
@@ -310,7 +310,7 @@
     },
     {
       "Debut Build": "16.13 (180422)",
-      "Feature Description": "Context-based sync",
+      "feature": "Context-based sync",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.13 (180422)",
@@ -324,7 +324,7 @@
     },
     {
       "Debut Build": "16.13 (180404)",
-      "Feature Description": "Edit Groups",
+      "feature": "Edit Groups",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.13 (180404)",
@@ -338,7 +338,7 @@
     },
     {
       "Debut Build": "16.13 (180401)",
-      "Feature Description": "Automatic Sync Shared Mailbox",
+      "feature": "Automatic Sync Shared Mailbox",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.13 (180401)",
@@ -352,7 +352,7 @@
     },
     {
       "Debut Build": "16.12 (180410)",
-      "Feature Description": "Week Numbers",
+      "feature": "Week Numbers",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": "16.12 (180410)",
@@ -366,7 +366,7 @@
     },
     {
       "Debut Build": "16.12 (180318)",
-      "Feature Description": "Corrupt rules indicator",
+      "feature": "Corrupt rules indicator",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": "16.12 (180318)",
@@ -380,7 +380,7 @@
     },
     {
       "Debut Build": "16.12 (180318)",
-      "Feature Description": "New Signature Editor",
+      "feature": "New Signature Editor",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": "16.12 (180318)",
@@ -394,7 +394,7 @@
     },
     {
       "Debut Build": "16.11 (180311)",
-      "Feature Description": "Shift F10 for context menu",
+      "feature": "Shift F10 for context menu",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": "16.11 (180311)",
@@ -408,7 +408,7 @@
     },
     {
       "Debut Build": "16.12 (180312)",
-      "Feature Description": "Reminder Improvement",
+      "feature": "Reminder Improvement",
       "Subscription Only": "",
       "DF %": "100%",
       "DF Build": "16.12 (180312)",
@@ -422,7 +422,7 @@
     },
     {
       "Debut Build": "16.11 (180306)",
-      "Feature Description": "Customize the new toolbar",
+      "feature": "Customize the new toolbar",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "16.11 (180306)",
@@ -436,7 +436,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "New calendar event card",
+      "feature": "New calendar event card",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 16,
@@ -450,7 +450,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "Display second time zone in Calendar",
+      "feature": "Display second time zone in Calendar",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 16,
@@ -464,7 +464,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "Swipe gestureÊcustomization",
+      "feature": "Swipe gestureÊcustomization",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 16,
@@ -478,7 +478,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "Set start and end time zone",
+      "feature": "Set start and end time zone",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 16,
@@ -492,7 +492,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "New People Card",
+      "feature": "New People Card",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 16,
@@ -506,7 +506,7 @@
     },
     {
       "Debut Build": 16.11,
-      "Feature Description": "Google Oauth",
+      "feature": "Google Oauth",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 16,
@@ -520,7 +520,7 @@
     },
     {
       "Debut Build": 16.1,
-      "Feature Description": "Highlights search terms",
+      "feature": "Highlights search terms",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 16,
@@ -534,7 +534,7 @@
     },
     {
       "Debut Build": 16.1,
-      "Feature Description": "Create Group",
+      "feature": "Create Group",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 16,
@@ -548,7 +548,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Contact Contextual Button",
+      "feature": "Contact Contextual Button",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 17,
@@ -562,7 +562,7 @@
     },
     {
       "Debut Build": "s",
-      "Feature Description": "Contact Card",
+      "feature": "Contact Card",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": "s",
@@ -576,7 +576,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Change the text display size",
+      "feature": "Change the text display size",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 17,
@@ -590,7 +590,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Empty folder messages",
+      "feature": "Empty folder messages",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 17,
@@ -604,7 +604,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Ability to create tables",
+      "feature": "Ability to create tables",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 17,
@@ -618,7 +618,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Swipe to archive and delete email",
+      "feature": "Swipe to archive and delete email",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 17,
@@ -632,7 +632,7 @@
     },
     {
       "Debut Build": 16.9,
-      "Feature Description": "Google Cloud Cache",
+      "feature": "Google Cloud Cache",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 17,
@@ -646,7 +646,7 @@
     },
     {
       "Debut Build": 16.8,
-      "Feature Description": "New Toolbar",
+      "feature": "New Toolbar",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 17,
@@ -660,7 +660,7 @@
     },
     {
       "Debut Build": 16.7,
-      "Feature Description": "Send to OneNote",
+      "feature": "Send to OneNote",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 17,
@@ -674,7 +674,7 @@
     },
     {
       "Debut Build": 15.39,
-      "Feature Description": "Trigger authentication prompt",
+      "feature": "Trigger authentication prompt",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -688,7 +688,7 @@
     },
     {
       "Debut Build": 15.39,
-      "Feature Description": "Allow delegate to schedule meeting on behalf of principal",
+      "feature": "Allow delegate to schedule meeting on behalf of principal",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -702,7 +702,7 @@
     },
     {
       "Debut Build": 15.38,
-      "Feature Description": "Certificate Based Authentication (CBA)",
+      "feature": "Certificate Based Authentication (CBA)",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -716,7 +716,7 @@
     },
     {
       "Debut Build": 15.36,
-      "Feature Description": "Favorites enhancement",
+      "feature": "Favorites enhancement",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -730,7 +730,7 @@
     },
     {
       "Debut Build": 15.36,
-      "Feature Description": "Deferred delivery of email or Send Later",
+      "feature": "Deferred delivery of email or Send Later",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -744,7 +744,7 @@
     },
     {
       "Debut Build": 15.35,
-      "Feature Description": "Read Receipts and Delivery Notifications",
+      "feature": "Read Receipts and Delivery Notifications",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -758,7 +758,7 @@
     },
     {
       "Debut Build": 15.34,
-      "Feature Description": "Easier account setup",
+      "feature": "Easier account setup",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -772,7 +772,7 @@
     },
     {
       "Debut Build": 15.34,
-      "Feature Description": "Email templates",
+      "feature": "Email templates",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -786,7 +786,7 @@
     },
     {
       "Debut Build": 15.34,
-      "Feature Description": "_Drag & Drop Emails to Create New Items",
+      "feature": "_Drag & Drop Emails to Create New Items",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -800,7 +800,7 @@
     },
     {
       "Debut Build": 15.34,
-      "Feature Description": "Outlook Groups",
+      "feature": "Outlook Groups",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -814,7 +814,7 @@
     },
     {
       "Debut Build": 15.32,
-      "Feature Description": "Store Add-In",
+      "feature": "Store Add-In",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -828,7 +828,7 @@
     },
     {
       "Debut Build": 15.32,
-      "Feature Description": "Support for Touch Bar on MacBook Pro",
+      "feature": "Support for Touch Bar on MacBook Pro",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -842,7 +842,7 @@
     },
     {
       "Debut Build": 15.28,
-      "Feature Description": "Accessibility checker",
+      "feature": "Accessibility checker",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -856,7 +856,7 @@
     },
     {
       "Debut Build": 15.27,
-      "Feature Description": "Automatic language detection in compose window",
+      "feature": "Automatic language detection in compose window",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -870,7 +870,7 @@
     },
     {
       "Debut Build": 15.26,
-      "Feature Description": "Travel & Packages (TXP)",
+      "feature": "Travel & Packages (TXP)",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -884,7 +884,7 @@
     },
     {
       "Debut Build": 15.25,
-      "Feature Description": "Focused Inbox",
+      "feature": "Focused Inbox",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -898,7 +898,7 @@
     },
     {
       "Debut Build": 15.25,
-      "Feature Description": "@mentions",
+      "feature": "@mentions",
       "Subscription Only": "Yes",
       "DF %": "100%",
       "DF Build": 15,
@@ -912,7 +912,7 @@
     },
     {
       "Debut Build": 15.22,
-      "Feature Description": "WordMail editor",
+      "feature": "WordMail editor",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -926,7 +926,7 @@
     },
     {
       "Debut Build": 15.22,
-      "Feature Description": "Support for right-to-left (RTLA) languages - Arabic, Hebrew",
+      "feature": "Support for right-to-left (RTLA) languages - Arabic, Hebrew",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -940,7 +940,7 @@
     },
     {
       "Debut Build": 15.21,
-      "Feature Description": "One-click archive",
+      "feature": "One-click archive",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -954,7 +954,7 @@
     },
     {
       "Debut Build": 15.18,
-      "Feature Description": "Find a meeting room",
+      "feature": "Find a meeting room",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -968,7 +968,7 @@
     },
     {
       "Debut Build": 15.18,
-      "Feature Description": "Full screen view",
+      "feature": "Full screen view",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -982,7 +982,7 @@
     },
     {
       "Debut Build": 15.16,
-      "Feature Description": "Highlight flagged items",
+      "feature": "Highlight flagged items",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -996,7 +996,7 @@
     },
     {
       "Debut Build": 15.15,
-      "Feature Description": "Support for outlook.com calendars and contacts",
+      "feature": "Support for outlook.com calendars and contacts",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -1010,7 +1010,7 @@
     },
     {
       "Debut Build": 15.14,
-      "Feature Description": "Export data to archive files (.olm)",
+      "feature": "Export data to archive files (.olm)",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
@@ -1024,7 +1024,7 @@
     },
     {
       "Debut Build": 15.12,
-      "Feature Description": "Support for Clutter",
+      "feature": "Support for Clutter",
       "Subscription Only": "No",
       "DF %": "100%",
       "DF Build": 15,
