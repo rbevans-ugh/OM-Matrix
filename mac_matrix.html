@@ -138,6 +138,12 @@
 		return input;
 	};
 
+	var table = new Tabulator("#tabulator-example", {
+    dataEdited:function(data){
+    //data - the updated table data
+    },
+});
+
     var table = new Tabulator("#tabulator-example", {
         height:300,
 		//data:data,
