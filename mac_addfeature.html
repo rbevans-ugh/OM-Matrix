@@ -17,27 +17,27 @@
       var idText = document.getElementById("featureName").value;
       var idText1 = document.getElementById("subscription").value;
       var idText2= document.getElementById("comments").value;
-      var idText3 = document.getElementById("DF %").value;
-      var idText4 = document.getElementById("DF Build").value;
-      var idText5 = document.getElementById("IF %").value;
-      var idText6 = document.getElementById("IF Build").value;
-      var idText7 = document.getElementById("IS %").value;
-      var idText8 = document.getElementById("IS Build").value;
-      var idText9 = document.getElementById("PROD %").value;
-      var idText10 = document.getElementById("PROD Build").value;
+      var idText3 = document.getElementById("DF_PCT").value;
+      var idText4 = document.getElementById("DF_Build").value;
+      var idText5 = document.getElementById("IF_PCT").value;
+      var idText6 = document.getElementById("IF_Build").value;
+      var idText7 = document.getElementById("IS_PCT").value;
+      var idText8 = document.getElementById("IS_Build").value;
+      var idText9 = document.getElementById("PROD_PCT").value;
+      var idText10 = document.getElementById("PROD_Build").value;
       console.log(idText,idText2);
-      // var data = { featureName: idText, 
-      //   comments: idText2,
-      //   subscription: idText1,
-      //   DF %: idText3,
-      //   DF Build: idText4,
-      //   IF %: idText5,
-      //   IF Build: idText6,
-      //   IS %: idText7,
-      //   IS Build: idText8,
-      //   PROD %: idText9,
-      //   PROD Build: idText10,
-      // };
+      var data = { featureName: idText, 
+        comments: idText2,
+        subscription: idText1,
+        DF_PCT: idText3,
+        DF_Build: idText4,
+        IF_PCT: idText5,
+        IF_Build: idText6,
+        IS_PCT: idText7,
+        IS_Build: idText8,
+        PROD_PCT: idText9,
+        PROD_Build: idText10,
+      };
       //url is hardcoded from flow. 
       console.log(data);
       var url =
@@ -50,9 +50,9 @@
         },
         body: JSON.stringify(data)
       })
-        .then(function(response) {
-          return response.json();
-        })
+        // .then(function(response) {
+        //   return response.json();
+        // })
         console.log("got the response from Flow");
     }
   </script>
@@ -96,7 +96,7 @@
         </nav>
 		  <div class="jumbotron text-center">
           <div class="container">
-            <img src="dist/om.png" alt="Hey yo" width=10%>
+            <img src="dist/om.png" alt="Hey yo" width=10PCT>
             <h1>Add & Update Feature</h1>
           </div>
           </div>
@@ -108,13 +108,13 @@
                   </div>
                   <label for="subscription">Subscription Feature:</label>
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="subscription" id="subscription" value="option1">
+                      <input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
                       <label class="form-check-label" for="subscription">
                         Yes
                       </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="option2">
+                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="No">
                         <label class="form-check-label" for="subscription">
                           No
                         </label>
@@ -125,34 +125,34 @@
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="DF %" class="form-control" placeholder="DF %">
+                        <input type="text" id="DF_PCT" class="form-control" placeholder="DF_PCT">
                       </div>
                       <div class="col">
-                        <input type="text" id="DF Build"  class="form-control" placeholder="DF Build">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col">
-                        <input type="text" id="IF %"  class="form-control" placeholder="IF %">
-                      </div>
-                      <div class="col">
-                        <input type="text" id="IF Build"  class="form-control" placeholder="IF Build">
+                        <input type="text" id="DF_Build"  class="form-control" placeholder="DF_Build">
                       </div>
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="IS %"  class="form-control" placeholder="IS %">
+                        <input type="text" id="IF_PCT"  class="form-control" placeholder="IF_PCT">
                       </div>
                       <div class="col">
-                        <input type="text" id="IS Build"  class="form-control" placeholder="IS Build">
+                        <input type="text" id="IF_Build"  class="form-control" placeholder="IF_Build">
                       </div>
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="PROD %"  class="form-control" placeholder="PROD %">
+                        <input type="text" id="IS_PCT"  class="form-control" placeholder="IS_PCT">
                       </div>
                       <div class="col">
-                        <input type="text" id="PROD Build"  class="form-control" placeholder="PROD Build">
+                        <input type="text" id="IS_Build"  class="form-control" placeholder="IS_Build">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD_PCT">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="PROD_Build"  class="form-control" placeholder="PROD_Build">
                       </div>
                   </div>
                   <br>
@@ -169,6 +169,7 @@
                            </div>
                            <div class="modal-body">
                                <p class="text-center">Are you sure you want to add this feature?</p>
+                               <p class="label value="featureName"></p>
                              <div class="text-center" >
                                  <button type="submit" class="btn btn-primary" onclick="addFeature()">Submit</button>
                                  <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
