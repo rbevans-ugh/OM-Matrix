@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,16 +17,27 @@
       var idText = document.getElementById("featureName").value;
       var idText1 = document.getElementById("subscription").value;
       var idText2= document.getElementById("comments").value;
-      // var idText3 = document.getElementById("DF %").value;
-      // var idText4 = document.getElementById("DF Build").value;
-      // var idText5 = document.getElementById("IF %").value;
-      // var idText6 = document.getElementById("IF Build").value;
-      // var idText7 = document.getElementById("IS %").value;
-      // var idText8 = document.getElementById("IS Build").value;
-      // var idText9 = document.getElementById("PROD %").value;
-      // var idText10 = document.getElementById("PROD Build").value;
+      var idText3 = document.getElementById("DF %").value;
+      var idText4 = document.getElementById("DF Build").value;
+      var idText5 = document.getElementById("IF %").value;
+      var idText6 = document.getElementById("IF Build").value;
+      var idText7 = document.getElementById("IS %").value;
+      var idText8 = document.getElementById("IS Build").value;
+      var idText9 = document.getElementById("PROD %").value;
+      var idText10 = document.getElementById("PROD Build").value;
       console.log(idText,idText2);
-      var data = { featureName: idText, comments:idText2 };
+      // var data = { featureName: idText, 
+      //   comments: idText2,
+      //   subscription: idText1,
+      //   DF %: idText3,
+      //   DF Build: idText4,
+      //   IF %: idText5,
+      //   IF Build: idText6,
+      //   IS %: idText7,
+      //   IS Build: idText8,
+      //   PROD %: idText9,
+      //   PROD Build: idText10,
+      // };
       //url is hardcoded from flow. 
       console.log(data);
       var url =
@@ -40,36 +52,48 @@
       })
         .then(function(response) {
           return response.json();
-        });
+        })
         console.log("got the response from Flow");
     }
   </script>
   <body>
     	  <!-- Nav Bar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="index.html">One Outlook</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Client Matrix<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Client
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
-					<a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
-					<a class="dropdown-item" href="#">Outlook Web</a>
-					<a class="dropdown-item" href="#">Outlook Desktop</a>
-					</div>	
-				</li>
-			</ul>
-		</div>
-	</nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">One Outlook</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Client
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
+                <a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
+                <a class="dropdown-item" href="#">Outlook Web</a>
+                <a class="dropdown-item" href="#">Outlook Desktop</a>
+                </div>	
+              </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Add Feature
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
+                  <a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
+                  <a class="dropdown-item" href="#">Outlook Web</a>
+                  <a class="dropdown-item" href="#">Outlook Desktop</a>
+                  </div>	
+                </li>
+              </ul>
+              </div>
+            </div>
+        </nav>
 		  <div class="jumbotron text-center">
           <div class="container">
             <img src="dist/om.png" alt="Hey yo" width=10%>
@@ -112,7 +136,7 @@
                         <input type="text" id="IF %"  class="form-control" placeholder="IF %">
                       </div>
                       <div class="col">
-                        <input type="text" id="IF %"  class="form-control" placeholder="IF Build">
+                        <input type="text" id="IF Build"  class="form-control" placeholder="IF Build">
                       </div>
                   </div>
                   <div class="row">
@@ -120,7 +144,7 @@
                         <input type="text" id="IS %"  class="form-control" placeholder="IS %">
                       </div>
                       <div class="col">
-                        <input type="text" id="IS %"  class="form-control" placeholder="IS Build">
+                        <input type="text" id="IS Build"  class="form-control" placeholder="IS Build">
                       </div>
                   </div>
                   <div class="row">
@@ -128,16 +152,40 @@
                         <input type="text" id="PROD %"  class="form-control" placeholder="PROD %">
                       </div>
                       <div class="col">
-                        <input type="text" id="PROD %"  class="form-control" placeholder="PROD Build">
+                        <input type="text" id="PROD Build"  class="form-control" placeholder="PROD Build">
                       </div>
                   </div>
                   <br>
-                  <button type="button" class="btn btn-primary btn-lg btn-block btn-dark" onclick="addFeature()">Submit Feature</button>
+                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark">Submit Feature</submit>
                 </form>
-          </div>  
+          </div>
+          <!-- Confirmation Modal for submitting -->
+          <div id="submit-confirm" class="modal"  data-backdrop="static" data-keyboard="false">
+              <div class="vertical-alignment-helper">
+                   <div class="modal-dialog vertical-align-center">
+                       <div class="modal-content">
+                           <div class="modal-header"> 
+                               <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
+                           </div>
+                           <div class="modal-body">
+                               <p class="text-center">Are you sure you want to add this feature?</p>
+                             <div class="text-center" >
+                                 <button type="submit" class="btn btn-primary" onclick="addFeature()">Submit</button>
+                                 <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
+                             </div>
+                             </form>  
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+          <script>
+              $('#submit_id').on('click',function(){
+                   $('#submit-confirm').modal('show');
+                  });
+          </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>

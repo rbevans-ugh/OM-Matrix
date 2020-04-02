@@ -10,6 +10,7 @@
 
     <title>Add Feature!</title>
   </head>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script type="text/javascript">
   function addFeature() {
     console.log("hi");
@@ -44,7 +45,7 @@
     //url is hardcoded from flow. 
     console.log(data);
     var url =
-      "https://prod-13.westcentralus.logic.azure.com:443/workflows/8842686e9b144eec824a6f70c22fb574/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LAMZ92ClZ9IDMzGCUgRvmFwJtWB0tGvKBLkJmd7ZHjY";
+      "https://prod-12.westcentralus.logic.azure.com:443/workflows/cfa4a35d41f045e2ba1bbeedda848c83/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AH4uTBll2IKhsiJ0UGRdkW1mnZBsnIiTgS68nhkUfEc";
     //clear old content out so we're not concating results on each run.
     fetch(url, {
       method: "POST",
@@ -53,107 +54,142 @@
       },
       body: JSON.stringify(data)
     })
-      .then(function(response) {
-        return response.json();
-      });
+      // .then(function(response) {
+      //   return response();
+      // });
       console.log("got the response from Flow");
   }
-
   </script>
   <body>
-    	  <!-- Nav Bar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="index.html">One Outlook</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Client Matrix<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Client
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
-					<a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
-					<a class="dropdown-item" href="#">Outlook Web</a>
-					<a class="dropdown-item" href="#">Outlook Desktop</a>
-					</div>	
-				</li>
-			</ul>
-		</div>
-	</nav>
+    <!-- Nav Bar -->
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">One Outlook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Client
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
+            <a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
+            <a class="dropdown-item" href="#">Outlook Web</a>
+            <a class="dropdown-item" href="#">Outlook Desktop</a>
+            </div>	
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Feature
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
+              <a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
+              <a class="dropdown-item" href="#">Outlook Web</a>
+              <a class="dropdown-item" href="#">Outlook Desktop</a>
+              </div>	
+            </li>
+          </ul>
+          </div>
+        </div>
+    </nav>
 		  <div class="jumbotron text-center">
           <div class="container">
             <img src="dist/om.png" alt="Hey yo" width=10%>
-            <h1>Add & Update Feature</h1>
+            <h1>Add Feature</h1>
           </div>
           </div>
           <div class="container-fluid">
               <form>
                   <div class="form-group">
                     <label for="featureName">Feature Name:</label>
-                    <input type="text" class="form-control" id="featureName" placeholder="Shared Mailbox" required>
+                    <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
                   </div>
                       <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="o365" value="N">
+                          <input class="form-check-input" type="checkbox" id="o365" value="Y">
                           <label class="form-check-label" for="o365">O365</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="outlook" value="N">
+                          <input class="form-check-input" type="checkbox" id="outlook" value="Y">
                           <label class="form-check-label" for="outlook">Outlook</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="o365gcc" value="N">
+                          <input class="form-check-input" type="checkbox" id="o365gcc" value="Y">
                           <label class="form-check-label" for="o365gcc">O365 GCC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="gmail" value="N">
+                          <input class="form-check-input" type="checkbox" id="gmail" value="Y">
                           <label class="form-check-label" for="gmail">Gmail</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="gmailcc" value="N">
+                          <input class="form-check-input" type="checkbox" id="gmailcc" value="Y">
                           <label class="form-check-label" for="gmailcc">Gmail - CC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="imap" value="N">
+                          <input class="form-check-input" type="checkbox" id="imap" value="Y">
                           <label class="form-check-label" for="imap">IMAP</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="imapcc" value="N">
+                          <input class="form-check-input" type="checkbox" id="imapcc" value="Y">
                           <label class="form-check-label" for="imapcc">IMAP - CC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="yahoo" value="N">
+                          <input class="form-check-input" type="checkbox" id="yahoo" value="Y">
                           <label class="form-check-label" for="yahoo">Yahoo</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="yahoocc" value="N">
+                          <input class="form-check-input" type="checkbox" id="yahoocc" value="Y">
                           <label class="form-check-label" for="yahoocc">Yahoo - CC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="icloud" value="N">
+                          <input class="form-check-input" type="checkbox" id="icloud" value="Y">
                           <label class="form-check-label" for="icloud">iCloud</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="icloudcc" value="N">
+                          <input class="form-check-input" type="checkbox" id="icloudcc" value="Y">
                           <label class="form-check-label" for="icloudcc">iCloud - CC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="opcc" value="N">
+                          <input class="form-check-input" type="checkbox" id="opcc" value="Y">
                           <label class="form-check-label" for="opcc">U-OPCC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="pop3" value="N">
+                          <input class="form-check-input" type="checkbox" id="pop3" value="Y">
                           <label class="form-check-label" for="pop3">POP3</label>
                         </div>
                   <br>
-                  <submit type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="addFeature()">Submit Feature</button>
-                </form>
-          </div>  
+                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark">Submit Feature</submit>
+          </div>
+          <!-- Confirmation Modal for submitting -->
+          <div id="submit-confirm" class="modal"  data-backdrop="static" data-keyboard="false">
+              <div class="vertical-alignment-helper">
+                   <div class="modal-dialog vertical-align-center">
+                       <div class="modal-content">
+                           <div class="modal-header"> 
+                               <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
+                           </div>
+                           <div class="modal-body">
+                               <p class="text-center">Are you sure you want to add this feature?</p>
+                             <div class="text-center" >
+                                 <button type="submit" class="btn btn-primary" onclick="addFeature()">Submit</button>
+                                 <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
+                             </div>
+                             </form>  
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+          <script>
+              $('#submit_id').on('click',function(){
+                   $('#submit-confirm').modal('show');
+                  });
+          </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
