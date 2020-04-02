@@ -11,51 +11,8 @@
 
     <title>Add Feature!</title>
   </head>
-  <script type="text/javascript">
-  function addFeature() {
-    console.log("hi");
-      var idText = document.getElementById("featureName").value;
-      var idText1 = document.getElementById("subscription").value;
-      var idText2= document.getElementById("comments").value;
-      var idText3 = document.getElementById("DF_PCT").value;
-      var idText4 = document.getElementById("DF_Build").value;
-      var idText5 = document.getElementById("IF_PCT").value;
-      var idText6 = document.getElementById("IF_Build").value;
-      var idText7 = document.getElementById("IS_PCT").value;
-      var idText8 = document.getElementById("IS_Build").value;
-      var idText9 = document.getElementById("PROD_PCT").value;
-      var idText10 = document.getElementById("PROD_Build").value;
-      console.log(idText,idText2);
-      var data = { featureName: idText, 
-        comments: idText2,
-        subscription: idText1,
-        DF_PCT: idText3,
-        DF_Build: idText4,
-        IF_PCT: idText5,
-        IF_Build: idText6,
-        IS_PCT: idText7,
-        IS_Build: idText8,
-        PROD_PCT: idText9,
-        PROD_Build: idText10,
-      };
-      //url is hardcoded from flow. 
-      console.log(data);
-      var url =
-        "https://prod-09.westcentralus.logic.azure.com:443/workflows/bde242871bd24b8d839dda737d907f85/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wQ0lpFfxigdslnV8aCHbYsUipaTZS_f4PTFEolz6UVA";
-      //clear old content out so we're not concating results on each run.
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-        // .then(function(response) {
-        //   return response.json();
-        // })
-        console.log("got the response from Flow");
-    }
-  </script>
+  <script src="dist/js/confirmfeature.js"></script>
+  <script src="dist/js/addfeature.js"></script>
   <body>
     	  <!-- Nav Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -104,7 +61,7 @@
               <form>
                   <div class="form-group">
                     <label for="featureName">Feature Name:</label>
-                    <input type="text" class="form-control" id="featureName" placeholder="Shared Mailbox" required>
+                    <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
                   </div>
                   <label for="subscription">Subscription Feature:</label>
                   <div class="form-check">
@@ -125,38 +82,38 @@
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="DF_PCT" class="form-control" placeholder="DF_%">
+                        <input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
                       </div>
                       <div class="col">
-                        <input type="text" id="DF_Build"  class="form-control" placeholder="DF_Build">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col">
-                        <input type="text" id="IF_PCT"  class="form-control" placeholder="IF_%">
-                      </div>
-                      <div class="col">
-                        <input type="text" id="IF_Build"  class="form-control" placeholder="IF_Build">
+                        <input type="text" id="DF_Build"  class="form-control" placeholder="DF Build">
                       </div>
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="IS_PCT"  class="form-control" placeholder="IS_%">
+                        <input type="text" id="IF_PCT"  class="form-control" placeholder="IF %">
                       </div>
                       <div class="col">
-                        <input type="text" id="IS_Build"  class="form-control" placeholder="IS_Build">
+                        <input type="text" id="IF_Build"  class="form-control" placeholder="IF Build">
                       </div>
                   </div>
                   <div class="row">
                       <div class="col">
-                        <input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD_%">
+                        <input type="text" id="IS_PCT"  class="form-control" placeholder="IS %">
                       </div>
                       <div class="col">
-                        <input type="text" id="PROD_Build"  class="form-control" placeholder="PROD_Build">
+                        <input type="text" id="IS_Build"  class="form-control" placeholder="IS Build">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD %">
+                      </div>
+                      <div class="col">
+                        <input type="text" id="PROD_Build"  class="form-control" placeholder="PROD Build">
                       </div>
                   </div>
                   <br>
-                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark">Submit Feature</submit>
+                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">Submit Feature</submit>
                 </form>
           </div>
           <!-- Confirmation Modal for submitting -->
@@ -168,11 +125,21 @@
                                <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
                            </div>
                            <div class="modal-body">
-                               <p class="text-center">Are you sure you want to add this feature?</p>
-                               <p class="label value="featureName"></p>
+                             <p class="text-center">Are you sure you want to add this feature?</p>
+                             <p>Feature Name: </p><p id="confirmFeatureName"></p>
+                             <p> Subscription: </p><p id="confirmSubscription"></p>
+                             <p>Comments: </p><p id="confirmComments"></p>
+                             <p>DF PCT: </p><p id="confirmDF_PCT"></p>
+                             <p>DF Build: </p><p id="confirmDF_Build"></p>
+                             <p>IF PCT: </p><p id="confirmIF_PCT"></p>
+                             <p>IF Build: </p><p id="confirmIF_Build"></p>
+                             <p>IS PCT: </p><p id="confirmIS_PCT"></p>
+                             <p>IS Build: </p><p id="confirmIS_Build"></p>
+                             <p>PROD PCT: </p><p id="confirmPROD_PCT"></p>
+                             <p>PROD Build: </p><p id="confirmPROD_Build"></p>
                              <div class="text-center" >
-                                 <button type="submit" class="btn btn-primary" onclick="addFeature()">Submit</button>
-                                 <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
+                                 <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="addFeatureMac()">Submit</button>
+                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                              </div>
                              </form>  
                            </div>
