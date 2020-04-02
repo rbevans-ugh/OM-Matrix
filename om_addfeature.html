@@ -117,33 +117,47 @@
                           <label class="form-check-label" for="pop3">POP3</label>
                         </div>
                   <br>
-                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark">Submit Feature</submit>
+                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">Submit Feature</submit>
           </div>
-          <!-- Confirmation Modal for submitting -->
-          <div id="submit-confirm" class="modal"  data-backdrop="static" data-keyboard="false">
-              <div class="vertical-alignment-helper">
-                   <div class="modal-dialog vertical-align-center">
-                       <div class="modal-content">
-                           <div class="modal-header"> 
-                               <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
-                           </div>
-                           <div class="modal-body">
-                               <p class="text-center">Are you sure you want to add this feature?</p>
-                             <div class="text-center" >
-                                 <button type="submit" class="btn btn-primary" onclick="addFeature()">Submit</button>
-                                 <button type="button" class="btn btn-primary" data-dismiss="modal" >Cancel</button>
+            <!-- Confirmation Modal for submitting -->
+            <div id="submit-confirm" class="modal"  data-backdrop="static" data-keyboard="false">
+                <div class="vertical-alignment-helper">
+                     <div class="modal-dialog vertical-align-center">
+                         <div class="modal-content">
+                             <div class="modal-header"> 
+                                 <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
                              </div>
-                             </form>  
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-          <script>
-              $('#submit_id').on('click',function(){
-                   $('#submit-confirm').modal('show');
-                  });
-          </script>
+                             <div class="modal-body">
+                               <p class="text-center">Are you sure you want to add this feature?</p>
+                               <p>Feature Name: </p><p id="confirmFeatureName"></p>
+                               <p>o365: </p><p id="confirmo365"></p>
+                               <p>outlook: </p><p id="confirmoutlook"></p>
+                               <p>o365gcc: </p><p id="confirmo365gcc"></p>
+                               <p>gmail: </p><p id="confirmgmail"></p>
+                               <p>gmailcc: </p><p id="confirmgmailcc"></p>
+                               <p>imap: </p><p id="confirmimap"></p>
+                               <p>imapcc: </p><p id="confirmimapcc"></p>
+                               <p>yahoo: </p><p id="confirmyahoo"></p>
+                               <p>yahoocc: </p><p id="confirmyahoocc"></p>
+                               <p>icloud: </p><p id="confirmicloud"></p>
+                               <p>icloudcc: </p><p id="confirmicloudcc"></p>
+                               <p>opcc: </p><p id="confirmopcc"></p>
+                               <p>pop3: </p><p id="confirmpop3"></p>
+                               <div class="text-center" >
+                                   <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="addFeatureMac()">Submit</button>
+                                   <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                               </div>
+                               </form>  
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            <script>
+                $('#submit_id').on('click',function(){
+                     $('#submit-confirm').modal('show');
+                    });
+            </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
