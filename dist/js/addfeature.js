@@ -39,4 +39,5 @@ function addFeatureMac() {
       //   return response.json();
       // })
       console.log("got the response from Flow");
+      document.getElementById("addfeatureform").reset();
   }
