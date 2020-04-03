@@ -1,33 +1,13 @@
 function addFeature() {
     console.log("hi");
-    var idText1 = document.getElementById("featureName");
-    var idText2 = document.getElementById("o365");
-    var idText3 = document.getElementById("outlook");
-    var idText4 = document.getElementById("o365gcc");
-    var idText5 = document.getElementById("gmail").checked;
-    var idText6 = document.getElementById("gmailcc").checked;
-    var idText7 = document.getElementById("imap").checked;
-    var idText8 = document.getElementById("imapcc").checked;
-    var idText9 = document.getElementById("yahoo").checked;
-    var idText10 = document.getElementById("yahoocc").checked;
-    var idText11 = document.getElementById("icloud").checked;
-    var idText12 = document.getElementById("icloudcc").checked;
-    var idText13 = document.getElementById("opcc").checked;
-    var idText14 = document.getElementById("pop3").checked;
-    var data = { featureName: idText1, 
-      o365: idText2, 
-      outlook: idText3, 
-      o365gcc: idText4, 
-      gmail: idText5, 
-      gmailcc: idText6, 
-      imap: idText7, 
-      imapcc: idText8, 
-      yahoo: idText9, 
-      yahoocc: idText10, 
-      icloud: idText11, 
-      icloudcc: idText12, 
-      opcc: idText13, 
-      pop3: idText14, };
+    var confirm0 = document.getElementById("featureName").value;
+    var select1 = document.getElementById("acctlist");
+    var selected1 = []
+    for (var i = 0; i < select1.length; i++) {
+      if (select1.options[i].selected) selected1.push(select1.options[i].value);
+  }
+  console.log(selected1);
+    var data = { featureName: confirm0, selectedAccts: selected1};
     //url is hardcoded from flow. 
     console.log(data);
     var url =
