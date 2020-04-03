@@ -1,32 +1,13 @@
 function confirmFeature(){
-  var confirm0 = document.getElementById("acctlist");
-  console.log(confirm0.options[confirm0.selectedIndex].value);
-  // var confirm1 = document.getElementById("acctlist").value;
-  // var confirm2 = document.getElementById("outlook").value;
-  // var confirm3 = document.getElementById("o365gcc").value;
-  // var confirm4 = document.getElementById("gmail").value;
-  // var confirm5 = document.getElementById("gmailcc").value;
-  // var confirm6 = document.getElementById("imap").value;
-  // var confirm7 = document.getElementById("imapcc").value;
-  // var confirm8 = document.getElementById("yahoo").value;
-  // var confirm9 = document.getElementById("yahoocc").value;
-  // var confirm10 = document.getElementById("icloud").value;
-  // var confirm11 = document.getElementById("icloudcc").value;
-  // var confirm12 = document.getElementById("opcc").value;
-  // var confirm13 = document.getElementById("pop3").value;
+  var confirm0 = document.getElementById("featureName").value;
+  // console.log(confirm0.options[confirm0.selectedIndex].value);
+  var select1 = document.getElementById("acctlist");
+  var selected1 = []
+  for (var i = 0; i < select1.length; i++) {
+    if (select1.options[i].selected) selected1.push(select1.options[i].value);
+}
+console.log(selected1);
     console.log(confirm0);
   document.getElementById("confirmFeatureName").innerHTML = confirm0;
-  document.getElementById("confirmo365").innerHTML = confirm1;
-  document.getElementById("confirmoutlook").innerHTML = confirm2;
-  document.getElementById("confirmo365gcc").innerHTML = confirm3;
-  document.getElementById("confirmgmail").innerHTML = confirm4;
-  document.getElementById("confirmgmailcc").innerHTML = confirm5;
-  document.getElementById("confirmimap").innerHTML = confirm6;
-  document.getElementById("confirmimapcc").innerHTML = confirm7;
-  document.getElementById("confirmyahoo").innerHTML = confirm8;
-  document.getElementById("confirmyahoocc").innerHTML = confirm9;
-  document.getElementById("confirmicloud").innerHTML = confirm10;
-  document.getElementById("confirmicloudcc").innerHTML = confirm11;
-  document.getElementById("confirmopcc").innerHTML = confirm12;
-  document.getElementById("confirmpop3").innerHTML = confirm13;
+  document.getElementById("confirmaccttype").innerHTML = selected1;
   }

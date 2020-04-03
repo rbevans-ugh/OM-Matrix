@@ -1,9 +1,9 @@
 function addFeature() {
     console.log("hi");
-    var idText1 = document.getElementById("featureName").value;
-    var idText2 = document.getElementById("o365").checked;
-    var idText3 = document.getElementById("outlook").checked;
-    var idText4 = document.getElementById("o365gcc").checked;
+    var idText1 = document.getElementById("featureName");
+    var idText2 = document.getElementById("o365");
+    var idText3 = document.getElementById("outlook");
+    var idText4 = document.getElementById("o365gcc");
     var idText5 = document.getElementById("gmail").checked;
     var idText6 = document.getElementById("gmailcc").checked;
     var idText7 = document.getElementById("imap").checked;
