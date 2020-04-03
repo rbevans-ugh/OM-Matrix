@@ -4,7 +4,7 @@ function confirmFeature(){
   var select1 = document.getElementById("acctlist");
   var selected1 = []
   for (var i = 0; i < select1.length; i++) {
-    if (select1.options[i].selected) selected1.push(select1.options[i].value);
+    if (select1.options[i].selected) selected1.push(select1.options[i].innerHTML);
 }
 console.log(selected1);
     console.log(confirm0);
