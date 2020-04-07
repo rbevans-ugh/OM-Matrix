@@ -122,7 +122,7 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:editIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
+	  {formatter:editIcon, width:40, hozAlign:"center", cellClick:function(e, cell){}},
       {title:"Feature", field:"feature", minWidth:80, width:370},
 	  {title:"Debut Build", field:"Debut Build", width:120,align:"center"},
 	  {title:"Subscription Only", field:"Subscription Only", width:120,align:"center"},
@@ -152,7 +152,7 @@
 	});
 	// Editing 
 	var editIcon = function(cell, formatterParams, onRendered){ //plain text value
-    return "<i id='exampleModalLong'></i>";
+    return "<i id='modal fade'></i>";
 };
 </script>
 
