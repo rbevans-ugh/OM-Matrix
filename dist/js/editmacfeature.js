@@ -1,4 +1,4 @@
-function addFeatureMac() {
+function editFeatureMac() {
     console.log("hi");
       var idText = document.getElementById("featureName").value;
       var idText1 = document.getElementById("subscription").value;

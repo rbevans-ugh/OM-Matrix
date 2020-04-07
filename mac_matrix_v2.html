@@ -16,6 +16,7 @@
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	
   </head>
+  <script src="dist/js/editmacfeature.js"></script>
   <body>
 	  <!-- Nav Bar -->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -99,34 +100,7 @@
 				  </div> -->
 		<script type="text/javascript">
 	//define data
-	var data = [    {
-      "Debut_Build": 15.15,
-      "feature": "Support for outlook.com calendars and contacts",
-      "Subscription ": "No",
-      "DF_PCT": "100%",
-      "DF_Build": 15,
-      "IF_PCT": "100%",
-      "IF_Build": "15.100.42.41",
-      "IS_PCT": "100%",
-      "IS_Build": "15.100.42.41",
-      "PROD_PCT": "100%",
-      "PROD_Build": "15.100.42.41",
-      "Comments": ""
-    },
-    {
-      "Debut_Build": 15.14,
-      "feature": "Export data to archive files (.olm)",
-      "Subscription": "No",
-      "DF_PCT": "100%",
-      "DF_Build": 15,
-      "IF_PCT": "100%",
-      "IF_Build": "15.100.42.41",
-      "IS_PCT": "100%",
-      "IS_Build": "15.100.42.41",
-      "PROD_PCT": "100%",
-      "PROD_Build": "15.100.42.41",
-      "Comments": "SOME TEXT DATA"
-    }, ]
+	var data = [ ]
 	// Editing 
 	var editdataIcon = function(cell, formatterParams, onRendered){ //plain text value
     return "<img class='infoImage' src='dist/editicon.png' width=100%>";
@@ -134,10 +108,10 @@
     var table = new Tabulator("#tabulator-example", {
         height:300,
 		data:data,
-		// ajaxConfig:{
-		// 	method: 'GET'
-		// },
-		ajaxURL:"macdata.json",
+		ajaxConfig:{
+			method: 'GET'
+		},
+		ajaxURL:"https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/macdata.json?st=2020-04-01T17%3A50%3A34Z&se=2021-04-01T17%3A50%3A00Z&sp=racwl&sv=2018-03-28&sr=b&sig=Y49HQCX6n2NllSiFFxnWDurcdRfWR8YNZMzMTaHgLqI%3D",
         // layout:"fitDataStretch",
 		// ajaxProgressiveLoad:"scroll",
 		// paginationSize:20,
@@ -277,7 +251,7 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+						<button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="editFeatureMac()">Submit</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
