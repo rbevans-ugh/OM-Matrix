@@ -33,4 +33,5 @@ for (var i = 0; i < select1.length; i++) {
       //   return response();
       // });
       console.log("got the response from Flow");
+      document.getElementById("addfeatureform").reset();
   }
