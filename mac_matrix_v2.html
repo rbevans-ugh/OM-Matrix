@@ -99,18 +99,45 @@
 				  </div> -->
 		<script type="text/javascript">
 	//define data
-	var data = [ ]
+	var data = [    {
+      "Debut Build": 15.15,
+      "feature": "Support for outlook.com calendars and contacts",
+      "Subscription Only": "No",
+      "DF %": "100%",
+      "DF Build": 15,
+      "IF %": "100%",
+      "IF Build": "",
+      "IS %": "100%",
+      "IS Build": "",
+      "PROD %": "100%",
+      "PROD Build": "",
+      "Comments": ""
+    },
+    {
+      "Debut Build": 15.14,
+      "feature": "Export data to archive files (.olm)",
+      "Subscription Only": "No",
+      "DF %": "100%",
+      "DF Build": 15,
+      "IF %": "100%",
+      "IF Build": "",
+      "IS %": "100%",
+      "IS Build": "",
+      "PROD %": "100%",
+      "PROD Build": "",
+      "Comments": ""
+    }, ]
 	// Editing 
 	var editdataIcon = function(cell, formatterParams, onRendered){ //plain text value
     return "<i class='fa fa-print'></i>";
 	};
     var table = new Tabulator("#tabulator-example", {
         height:300,
-		//data:data,
-		ajaxConfig:{
-			method: 'GET'
-		},
-		ajaxURL:"https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/macdata.json?st=2020-04-01T17%3A50%3A34Z&se=2021-04-01T17%3A50%3A00Z&sp=racwl&sv=2018-03-28&sr=b&sig=Y49HQCX6n2NllSiFFxnWDurcdRfWR8YNZMzMTaHgLqI%3D",
+		data:data,
+		// ajaxConfig:{
+		// 	method: 'GET'
+		// },
+		ajaxURL:"macdata.json",
         // layout:"fitDataStretch",
 		// ajaxProgressiveLoad:"scroll",
 		// paginationSize:20,
@@ -125,7 +152,13 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){$('#exampleModalLong').modal.on;}},
+	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
+		  $('#editModal').modal();
+		}
+		  
+		},
+	//   {formatter:printIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
+
       {title:"Feature", field:"feature", minWidth:80, width:370}, 
 	  {title:"Debut Build", field:"Debut Build", width:120,align:"center"},
 	  {title:"Subscription Only", field:"Subscription Only", width:120,align:"center"},
@@ -154,27 +187,80 @@
       table.setFilter( "feature", "like", $(this).val())
 	});
 </script>
-
 			<!-- Button trigger modal -->
-			<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-				What's New!
-			</button> -->
-			
-			<!-- Modal -->
-			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+			What's New!
+		</button> -->
+		
+		<!-- Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">What's New!</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Edit Feature</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 					</div>
 					<div class="modal-body">
-					Add a feature for <a href="om_addfeature.html">Outlook Mobile</a> and <a href="mac_addfeature.html">Outlook Mac</a> are now setup.  Contact <a href="mailto:robevans@microsoft.com">robevans@microsoft.com</a> for questions or issues.
+					        <form>
+					<div class="form-group">
+							<label for="featureName">Feature Name:</label>
+							<input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
+							</div>
+							<label for="subscription">Subscription Feature:</label>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
+								<label class="form-check-label" for="subscription">
+								Yes
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="subscription" id="subscription" value="No">
+								<label class="form-check-label" for="subscription">
+									No
+								</label>
+								</div>
+							<div class="form-group">
+							<label for="comments">Comments:</label>
+							<textarea class="form-control" id="comments" rows="3"></textarea>
+							</div>
+							<div class="row">
+								<div class="col">
+								<input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
+								</div>
+								<div class="col">
+								<input type="text" id="DF_Build"  class="form-control" placeholder="DF Build">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+								<input type="text" id="IF_PCT"  class="form-control" placeholder="IF %">
+								</div>
+								<div class="col">
+								<input type="text" id="IF_Build"  class="form-control" placeholder="IF Build">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+								<input type="text" id="IS_PCT"  class="form-control" placeholder="IS %">
+								</div>
+								<div class="col">
+								<input type="text" id="IS_Build"  class="form-control" placeholder="IS Build">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+								<input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD %">
+								</div>
+								<div class="col">
+								<input type="text" id="PROD_Build"  class="form-control" placeholder="PROD Build">
+								</div>
+						</form>
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+						<button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
 				</div>
