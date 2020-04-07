@@ -3,7 +3,6 @@ function confirmFeature(){
   // console.log(confirm0.options[confirm0.selectedIndex].value);
   var select1 = document.getElementById("acctlist");
   var selected1 = []
-  var object = {}
   for (var i = 0; i < select1.length; i++) {
     if (select1.options[i].selected) selected1.push(select1.options[i].innerHTML);
 }
