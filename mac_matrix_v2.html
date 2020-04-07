@@ -100,7 +100,10 @@
 		<script type="text/javascript">
 	//define data
 	var data = [ ]
-
+	// Editing 
+	var editIcon = function(cell, formatterParams, onRendered){ //plain text value
+    return "<i class='fa fa-print'></i>";
+	};
     var table = new Tabulator("#tabulator-example", {
         height:300,
 		//data:data,
@@ -122,9 +125,7 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:editIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
-
-	  }},
+	  {formatter:editIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
       {title:"Feature", field:"feature", minWidth:80, width:370},
 	  {title:"Debut Build", field:"Debut Build", width:120,align:"center"},
 	  {title:"Subscription Only", field:"Subscription Only", width:120,align:"center"},
@@ -152,10 +153,6 @@
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val())
 	});
-	// Editing 
-	var editIcon = function(cell, formatterParams, onRendered){ //plain text value
-    return "#exampleModalLong";
-};
 </script>
 
 			<!-- Button trigger modal -->
