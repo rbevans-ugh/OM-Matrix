@@ -126,7 +126,14 @@
       ],
       columns:[
 	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
-      {title:"Feature", field:"feature", minWidth:80, width:370},
+      {title:"Feature", field:"feature", minWidth:80, width:370, formatter:function(cell, formatterParams){
+       var value = cell.getValue();
+        if(value.indexOf("o") > 0){
+            return "<span style='color:red; font-weight:bold;'>" + value + "</span>";
+        }else{
+            return value;
+        }
+    }},
 	  {title:"Debut Build", field:"Debut Build", width:120,align:"center"},
 	  {title:"Subscription Only", field:"Subscription Only", width:120,align:"center"},
 	  {title:"DF %", field:"DF %", width:120,align:"center"},
