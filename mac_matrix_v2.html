@@ -122,7 +122,7 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:printIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
+	  {formatter:editIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
       {title:"Feature", field:"feature", minWidth:80, width:370},
 	  {title:"Debut Build", field:"Debut Build", width:120,align:"center"},
 	  {title:"Subscription Only", field:"Subscription Only", width:120,align:"center"},
@@ -146,14 +146,39 @@
     },
 
 	});
-
-	var printIcon = function(cell, formatterParams, onRendered){ //plain text value
-    return "<i class='fa fa-print'></i>";
-};
-
+	// Filtering
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val())
 	});
+	// Editing 
+	var editIcon = function(cell, formatterParams, onRendered){ //plain text value
+    return "<i class='modal fade'></i>";
+};
 </script>
+
+			<!-- Button trigger modal -->
+			<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+				What's New!
+			</button> -->
+			
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">What's New!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+					Add a feature for <a href="om_addfeature.html">Outlook Mobile</a> and <a href="mac_addfeature.html">Outlook Mac</a> are now setup.  Contact <a href="mailto:robevans@microsoft.com">robevans@microsoft.com</a> for questions or issues.
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+				</div>
+			</div>
 </body>
 </html>
