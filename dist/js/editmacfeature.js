@@ -11,7 +11,7 @@ function editFeatureMac() {
       var idText8 = document.getElementById("IS_Build").value;
       var idText9 = document.getElementById("PROD_PCT").value;
       var idText10 = document.getElementById("PROD_Build").value;
-      var idText10 = document.getElementById("Debut_Build").value;
+      var idText11 = document.getElementById("Debut_Build").value;
       console.log(idText,idText2);
       var data = { featureName: idText, 
         comments: idText2,
@@ -24,6 +24,7 @@ function editFeatureMac() {
         IS_Build: idText8,
         PROD_PCT: idText9,
         PROD_Build: idText10,
+        Debut_Build: idText11,
       };
       //url is hardcoded from flow. 
       console.log(data);
