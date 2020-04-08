@@ -177,5 +177,28 @@
       table.setFilter( "feature", "like", $(this).val())
 	});
 </script>
+		<!-- Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				<div class="vertical-alignment-helper">
+						<div class="modal-dialog vertical-align-center">
+							<div class="modal-content">
+								<div class="modal-header"> 
+									<h4 class="modal-title  text-center">Add to Feature Matrix</h4>
+								</div>
+								<div class="modal-body">
+								  <p class="text-center">Are you sure you want to add this feature?</p>
+								  <p>Feature Name: </p><p id="confirmFeatureName"></p>
+								  <p>Account Type: </p><p id="confirmaccttype"></p>
+								  <div class="text-center" >
+									  <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="addFeature()">Submit</button>
+									  <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+								  </div>
+								  </form>  
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+
 </body>
 </html>
