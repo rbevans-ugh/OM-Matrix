@@ -43,15 +43,22 @@
          "desktop":"Y"
       },
       {
-         "feature":"Shared mailbox",
+         "feature":"Shared Mailbox",
          "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Delegate mailbox",
+         "feature":"Delegate Mailbox",
          "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Side-by-side calendars",
+         "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -106,15 +113,15 @@
          "desktop":"Y"
       },
       {
-         "feature":"Open zip file (iOS) (cannot open natively)",
-         "om":"N",
+         "feature":"Open zip file",
+         "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
          "feature":"Open Password protected files",
-         "om":"N",
+         "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -135,7 +142,7 @@
       },
       {
          "feature":"Rich text support",
-         "om":"N",
+         "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -241,20 +248,20 @@
       {
          "feature":"Badge count - Android",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Badge count - iOS",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
-         "feature":"Add-ins (mail read)",
-         "om":"N",
+         "feature":"Add-ins",
+         "om":"Y",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -268,14 +275,14 @@
       },
       {
          "feature":"Open embedded attachments",
-         "om":"Y",
+         "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
          "feature":"Open embedded MSG files",
-         "om":"Y",
+         "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -285,14 +292,14 @@
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Message for disabling background restriction (Android only)",
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Draft sync",
@@ -302,7 +309,7 @@
          "desktop":"Y"
       },
       {
-         "feature":"Set Autoreply (OOO)",
+         "feature":"Set Autoreply - Out of Office (OOO)",
          "om":"Y",
          "mac":"Y",
          "owa":"Y",
@@ -334,28 +341,28 @@
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Lens integration -Êcamera in compose and quick reply, inking, gallery entry point - iOS",
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Lens integration - scan business card",
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Lens integration - inking and gallery entry point - Andorid",
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"[Samsung Note device] S Pen hover",
@@ -367,9 +374,9 @@
       {
          "feature":"Appended Carrier signatures",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Video compression",
@@ -390,14 +397,14 @@
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Play My Emails",
          "om":"Y",
          "mac":"N",
          "owa":"N",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Calendar - Add/Edit/Delete events",
@@ -467,7 +474,7 @@
          "om":"Y",
          "mac":"N",
          "owa":"Y",
-         "desktop":"Y"
+         "desktop":"N"
       },
       {
          "feature":"Calendar TxP cards",
@@ -492,14 +499,14 @@
       },
       {
          "feature":"Sync local calendar to Outlook (edit)",
-         "om":"Y",
+         "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
          "feature":"Sync Outlook to local calendar",
-         "om":"Y",
+         "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
@@ -507,9 +514,9 @@
       {
          "feature":"Calendar color sync (not categories)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Recurring Events",
@@ -528,9 +535,9 @@
       {
          "feature":"Month view (iOS)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Include comment when cancelling a meeting",
@@ -540,21 +547,21 @@
          "desktop":"Y"
       },
       {
-         "feature":"Calendar LAS iOS (conf room availability)",
+         "feature":"Find a room - Calendar LAS iOS (conf room availability)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
-         "feature":"Calendar LAS Android (conf room availability)",
+         "feature":"Find a room - Calendar LAS Android (conf room availability)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
-         "feature":"Category Colors (iOS + Android)",
+         "feature":"Category Colors",
          "om":"Y",
          "mac":"Y",
          "owa":"Y",
@@ -585,11 +592,11 @@
          "feature":"Up Next",
          "om":"Y",
          "mac":"N",
-         "owa":"N",
+         "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Week Numbers (iOS)",
+         "feature":"Week Numbers",
          "om":"Y",
          "mac":"Y",
          "owa":"Y",
@@ -598,16 +605,16 @@
       {
          "feature":"Zero query - People, File (iOS)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Zero query - TxP (iOS)",
          "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
+         "mac":"N",
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Search by subject / Sender (KQL)",
@@ -659,7 +666,7 @@
          "desktop":"Y"
       },
       {
-         "feature":"Search history (iOS only)",
+         "feature":"Search history",
          "om":"Y",
          "mac":"Y",
          "owa":"Y",
@@ -680,63 +687,56 @@
          "desktop":"Y"
       },
       {
-         "feature":"Tasks",
+         "feature":"Task Create",
          "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Create",
-         "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
-      },
-      {
-         "feature":"Delete",
-         "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
-      },
-      {
-         "feature":"Set Date",
-         "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
-      },
-      {
-         "feature":"Sort by Date / Sender",
-         "om":"Y",
-         "mac":"Y",
-         "owa":"Y",
-         "desktop":"Y"
-      },
-      {
-         "feature":"Create",
+         "feature":"Task Delete",
          "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Delete",
+         "feature":"Task Set Date",
          "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Set Date",
+         "feature":"Task Sort by Date / Sender",
          "om":"N",
          "mac":"Y",
          "owa":"Y",
          "desktop":"Y"
       },
       {
-         "feature":"Sort by Date / Sender",
+         "feature":"Notes Create",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Notes Delete",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Notes Set Date",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Notes Sort by Date / Sender",
          "om":"N",
          "mac":"Y",
          "owa":"Y",
@@ -746,22 +746,22 @@
          "feature":"Monetization",
          "om":"Y",
          "mac":"N",
-         "owa":"Y",
-         "desktop":"Y"
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"In-app purchase",
          "om":"Y",
          "mac":"N",
-         "owa":"Y",
-         "desktop":"Y"
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"Ads",
          "om":"Y",
          "mac":"N",
-         "owa":"Y",
-         "desktop":"Y"
+         "owa":"N",
+         "desktop":"N"
       },
       {
          "feature":"ToDo App (Separate app)",
@@ -775,6 +775,138 @@
          "om":"Y",
          "mac":"Y",
          "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Object Mode",
+         "om":"N",
+         "mac":"N",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Folder Retention Policies",
+         "om":"N",
+         "mac":"N",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Online Archive",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },      {
+         "feature":"Archive",
+         "om":"Y",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Import PST's",
+         "om":"N",
+         "mac":"Y",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Export PST's",
+         "om":"N",
+         "mac":"N",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Message Recall",
+         "om":"N",
+         "mac":"N",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Read receipt",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Customize folder order",
+         "om":"N",
+         "mac":"N",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Delay Send",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Offline Address Book",
+         "om":"N",
+         "mac":"Y",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Presence Information",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Synchronizes contact groups with Exchange",
+         "om":"N",
+         "mac":"N",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Public Folders",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Themes",
+         "om":"N",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"O365 Groups",
+         "om":"Y",
+         "mac":"Y",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Quick Steps",
+         "om":"N",
+         "mac":"N",
+         "owa":"N",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Mailtips",
+         "om":"Y",
+         "mac":"N",
+         "owa":"Y",
+         "desktop":"Y"
+      },
+      {
+         "feature":"Policy Tips",
+         "om":"N",
+         "mac":"N",
+         "owa":"Y",
          "desktop":"Y"
       }
    ]
