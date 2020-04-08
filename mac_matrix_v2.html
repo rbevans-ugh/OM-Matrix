@@ -132,7 +132,6 @@
 		  varSubscription = cell.getRow().getData().Subscription
 		  varComments = cell.getRow().getData().Comments
 
-		  window.console&&console.log(varSubscription);
 		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#Debut_Build").val(cell.getRow().getData().Debut_Build)
@@ -147,6 +146,7 @@
 		  //subscription isn't right.  Need to look more into it.
 		  $("#subscription").prop('checked',varSubscription)
 		  $("#comments").val(varComments)
+		  window.console&&console.log(varSubscription);
 		} 
 		},
 	//   {formatter:printIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
@@ -217,6 +217,10 @@
 							<label for="comments">Comments:</label>
 							<textarea class="form-control" id="comments" rows="3"></textarea>
 							</div>
+							<div class="form-group">
+									<label for="Debut_Build">Debut Build:</label>
+									<textarea class="form-control" id="Debut_Build" rows="3"></textarea>
+									</div>
 							<div class="row">
 								<div class="col">
 								<input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
