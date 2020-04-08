@@ -12,7 +12,7 @@ function editFeatureMac() {
       var idText9 = document.getElementById("PROD_PCT").value;
       var idText10 = document.getElementById("PROD_Build").value;
       var idText11 = document.getElementById("Debut_Build").value;
-      console.log(idText,idText2);
+      console.log(idText11, Debut_Build);
       var data = { featureName: idText, 
         comments: idText2,
         subscription: idText1,
