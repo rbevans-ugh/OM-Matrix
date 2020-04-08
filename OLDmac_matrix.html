@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
 	<link rel="stylesheet" href="dist/css/semantic-ui/tabulator_semantic-ui.css">
-	<title>Outlook Mobile</title>
+	<title>MAC</title>
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -14,8 +14,8 @@
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
+	
   </head>
-  <script src="dist/js/editmobilefeature.js"></script>
   <body>
 	  <!-- Nav Bar -->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -57,7 +57,7 @@
 	  <div class="jumbotron text-center">
 		  <div class="container">
 			  <img src="dist/om.png" alt="Hey yo" width=10%>
-			  <h1>Outlook Mobile Feature Matrix</h1>
+			  <h1>Outlook Mac Feature Matrix</h1>
 			</div>
 		</div>
 		<div class="container-fluid">
@@ -66,7 +66,7 @@
 			<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
 			<div id="tabulator-example"></div>
 			<!-- Cards -->
-			<div class="container">
+			<!-- <div class="container">
 				<div class="row">
 					<div class="col-sm">
 						<div class="card" style="width: 18rem;">
@@ -96,22 +96,19 @@
 								</div>
 					  </div>
 					</div>
-				  </div>
+				  </div> -->
 		<script type="text/javascript">
 	//define data
 	var data = [ ]
-	// Editing 
-	var editdataIcon = function(cell, formatterParams, onRendered){ //plain text value
-    return "<img class='infoImage' src='dist/editicon.png' width=100%>";
-	};
+
     var table = new Tabulator("#tabulator-example", {
         height:300,
 		//data:data,
 		ajaxConfig:{
 			method: 'GET'
 		},
-		ajaxURL:"https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/omdata.json?st=2020-04-01T17%3A49%3A00Z&se=2021-04-01T13%3A09%3A00Z&sp=rawl&sv=2018-03-28&sr=b&sig=VyZHptCbnJDteO%2FF57t7Oph6%2ByyWKciOssSeuGNg%2BkY%3D ",
-        layout:"fitDataStretch",
+		ajaxURL:"https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/macdata.json?st=2020-04-01T17%3A50%3A34Z&se=2021-04-01T17%3A50%3A00Z&sp=racwl&sv=2018-03-28&sr=b&sig=Y49HQCX6n2NllSiFFxnWDurcdRfWR8YNZMzMTaHgLqI%3D",
+        // layout:"fitDataStretch",
 		// ajaxProgressiveLoad:"scroll",
 		// paginationSize:20,
 		placeholder:"No Data Set",
@@ -125,42 +122,18 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
-		  $('#editModal').modal();
-		  //alert(varFeatureName);
-		  $("#featureName").val(cell.getRow().getData().feature)
-		//   $("#o365").val(cell.getRow().getData().o365)
-        //   $("#outlook").val(cell.getRow().getData().outlook)
-        //   $("#o365gcc").val(cell.getRow().getData().o365gcc)
-        //   $("#gmail").val(cell.getRow().getData().gmail)
-        //   $("#gmailcc").val(cell.getRow().getData().gmailcc)
-        //   $("#imap").val(cell.getRow().getData().imap)
-        //   $("#imapcc").val(cell.getRow().getData().imapcc)
-        //   $("#yahoo").val(cell.getRow().getData().yahoo)
-        //   $("#yahoocc").val(cell.getRow().getData().yahoocc)
-        //   $("#icloud").val(cell.getRow().getData().icloud)
-        //   $("#icloudcc").val(cell.getRow().getData().icloudcc)
-        //   $("#onprem").val(cell.getRow().getData().onprem)
-        //   $("#onpremcc").val(cell.getRow().getData().onpremcc)
-        //   $("#pop3").val(cell.getRow().getData().pop3)
-		  //window.console&&console.log(varSubscription);
-		} 
-		},
-      {title:"Feature", field:"feature", minWidth:80, width:370},
-	  {title:"O365", field:"o365", width:120,align:"center"},
-	  {title:"Outlook.com", field:"outlook", width:120,align:"center"},
-	  {title:"O365 - GCC Mod", field:"o365gcc", width:120,align:"center"},
-	  {title:"Gmail", field:"gmail", width:120,align:"center"},
-	  {title:"Gmail - CC", field:"gmailcc", width:120,align:"center"},
-	  {title:"IMAP", field:"imap", width:120,align:"center"},
-	  {title:"IMAP - CC", field:"imapcc", width:120,align:"center"},
-	  {title:"Yahoo", field:"yahoo", width:120,align:"center"},
-	  {title:"Yahoo - CC", field:"yahoocc", width:120,align:"center"},
-	  {title:"iCloud", field:"icloud", width:120,align:"center"},
-	  {title:"iCloud - CC", field:"icloudcc", width:120,align:"center"},
-	  {title:"On-Prem", field:"onprem", width:120,align:"center"},
-	  {title:"OPCC", field:"onpremcc", width:120,align:"center"},
-	  {title:"POP3", field:"pop3", width:120,align:"center"},
+      {title:"Feature", field:"feature", minWidth:80, width:370}, 
+	  {title:"Debut Build", field:"Debut_Build", width:120,align:"center"},
+	  {title:"Subscription Only", field:"Subscription", width:120,align:"center"},
+	  {title:"DF %", field:"DF_PCT", width:120,align:"center"},
+	  {title:"DF Build", field:"DF_Build", width:120,align:"center"},
+	  {title:"IF %", field:"IF_PCT", width:120,align:"center"},
+	  {title:"IF Build", field:"IF_Build", width:120,align:"center"},
+	  {title:"IS %", field:"IS_PCT", width:120,align:"center"},
+	  {title:"IS Build", field:"IS_Build", width:120,align:"center"},
+	  {title:"PROD %", field:"PROD_PCT", width:120,align:"center"},
+	  {title:"PROD Build", field:"PROD_Build", width:120,align:"center"},
+	  {title:"Comments", field:"Comments", width:300,align:"center", formatter:"textarea"},
 	  ],
 
 	  ajaxResponse:function(url, params, response){
@@ -177,45 +150,5 @@
       table.setFilter( "feature", "like", $(this).val())
 	});
 </script>
-		<!-- Modal -->
-		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-				<div class="vertical-alignment-helper">
-					<div class="modal-dialog vertical-align-center">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4 class="modal-title  text-center">Edit Feature</h4>
-							</div>
-							<div class="modal-body">
-								<form>
-									<label for="featureName">Feature Name:</label>
-									<input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required disabled>
-									<label for="featureName">Account Types:</label>
-									<div class="form-group">
-										<select id="acctlist" class="custom-select" multiple size="10">
-											<option id="o365" value="o365">O365</option>
-											<option id="outlook" value="outlook">Outlook</option>
-											<option id="o365gcc" value="o365gcc">O365 GCC</option>
-											<option id="gmail" value="gmail">Gmail</option>
-											<option id="gmailcc" value="gmailcc">Gmail - CC</option>
-											<option id="imap" value="imap">IMAP</option>
-											<option id="imapcc" value="imapcc">IMAP - CC</option>
-											<option id="yahoo" value="yahoo">Yahoo</option>
-											<option id="yahoocc" value="yahoocc">Yahoo - CC</option>
-											<option id="icloud" value="icloud">iCloud</option>
-											<option id="icloudcc" value="icloudcc">iCloud - CC</option>
-											<option id="opcc" value="OPCC">OPCC</option>
-											<option id="pop3" value="pop3">POP3</option>
-										</select>
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="editFeature()">Submit</button>
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 </body>
 </html>
