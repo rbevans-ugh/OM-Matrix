@@ -14,7 +14,7 @@
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
-	
+	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
   </head>
   <script src="dist/js/editmacfeature.js"></script>
   <body>
@@ -62,10 +62,17 @@
 			</div>
 		</div>
 		<div class="container-fluid">
+				<div class="row">	
+						<div class="col-10">		
+							<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
+						</div>
+						<div class="col-sm">		
+								<button type="button" class="btn btn-primary" id="download-xlsx">Download XLSX</button>
+							</div>
+						</div>
 			<div id="tabulator-controls" class="table-controls">
 				<i class="fa fa-filter fa-fw"></i>
-			<input class="filterbox" name="feature" type="text" placeholder="Filter Table By Feature">
-			<div id="tabulator-example"></div>
+				<div id="tabulator-example"></div>
 			<!-- Cards -->
 			<!-- <div class="container">
 				<div class="row">
@@ -98,7 +105,7 @@
 					  </div>
 					</div>
 				  </div> -->
-		<script type="text/javascript">
+	<script type="text/javascript">
 	//define data
 	var data = [ ]
 	// Editing 
@@ -173,6 +180,10 @@
         return response.data; //pass the data array into Tabulator
     },
 
+	});
+	//trigger download of data.xlsx file
+	document.getElementById("download-xlsx").addEventListener("click", function(){
+	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
 	// Filtering
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
