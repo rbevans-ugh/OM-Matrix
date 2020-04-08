@@ -182,6 +182,11 @@
 
 	});
 
+	//trigger download of data.xlsx file
+	document.getElementById("download-xlsx").addEventListener("click", function(){
+		table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
+	});
+
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val())
 	});
