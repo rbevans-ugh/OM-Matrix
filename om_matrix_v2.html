@@ -127,7 +127,7 @@
 	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
 		  //alert(varFeatureName);
-		  $("#acctlist").val(cell.getRow().getData().feature)
+		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#o365").val(cell.getRow().getData().o365)
           $("#outlook").val(cell.getRow().getData().outlook)
           $("#o365gcc").val(cell.getRow().getData().o365gcc)
