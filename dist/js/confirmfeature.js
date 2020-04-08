@@ -10,6 +10,7 @@ function confirmFeature(){
     var confirm9 = document.getElementById("IS_Build").value;
     var confirm10 = document.getElementById("PROD_PCT").value;
     var confirm11 = document.getElementById("PROD_Build").value;
+    var confirm12 = document.getElementById("Debut_Build").value;
     console.log(confirm4);
     document.getElementById("confirmFeatureName").innerHTML = confirm1;
     document.getElementById("confirmSubscription").innerHTML = confirm2;
@@ -22,4 +23,6 @@ function confirmFeature(){
     document.getElementById("confirmIS_Build").innerHTML = confirm9;
     document.getElementById("confirmPROD_PCT").innerHTML = confirm10;
     document.getElementById("confirmPROD_Build").innerHTML = confirm11;
+    document.getElementById("confirmDebut_Build").innerHTML = confirm12;
+    
   }
