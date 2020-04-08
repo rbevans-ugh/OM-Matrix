@@ -123,10 +123,6 @@
       columns:[
 	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
-		//   varFeatureName = cell.getRow().getData().feature
-		  varSubscription = cell.getRow().getData().Subscription
-		  varComments = cell.getRow().getData().Comments
-
 		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#o365").val(cell.getRow().getData().o365)
