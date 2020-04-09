@@ -187,9 +187,10 @@
 	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
 	// Filtering
-    $("#tabulator-controls input[name=feature]").on("keyup", function(){
-      table.setFilter( "feature", "like", $(this).val())
-	});
+	$("#tabulator-controls input[name=feature], input[name=comments]").on("keyup", function(){
+  	table.setFilter( "feature", "like", $(this).val()),
+  	table.setFilter( "comments", "like", $(this).val())
+});
 </script>
 			<!-- Button trigger modal -->
 		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
