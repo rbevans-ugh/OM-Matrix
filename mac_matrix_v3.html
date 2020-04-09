@@ -187,10 +187,10 @@
 	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
 	// Filtering
-	$("#tabulator-controls").on("keyup", "input[name='feature'], input[name='Debut_Build']", function(){
+	$("#tabulator-controls").on("keyup", "input[name='feature'], input[name='Comments']", function(){
 		table.setFilter([
-			{ field: "feature", type: "like", value: $(this).val() },
-			{ field: "Debut_Build", type: "like", value: $(this).val() }
+			{ field: "Comments", type: "like", value: $(this).val() },
+			{ field: "feature", type: "like", value: $(this).val() }
 		]);
 	});
 </script>
