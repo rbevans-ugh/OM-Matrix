@@ -187,12 +187,12 @@
 	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
 	// Filtering
-	$("#tabulator-controls input[name=feature], input[name=Comments]").on("keyup", function(){
+	$("#tabulator-controls").on("keyup", "input[name='feature'], input[name='Comments']", function(){
 		table.setFilter([
-    { field: "feature", type: "like", value: $(this).val() },
-    { field: "Comments", type: "like", value: $(this).val() }
-  ]);
-});
+			{ field: "feature", type: "like", value: $(this).val() },
+			{ field: "Comments", type: "like", value: $(this).val() }
+		]);
+	});
 </script>
 			<!-- Button trigger modal -->
 		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
