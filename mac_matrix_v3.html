@@ -191,7 +191,7 @@
 	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
 	//filter new outlook
-	$("#newoutlookcheck input[name=comments]").on("keyup", function(){
+	$("#newoutlookcheck input[name=comments]").on("check", function(){
       table.setFilter( "comments", "=", "Gifs")
 	});
 
