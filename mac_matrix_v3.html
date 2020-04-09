@@ -188,7 +188,8 @@
 	});
 	// Filtering
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
-      table.setFilter( "feature", "like", $(this).val())
+	  table.setFilter( "feature", "like", $(this).val()),
+	  table.setFilter( "comments", "like", $(this).val())
 	});
 </script>
 			<!-- Button trigger modal -->
