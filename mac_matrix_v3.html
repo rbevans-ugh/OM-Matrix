@@ -14,7 +14,7 @@
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+	<!-- <script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script> -->
   </head>
   <script src="dist/js/editmacfeature.js"></script>
   <body>
@@ -175,9 +175,9 @@
 
 	});
 	//trigger download of data.xlsx file
-	document.getElementById("download-xlsx").addEventListener("click", function(){
-	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
-	});
+	// document.getElementById("download-xlsx").addEventListener("click", function(){
+	// table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
+	// });
 	// Filtering
     $("#tabulator-controls input[name=feature]").on("keyup", function(){
       table.setFilter( "feature", "like", $(this).val()) 
