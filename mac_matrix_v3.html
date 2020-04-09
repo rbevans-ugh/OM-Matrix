@@ -190,6 +190,11 @@
 	document.getElementById("download-xlsx").addEventListener("click", function(){
 	table.download("xlsx", "data.xlsx", {sheetName:"My Data"});
 	});
+	//filter new outlook
+	$("#newoutlookcheck input[name=comments]").on("keyup", function(){
+      table.setFilter( "comments", "=", "Gifs")
+	});
+
 	// Filtering
 	$("#tabulator-controls").on("keyup", "input[name='feature'], input[name='feature']", function(){
 		table.setFilter([
