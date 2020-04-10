@@ -154,13 +154,12 @@
 		  //subscription isn't right.  Need to look more into it.
 		  console.log("checking:" + varSubscription);
 		  if(varSubscription = 'No'){
-			$("#subscription").prop("checked", varSubscription);
-		  }else{
 			$("#subscription1").prop("checked", varSubscription);
+		  }else{
+			$("#subscription").prop("checked", varSubscription);
 		  }
 		//   $("#subscription").prop("checked", varSubscription);
 		  $("#comments").val(varComments)
-		  window.console&&console.log(varSubscription);
 		} 
 		},
 	//   {formatter:printIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
