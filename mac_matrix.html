@@ -138,6 +138,7 @@
 		  $('#editModal').modal();
 		//   Here is where we get the data to serve confirmfeature.js
 		  varSubscription = cell.getRow().getData().Subscription
+		  varNewoutlook = cell.getRow().getData().newoutlook
 		  varComments = cell.getRow().getData().Comments
 
 		  //alert(varFeatureName);
@@ -151,12 +152,16 @@
 		  $("#IS_Build").val(cell.getRow().getData().IS_Build)
 		  $("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
 		  $("#PROD_Build").val(cell.getRow().getData().PROD_Build)
-		  //subscription isn't right.  Need to look more into it.
 		  console.log("checking: " + varSubscription);
 		  if(varSubscription == 'No'){
 			$("#subscription1").prop("checked", true);
 		  }else{
 			$("#subscription").prop("checked", true);
+		  }
+		  if(varNewoutlook == 'No'){
+			$("#newoutlook1").prop("checked", true);
+		  }else{
+			$("#newoutlook").prop("checked", true);
 		  }
 		//   $("#subscription").prop("checked", varSubscription);
 		  $("#comments").val(varComments)
