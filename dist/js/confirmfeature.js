@@ -15,6 +15,11 @@ function confirmFeature(){
     }else{
       var confirm2 = "No"
     };
+    if (document.getElementById("newoutlook").checked){
+      var confirm13 = "Yes"
+    }else{
+      var confirm13 = "No"
+    };
     console.log(confirm2);
     document.getElementById("confirmFeatureName").innerHTML = confirm1;
     console.log("let's write the subscription button");
@@ -29,5 +34,6 @@ function confirmFeature(){
     document.getElementById("confirmPROD_PCT").innerHTML = confirm10;
     document.getElementById("confirmPROD_Build").innerHTML = confirm11;
     document.getElementById("confirmDebut_Build").innerHTML = confirm12;
+    document.getElementById("confirmNewoutlook").innerHTML = confirm13;
     
   }

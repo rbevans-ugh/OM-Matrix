@@ -17,6 +17,13 @@ function addFeatureMac() {
       var idText1 = "No"
     };
     console.log(idText1);
+    var idText12 = document.getElementById("newoutlook").value;
+    if (document.getElementById("subscription").checked){
+      var idText12 = "Yes"
+    }else{
+      var idText12 = "No"
+    };
+    console.log(idText1);
     //var idText1 = document.getElementById("subscription").innerHTML
     console.log(idText,idText2);
     var data = { featureName: idText, 
@@ -30,7 +37,8 @@ function addFeatureMac() {
       IS_Build: idText8,
       PROD_PCT: idText9,
       PROD_Build: idText10,
-      Debut_Build: idText11,
+      new_outlook: idText12,
+      
     };
     //url is hardcoded from flow. 
     console.log(data);

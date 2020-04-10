@@ -63,19 +63,30 @@
                     <label for="featureName">Feature Name:</label>
                     <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
                   </div>
-                  <label for="subscription">Subscription Feature:</label>
-                  <div class="form-check">
-                      <input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
-                      <label class="form-check-label" for="subscription">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="form-check">
+                  <div class="row">
+                      <div class="col">
+                        <label for="subscription">Subscription Feature:</label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
+                        <label class="form-check-label" for="subscription">Yes</label>
+                      </div>  
+                      <div class="form-check">
                         <input class="form-check-input" type="radio" name="subscription" id="subscription" value="No">
-                        <label class="form-check-label" for="subscription">
-                          No
-                        </label>
+                        <label class="form-check-label" for="subscription">No</label>
                       </div>
+                    </div>
+                    <div class="col">
+                        <label for="subscription">New Outlook:</label>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="New Outlook">
+                        <label class="form-check-label" for="subscription">Yes</label>
+                      </div>  
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="">
+                        <label class="form-check-label" for="newoutlook">No</label>
+                      </div>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label for="comments">Comments:</label>
                     <textarea class="form-control" id="comments" rows="3"></textarea>
@@ -132,6 +143,7 @@
                              <p class="text-center">Are you sure you want to add this feature?</p>
                              <p>Feature Name: </p><p id="confirmFeatureName"></p>
                              <p> Subscription: </p><p id="confirmSubscription"></p>
+                             <p> New Outlook: </p><p id="confirmNewoutlook"></p>
                              <p> Debut Build: </p><p id="confirmDebut_Build"></p>
                              <p>Comments: </p><p id="confirmComments"></p>
                              <p>DF PCT: </p><p id="confirmDF_PCT"></p>
