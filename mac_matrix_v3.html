@@ -161,7 +161,7 @@
 
       {title:"Feature", field:"feature", minWidth:80, width:370}, 
 	  {title:"Debut Build", field:"Debut_Build", width:120,align:"center"},
-	  {title:"Subscription", field:"Subscription", width:140,align:"center", editorParams:{values:{"Yes":"Yes", "No":"No"}}, headerFilter:true, headerFilterParams:{values:{"Yes":"Yes", "No":"No", "":""}}},
+	  {title:"Subscription", field:"Subscription", width:140, align:"center"},
 	  {title:"DF %", field:"DF_PCT", width:120,align:"center"},
 	  {title:"DF Build", field:"DF_Build", width:120,align:"center"},
 	  {title:"IF %", field:"IF_PCT", width:120,align:"center"},
@@ -171,6 +171,7 @@
 	  {title:"PROD %", field:"PROD_PCT", width:120,align:"center"},
 	  {title:"PROD Build", field:"PROD_Build", width:120,align:"center"},
 	  {title:"Comments", field:"Comments", width:300,align:"center", formatter:"textarea"},
+	  {title:"New Outlook", field:"new_outlook", width:300,align:"center", editorParams:{values:{"New Outlook":"New Outlook", "No":"No"}}, headerFilter:true, headerFilterParams:{values:{"New Outlook":"New Outlook", "No":"No", "":""}}},
 	  ],
 
 	  ajaxResponse:function(url, params, response){
