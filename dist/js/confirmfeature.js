@@ -15,7 +15,7 @@ function confirmFeature(){
     }else{
       var confirm2 = "No"
     };
-    console.log(confirm4);
+    console.log(confirm2);
     document.getElementById("confirmFeatureName").innerHTML = confirm1;
     document.getElementById("confirmSubscription").innerHTML = confirm2;
     document.getElementById("confirmComments").innerHTML = confirm3;
