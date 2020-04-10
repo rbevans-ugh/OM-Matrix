@@ -154,7 +154,7 @@
 		  //subscription isn't right.  Need to look more into it.
 		  console.log(varSubscription);
 		  if(varSubscription = 'No'){
-			$("#subscription").val("checked", 'No');
+			$("#subscription").prop("checked", varSubscription);
 		  }else{
 			$("#subscription").prop("checked", varSubscription);
 		  }
