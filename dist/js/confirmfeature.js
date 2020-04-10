@@ -1,6 +1,5 @@
 function confirmFeature(){
     var confirm1 = document.getElementById("featureName").value;
-    var confirm2 = document.getElementById("subscription").value;
     var confirm3 = document.getElementById("comments").value;
     var confirm4 = document.getElementById("DF_PCT").value;
     var confirm5 = document.getElementById("DF_Build").value;
@@ -11,6 +10,11 @@ function confirmFeature(){
     var confirm10 = document.getElementById("PROD_PCT").value;
     var confirm11 = document.getElementById("PROD_Build").value;
     var confirm12 = document.getElementById("Debut_Build").value;
+    if (document.getElementById("subscription").checked){
+      var confirm2 = "Yes"
+    }else{
+      var confirm2 = "No"
+    };
     console.log(confirm4);
     document.getElementById("confirmFeatureName").innerHTML = confirm1;
     document.getElementById("confirmSubscription").innerHTML = confirm2;
