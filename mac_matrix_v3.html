@@ -193,12 +193,15 @@
 	});
 
 	// Filtering
-	$("#tabulator-controls").on("keyup", "input[name='feature'], input[name='feature']", function(){
-		table.setFilter([
-			{ field: "feature", type: "like", value: $(this).val() },
-			{ field: "Comments", type: "like", value: $(this).val() }
-		]);
+	$("#tabulator-controls input[name=feature]").on("keyup", function(){
+	table.setFilter( "feature", "like", $(this).val())
 	});
+	// $("#tabulator-controls").on("keyup", "input[name='feature'], input[name='feature']", function(){
+	// 	table.setFilter([
+	// 		{ field: "feature", type: "like", value: $(this).val() },
+	// 		{ field: "Comments", type: "like", value: $(this).val() }
+	// 	]);
+	// });
 </script>
 			<!-- Button trigger modal -->
 		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
