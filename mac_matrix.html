@@ -153,7 +153,7 @@
 		  $("#PROD_Build").val(cell.getRow().getData().PROD_Build)
 		  //subscription isn't right.  Need to look more into it.
 		  console.log("checking:" + varSubscription);
-		  if(varSubscription == 'No'){
+		  if(varSubscription === 'No'){
 			$("#subscription1").prop("checked", varSubscription);
 		  }else{
 			$("#subscription").prop("checked", varSubscription);
