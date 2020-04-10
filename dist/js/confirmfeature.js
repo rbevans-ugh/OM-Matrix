@@ -17,6 +17,7 @@ function confirmFeature(){
     };
     console.log(confirm2);
     document.getElementById("confirmFeatureName").innerHTML = confirm1;
+    console.log("let's write the subscription button");
     document.getElementById("confirmSubscription").innerHTML = confirm2;
     document.getElementById("confirmComments").innerHTML = confirm3;
     document.getElementById("confirmDF_PCT").innerHTML = confirm4;
