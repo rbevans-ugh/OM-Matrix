@@ -152,7 +152,7 @@
 		  $("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
 		  $("#PROD_Build").val(cell.getRow().getData().PROD_Build)
 		  //subscription isn't right.  Need to look more into it.
-		  console.log("checking:" + varSubscription);
+		  console.log("checking: " + varSubscription);
 		  if(varSubscription == 'No'){
 			$("#subscription1").prop("checked", true);
 		  }else{
@@ -225,7 +225,7 @@
 								</label>
 							</div>
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name="subscription1" id="subscription1" value="No">
+								<input class="form-check-input" type="radio" name="subscription" id="subscription1" value="No">
 								<label class="form-check-label" for="subscription1">
 									No
 								</label>
