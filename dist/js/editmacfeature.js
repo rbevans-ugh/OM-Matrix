@@ -1,7 +1,6 @@
 function editFeatureMac() {
     console.log("hi");
       var idText = document.getElementById("featureName").value;
-      var idText1 = document.getElementById("subscription").value;
       var idText2= document.getElementById("comments").value;
       var idText3 = document.getElementById("DF_PCT").value;
       var idText4 = document.getElementById("DF_Build").value;
@@ -12,6 +11,11 @@ function editFeatureMac() {
       var idText9 = document.getElementById("PROD_PCT").value;
       var idText10 = document.getElementById("PROD_Build").value;
       var idText11 = document.getElementById("Debut_Build").value;
+      if (document.getElementById("subscription").checked){
+        var idText1 = "Yes"
+      }else{
+        var idText1 = "No"
+      };
       var data = { featureName: idText, 
         comments: idText2,
         subscription: idText1,
