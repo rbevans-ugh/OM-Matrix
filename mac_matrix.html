@@ -136,7 +136,7 @@
       columns:[
 	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
-		//   varFeatureName = cell.getRow().getData().feature
+		//   Here is where we get the data to serve confirmfeature.js
 		  varSubscription = cell.getRow().getData().Subscription
 		  varComments = cell.getRow().getData().Comments
 
@@ -152,7 +152,7 @@
 		  $("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
 		  $("#PROD_Build").val(cell.getRow().getData().PROD_Build)
 		  //subscription isn't right.  Need to look more into it.
-		  $("#subscription").prop('checked',varSubscription)
+		//   $("#subscription").prop('checked',varSubscription)
 		  $("#comments").val(varComments)
 		  window.console&&console.log(varSubscription);
 		} 
