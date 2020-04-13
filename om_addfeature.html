@@ -12,8 +12,8 @@
     <title>Add Feature!</title>
   </head>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="dist/js/addmobilefeature.js"></script>
   <script src="dist/js/confirmmobilefeature.js"></script>
+  <script type="text/javascript">
   </script>
   <body>
     <!-- Nav Bar -->
@@ -62,7 +62,21 @@
           <div class="container-fluid">
               <form id="addfeatureform">
                   <div class="form-group">
-                    <label for="featureName">Feature Name:</label>
+                    <!-- Successful add -->
+                      <div class="alert alert-primary alert-dismissible fade show" role="alert" id="successBlock" style="display: none">
+                          Feature Added!
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <!-- Feature wasn't added -->
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failBlock" style="display: none">
+                        Feature failed to be added.  Contact support.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    <label for="featureName" id="test">Feature Name:</label>
                     <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
                   </div>
                   <label for="featureName">Account Types:</label>
@@ -90,7 +104,7 @@
                      <div class="modal-dialog vertical-align-center">
                          <div class="modal-content">
                              <div class="modal-header"> 
-                                 <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
+                                 <h4 class="modal-title text-center">Add to Feature Matrix</h4>
                              </div>
                              <div class="modal-body">
                                <p class="text-center">Are you sure you want to add this feature?</p>
@@ -107,12 +121,25 @@
                  </div>
              </div>
             <script>
-                $('#submit_id').on('click',function(){
-                     $('#submit-confirm').modal('show');
-                    });
+            $('#submit_id').on('click',function(){
+              $('#submit-confirm').modal('show');
+            });
             </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="dist/js/addmobilefeature.js"></script>
+    <script>
+    function showConfirm(show) {
+    var success = document.getElementById("successBlock");
+    success.style.display = show;
+    };
+    </script>
+    <script>
+    function showFail(show) {
+    var fail = document.getElementById("failBlock");
+    fail.style.display = show;
+    };
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
