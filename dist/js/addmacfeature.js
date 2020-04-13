@@ -51,9 +51,20 @@ function addFeatureMac() {
       },
       body: JSON.stringify(data)
     })
-      // .then(function(response) {
-      //   return response.json();
-      // })
-      console.log("got the response from Flow");
+    .then(function(response) {
+      var flowStatus = response.status;
+      console.log(response.status);
+      console.log("the flowstatus is " + flowStatus);
+      // return response.status();
+      console.log(flowStatus);
+      if (flowStatus == 200){
+        console.log("we should be here yo "+ flowStatus);
+        showConfirm("block");
+      }
+      else {
+        console.log("ruh roh "+ flowStatus);
+        showFail("block");
+      }
+    });
       document.getElementById("addfeatureform").reset();
   }
