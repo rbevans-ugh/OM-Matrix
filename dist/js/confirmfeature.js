@@ -1,4 +1,6 @@
 function confirmFeature(){
+  showConfirm("none");
+  showFail("none");
     var confirm1 = document.getElementById("featureName").value;
     var confirm3 = document.getElementById("comments").value;
     var confirm4 = document.getElementById("DF_PCT").value;

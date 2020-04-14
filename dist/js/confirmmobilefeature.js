@@ -1,4 +1,6 @@
 function confirmFeature(){
+  showConfirm("none");
+  showFail("none");
   var confirm0 = document.getElementById("featureName").value;
   // console.log(confirm0.options[confirm0.selectedIndex].value);
   var select1 = document.getElementById("acctlist");
