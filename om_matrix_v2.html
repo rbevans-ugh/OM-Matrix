@@ -101,13 +101,18 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
+	//   {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
+	// 	  $('#editModal').modal();
+	// 	  //alert(varFeatureName);
+	// 	  $("#featureName").val(cell.getRow().getData().feature)
+	// 	} 
+	// 	},
+	  {title:"Feature", field:"feature", minWidth:80, width:370, cellClick:function(e, cell){
 		  $('#editModal').modal();
 		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		} 
 		},
-	  {title:"Feature", field:"feature", minWidth:80, width:370},
 	  {title:"ID", field:"id", minWidth:80, width:120, formatter:"link", formatterParams:{
 		  labelField:"id",
 		  urlPrefix:"https://office.visualstudio.com/Outlook%20Mobile/_workitems/edit/",
