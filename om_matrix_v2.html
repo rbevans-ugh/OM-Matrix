@@ -126,8 +126,16 @@
 			symbolAfter:"p",
 			precision:false,
 		}},
-	  {title:"DF %", field:"DF", width:120,align:"center"},
-	  {title:"PROD %", field:"PROD", width:120,align:"center"},
+	  {title:"DF %", field:"DF", width:120,align:"center", formatter:"money", formatterParams:{
+			symbol:"%",
+			symbolAfter:"p",
+			precision:false,
+		}},
+	  {title:"PROD %", field:"PROD", width:120,align:"center", formatter:"money", formatterParams:{
+			symbol:"%",
+			symbolAfter:"p",
+			precision:false,
+		}},
 	  {title:"Dashboard", field:"dashboard", width:120,align:"center"},
 	  {title:"Figma", field:"figma", width:120,align:"center"},
 	  ],
