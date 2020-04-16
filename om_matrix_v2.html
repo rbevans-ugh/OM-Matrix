@@ -121,7 +121,9 @@
 		  target:"_blank",
 		}},
 	  {title:"Status", field:"status", width:120,align:"center"},
-	  {title:"DEV %", field:"DEV", width:120,align:"center"},
+	  {title:"DEV %", field:"DEV", width:120,align:"center", formatter:"money", formatterParams:{
+			symbol:"%"
+		}}
 	  {title:"DF %", field:"DF", width:120,align:"center"},
 	  {title:"PROD %", field:"PROD", width:120,align:"center"},
 	  {title:"Dashboard", field:"dashboard", width:120,align:"center"},
