@@ -111,6 +111,8 @@
 		  $('#editModal').modal();
 		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
+		  $("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+		  $("#PM").val(cell.getRow().getData().PM)
 		} 
 		},
 	  {title:"ID", field:"id", minWidth:80, width:120, formatter:"link", formatterParams:{
