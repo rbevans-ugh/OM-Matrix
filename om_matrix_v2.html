@@ -78,7 +78,8 @@
 	var data = [ ]
 	// Editing 
 	var editdataIcon = function(cell, formatterParams, onRendered){ //plain text value
-    return "<img class='infoImage' src='dist/editicon.png' width=100%>";
+    return "<i class='fas fa-ellipsis-v'></i>";
+// "<img class='infoImage' src='dist/editicon.png' width=100%>";
 	};
     var table = new Tabulator("#tabulator-example", {
         height:450,
@@ -101,12 +102,12 @@
          {column:"feature", dir:"asc"},,
       ],
       columns:[
-	//   {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
-	// 	  $('#editModal').modal();
-	// 	  //alert(varFeatureName);
-	// 	  $("#featureName").val(cell.getRow().getData().feature)
-	// 	} 
-	// 	},
+	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
+		  $('#editModal').modal();
+		  //alert(varFeatureName);
+		  $("#featureName").val(cell.getRow().getData().feature)
+		} 
+		},
 	  {title:"Feature", field:"feature", minWidth:80, width:370, cellClick:function(e, cell){
 		  $('#editModal').modal();
 		  //alert(varFeatureName);
