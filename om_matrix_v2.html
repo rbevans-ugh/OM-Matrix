@@ -113,6 +113,7 @@
 		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#DEVOwner").val(cell.getRow().getData().DEVOwner)
 		  $("#PM").val(cell.getRow().getData().PM)
+		  $("#change_date").val(cell.getRow().getData().change_date)
 		} 
 		},
 	  {title:"ID", field:"id", minWidth:80, width:120, formatter:"link", formatterParams:{
@@ -176,6 +177,8 @@
 										<input type="text" class="form-control" id="PM" placeholder="Womp womp no PM owner" required disabled>
 										<label for="DEVOwner">DEV Owner:</label>
 										<input type="text" class="form-control" id="DEVOwner" placeholder="Womp womp no DEV owner" required disabled>
+										<label for="change_date">Last Updated:</label>
+										<input type="text" class="form-control" id="change_date" placeholder="Womp womp no DEV owner" required disabled>
 									</div>
 								</form>
 							</div>
