@@ -137,7 +137,12 @@
 			symbolAfter:"p",
 			precision:false,
 		}},
-	  {title:"Dashboards", field:"dashboards", width:120,align:"center", formatter:"link"},
+	  {title:"Dashboards", field:"dashboards", width:120,align:"center", cellClick:function(e, cell){
+		  $('#editModal').modal();
+		  //alert(varFeatureName);
+		  $("#featureName").val(cell.getRow().getData().feature)
+		} 
+		},
 	  {title:"Figma", field:"figma", width:120,align:"center"},
 	  ],
 
@@ -179,6 +184,8 @@
 										<input type="text" class="form-control" id="DEVOwner" placeholder="Womp womp no DEV owner" required disabled>
 										<label for="change_date">Last Updated:</label>
 										<input type="text" class="form-control" id="change_date" placeholder="Womp womp no DEV owner" required disabled>
+										<label for="dashboards">Dashboards:</label>
+										<input type="text" class="form-control" id="dashboards" placeholder="Womp womp no dashboard" required disabled>
 									</div>
 								</form>
 							</div>
