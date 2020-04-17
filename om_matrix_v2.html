@@ -103,13 +103,11 @@
       columns:[
 	  {formatter:editdataIcon, width:40, hozAlign:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
-		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		} 
 		},
 	  {title:"Feature", field:"feature", minWidth:80, width:370, cellClick:function(e, cell){
 		  $('#editModal').modal();
-		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#DEVOwner").val(cell.getRow().getData().DEVOwner)
 		  $("#PM").val(cell.getRow().getData().PM)
@@ -139,7 +137,6 @@
 		}},
 	  {title:"Dashboards", field:"dashboards", width:120,align:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
-		  //alert(varFeatureName);
 		  $("#featureName").val(cell.getRow().getData().feature)
 		} 
 		},
@@ -177,7 +174,7 @@
 								<form>
 									<label for="featureName">Feature Name:</label>
 									<p id="featureName"></p>
-									<input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required disabled>
+									<!-- <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required disabled> -->
 									<div class="form-group">
 										<label for="PM">PM Owner:</label>
 										<input type="text" class="form-control" id="PM" placeholder="Womp womp no PM owner" required disabled>
