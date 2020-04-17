@@ -142,7 +142,12 @@
 		}},
 	  {title:"Dashboards", field:"dashboards", width:120,align:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
+		  $("#featureName").val(cell.getRow().getData().feature)
+		  $("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+		  $("#PM").val(cell.getRow().getData().PM)
+		  $("#change_date").val(cell.getRow().getData().change_date)
 		  $("#dashboards").val(cell.getRow().getData().dashboards)
+		} 
 		} 
 		},
 	  {title:"Figma", field:"figma", width:120,align:"center"},
