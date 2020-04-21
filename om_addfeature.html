@@ -79,22 +79,75 @@
                     <label for="featureName" id="test">Feature Name:</label>
                     <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
                   </div>
-                  <label for="featureName">Account Types:</label>
-                  <select id="acctlist" class="custom-select" multiple size="10">
-                      <option id="o365" value="o365"> O365</option>
-                      <option id="outlook" value="outlook"> Outlook</option>
-                      <option id="o365gcc" value="o365gcc"> O365 GCC</option>
-                      <option id="gmail" value="gmail"> Gmail</option>
-                      <option id="gmailcc" value="gmailcc"> Gmail - CC</option>
-                      <option id="imap" value="imap"> IMAP</option>
-                      <option id="imapcc" value="imapcc"> IMAP - CC</option>
-                      <option id="yahoo" value="yahoo"> Yahoo </option>
-                      <option id="yahoocc" value="yahoocc"> Yahoo - CC</option>
-                      <option id="icloud" value="icloud"> iCloud</option>
-                      <option id="icloudcc" value="icloudcc"> iCloud - CC</option>
-                      <option id="opcc" value="OPCC"> OPCC</option>
-                      <option id="pop3" value="pop3"> POP3</option>                                  
-                    </select>
+                    <div class="form-group row">
+                        <div class="col-sm-1">Account Types:</div>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="o365" value="option1">
+                                  <label class="form-check-label" for="o365">O365</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="o365gcc" value="option2">
+                                  <label class="form-check-label" for="o365gcc">O365 GCC</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="outlook" value="option3">
+                                  <label class="form-check-label" for="outlook">Outlook</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="gmail" value="option4">
+                                    <label class="form-check-label" for="gmail">Gmail</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" id="gmailcc" value="option5">
+                                      <label class="form-check-label" for="gmailcc">Gmail Cloud Cache</label>
+                                </div>
+                          </div>
+                          <div class="form-check">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="imap" value="option6">
+                                  <label class="form-check-label" for="imap">IMAP</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="imapcc" value="option7">
+                                  <label class="form-check-label" for="imapcc">IMAP CC</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="yahoo" value="option8">
+                                  <label class="form-check-label" for="yahoo">Yahoo</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="yahoocc" value="option9">
+                                    <label class="form-check-label" for="yahoocc">Yahoo Cloud Cache</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" id="icloud" value="option10">
+                                      <label class="form-check-label" for="icloud">iCloud</label>
+                                </div>
+                          </div>
+                          <div class="form-check">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="icloudcc" value="option11">
+                                  <label class="form-check-label" for="icloudcc">iCloud CC</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="opcc" value="option12">
+                                  <label class="form-check-label" for="opcc">OPCC</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="pop3" value="option13">
+                                  <label class="form-check-label" for="pop3">POP3</label>
+                                </div>
+                          </div>
+                          <div class="form-check">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="selectall" value="option14">
+                                  <label class="form-check-label" for="selectall" onclick="eventCheckBox()">Select All</label>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
                       <br></br>
                   <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">Submit Feature</submit>
           </div>
@@ -120,8 +173,8 @@
                      </div>
                  </div>
              </div>
+             <!-- JQuery to show alert banner -->
             <script>
-              // JQuery to show alert banner
             $('#submit_id').on('click',function(){
               $('#submit-confirm').modal('show');
             });
@@ -140,6 +193,13 @@
     var fail = document.getElementById("failBlock");
     fail.style.display = show;
     };
+
+    function eventCheckBox() {
+  let checkboxs = document.getElementsByTagName("input");
+  for(let i = 1; i < checkboxs.length ; i++) {
+    checkboxs[i].checked = !checkboxs[i].checked;
+  }
+}
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
