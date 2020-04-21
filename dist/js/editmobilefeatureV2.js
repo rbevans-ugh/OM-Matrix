@@ -20,5 +20,4 @@ function editFeature() {
       //   return response();
       // });
       console.log("got the response from Flow");
-      document.getElementById("addfeatureform").reset();
   }
