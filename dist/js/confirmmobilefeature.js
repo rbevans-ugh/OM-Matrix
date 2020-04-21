@@ -14,7 +14,7 @@ function confirmFeature(){
 console.log(selected1);
     console.log(confirm0);
   document.getElementById("confirmFeatureName").innerHTML = confirm0;
-  document.getElementById("confirmPM").innerHTML = confirm1;
-  document.getElementById("confirmDEVOwner").innerHTML = confirm2;
+  // document.getElementById("confirmPM").innerHTML = confirm1;
+  // document.getElementById("confirmDEVOwner").innerHTML = confirm2;
   document.getElementById("confirmaccttype").innerHTML = selected1;
   }
