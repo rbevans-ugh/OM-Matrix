@@ -3,8 +3,8 @@ function confirmFeature(){
   showFail("none");
   var confirm0 = document.getElementById("featureName").value;
   // This is for matrix v2
-  var confirm1 = document.getElementById("PM").value;
-  var confirm2 = document.getElementById("DEVOwner").value;
+  // var confirm1 = document.getElementById("PM").value;
+  // var confirm2 = document.getElementById("DEVOwner").value;
   // console.log(confirm0.options[confirm0.selectedIndex].value);
   var select1 = document.getElementById("acctlist");
   var selected1 = []
