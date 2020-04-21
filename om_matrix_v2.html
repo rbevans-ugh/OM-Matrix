@@ -17,7 +17,7 @@
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
   </head>
-  <script src="dist/js/editmobilefeature.js"></script>
+  <script src="dist/js/editmobilefeatureV2.js"></script>
   <body>
 	  <!-- Nav Bar -->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -142,7 +142,7 @@
 			symbolAfter:"p",
 			precision:false,
 		}},
-	  {title:"Dashboards", field:"dashboards", width:120,align:"center", cellClick:function(e, cell){
+	  {title:"Dashboards", field:"dashboards", width:350,align:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
 		  $("#featureName").val(cell.getRow().getData().feature)
 		  $("#DEVOwner").val(cell.getRow().getData().DEVOwner)
@@ -196,12 +196,13 @@
 										<label class="font-weight-bold" for="change_date">Last Updated:</label>
 										<input type="text" readonly class="form-control-plaintext" id="change_date" placeholder="Womp womp no DEV owner 🔎" disabled>
 										<label class="font-weight-bold" for="dashboards">Dashboards:</label>
-										<textarea readonly class="form-control" id="dashboards" placeholder="Womp womp no dashboard 🔎" rows= "6" disabled></textarea>
+										<textarea readonly class="form-control" id="dashboards" placeholder="Womp womp no dashboard 🔎" rows= "6"></textarea>
 									</div>
 								</form>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>		
+								<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="editFeature()">Submit</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 							</div>
 						</div>
 					</div>
