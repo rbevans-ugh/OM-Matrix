@@ -144,6 +144,11 @@
 			symbolAfter:"p",
 			precision:false,
 		}},
+		{title:"github", field:"github", minWidth:80, width:120, formatter:"link", formatterParams:{
+		  labelField:"github",
+		  urlPrefix:"https://ghe-us.microsoft.com/outlook-mobile/product/issues/",
+		  target:"_blank",
+		}},
 	  {title:"Dashboards", field:"dashboards", width:350,align:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
 		  $("#id").val(cell.getRow().getData().id)
