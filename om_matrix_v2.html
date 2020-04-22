@@ -144,10 +144,10 @@
 			symbolAfter:"p",
 			precision:false,
 		}},
-		{title:"github", field:"github", minWidth:80, width:200, formatter:"placeHolder", formatterParams:{
+		{title:"github", field:"github", minWidth:80, width:200, formatter:"link", formatterParams:{
 		  //labelField:"github",
 		  target:"_blank",
-		  label:"github"
+		//   label:"github"
 		}},
 	  {title:"Dashboards", field:"dashboards", width:350,align:"center", cellClick:function(e, cell){
 		  $('#editModal').modal();
@@ -181,16 +181,6 @@
 		document.getElementById("download-xlsx").addEventListener("click", function(){
 		table.download("xlsx", "om_data.xlsx", {sheetName:"My Data"});
 	});
-
-	var placeHolder = function(cell, formatterParams) {
-    var cellValue = cell.getValue();
-    if (cellValue === "") {
-      return "Your Placeholder Text..."
-    } else {
-      return cellValue
-    }
-  };
-  
 </script>
 		<!-- Modal -->
 		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true" data-toggle="modal">
