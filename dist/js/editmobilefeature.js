@@ -1,21 +1,14 @@
 function editFeature() {
     console.log("hi");
     var confirm0 = document.getElementById("featureName").value;
-    var select1 = document.getElementById("acctlist");
-    console.log(select1);
-    var selected1 = []
+    var checkboxes = document.getElementsByName('chkbox')
+    var accts = []
     var object = {}
-//     for (var i = 0; i < select1.length; i++) {
-//       if (select1.options[i].selected) 
-//       selected1.push(select1.options[i].value);
-//   }
-for (var i = 0; i < select1.length; i++) {
-    if (select1.options[i].selected)
-    object[select1.options[i].value] = selected1.push(select1.options[i].value);
-    console.log(selected1[i]);
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked == true)
+      object[checkboxes[i].id] = accts.push(checkboxes[i].id);
   }
   //var object = Object.assign({}, select1);
-  console.log(selected1);
     var data = { featureName: confirm0, selectedAccts: object};
     //url is hardcoded from flow. 
     console.log(data);
