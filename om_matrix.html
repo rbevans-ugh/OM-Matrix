@@ -282,5 +282,13 @@
 					</div>
 				</div>
 			</div>
+			<script>
+			function eventCheckBox() {
+				let checkboxs = document.getElementsByTagName("input");
+				for(let i = 1; i < checkboxs.length ; i++) {
+				  checkboxs[i].checked = !checkboxs[i].checked;
+				}
+			  }
+			  </script>
 </body>
 </html>
