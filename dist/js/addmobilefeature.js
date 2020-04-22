@@ -6,7 +6,7 @@ function addFeature(flowStatus) {
     var object = {}
     for (var i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked == true)
-      object[checkboxes[i].value] = accts.push(checkboxes[i].value);
+      object[checkboxes[i].id] = accts.push(checkboxes[i].id);
   }
   //var object = Object.assign({}, select1);
   var data = { featureName: confirm0, selectedAccts: object};
