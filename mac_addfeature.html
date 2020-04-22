@@ -1,152 +1,160 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link rel="shortcut icon" type="image/png" href="dist/favicon.ico"/>
-    <!-- Required meta tags -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
+<head>
+  <link rel="shortcut icon" type="image/png" href="dist/favicon.ico" />
+  <!-- Required meta tags -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Add Feature!</title>
-  </head>
-  <script src="dist/js/confirmfeature.js"></script>
-  <script src="dist/js/addmacfeature.js"></script>
-  <body>
-    	  <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Client
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
-                <a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
-                <a class="dropdown-item" href="#">Outlook Web</a>
-                <a class="dropdown-item" href="#">Outlook Desktop</a>
-                </div>	
-              </li>
-            </ul>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Add Mac Feature
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
-                  <a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
-                  <a class="dropdown-item" href="#">Outlook Web</a>
-                  <a class="dropdown-item" href="#">Outlook Desktop</a>
-                  </div>	
-                </li>
-              </ul>
-              </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
+
+  <title>Add Feature!</title>
+</head>
+<script src="dist/js/confirmfeature.js"></script>
+<script src="dist/js/addmacfeature.js"></script>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Client
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
+            <a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
+            <a class="dropdown-item" href="#">Outlook Web</a>
+            <a class="dropdown-item" href="#">Outlook Desktop</a>
+          </div>
+        </li>
+      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Add Mac Feature
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
+              <a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
+              <a class="dropdown-item" href="#">Outlook Web</a>
+              <a class="dropdown-item" href="#">Outlook Desktop</a>
             </div>
-        </nav>
-		  <div class="jumbotron text-center">
-          <div class="container">
-            <img src="dist/om.png" alt="Hey yo" width=10%>
-            <h1>Add Feature</h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <img src="dist/om.png" alt="Hey yo" width=10%>
+      <h1>Add Feature</h1>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <form id="addfeatureform">
+      <div class="form-group">
+        <!-- Successful add -->
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" id="successBlock"
+          style="display: none">
+          Feature Added! Be sure to refresh the feature matrix.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Feature wasn't added -->
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failBlock" style="display: none">
+          Feature failed to be added. Contact support.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <label for="featureName">Feature Name:</label>
+        <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="subscription">Subscription Feature:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
+            <label class="form-check-label" for="subscription">Yes</label>
           </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="subscription" id="subscription" value="No">
+            <label class="form-check-label" for="subscription">No</label>
           </div>
-          <div class="container-fluid">
-              <form id="addfeatureform">
-                  <div class="form-group">
-                    <!-- Successful add -->
-                    <div class="alert alert-primary alert-dismissible fade show" role="alert" id="successBlock" style="display: none">
-                        Feature Added!  Be sure to refresh the feature matrix.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <!-- Feature wasn't added -->
-                      <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failBlock" style="display: none">
-                      Feature failed to be added.  Contact support.
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <label for="featureName">Feature Name:</label>
-                    <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
-                  </div>
-                  <div class="row">
-                      <div class="col">
-                        <label for="subscription">Subscription Feature:</label>
-                        <div class="form-check">
-                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="Yes">
-                        <label class="form-check-label" for="subscription">Yes</label>
-                      </div>  
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="subscription" id="subscription" value="No">
-                        <label class="form-check-label" for="subscription">No</label>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <label for="newoutlook">New Outlook:</label>
-                        <div class="form-check">
-                        <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="New Outlook">
-                        <label class="form-check-label" for="newoutlook">Yes</label>
-                      </div>  
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="">
-                        <label class="form-check-label" for="newoutlook">No</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="comments">Comments:</label>
-                    <textarea class="form-control" id="comments" rows="3"></textarea>
-                  </div>
-                  <div class="form-group">
-                      <label for="Debut_Build">Debut Build:</label>
-                      <input class="form-control" id="Debut_Build" rows="3"></input>
-                      </div>
-                  <div class="row">
-                      <div class="col">
-                        <label for="df">DF %:</label>
-                        <input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
-                      </div>
-                      <div class="col">
-                        <label for="df">DF Build:</label>
-                        <input type="text" id="DF_Build"  class="form-control" placeholder="DF Build">
-                      </div>
-                      <div class="col">
-                          <label for="if">IF %:</label>
-                          <input type="text" id="IF_PCT"  class="form-control" placeholder="IF %">
-                        </div>
-                        <div class="col">
-                          <label for="if">IF Build:</label>
-                          <input type="text" id="IF_Build"  class="form-control" placeholder="IF Build">
-                        </div>
-                  </div>
-                  <div class="row">
-                      <div class="col">
-                        <label for="is">IS %:</label>
-                        <input type="text" id="IS_PCT"  class="form-control" placeholder="IS %">
-                      </div>
-                      <div class="col">
-                        <label for="is">IS Build:</label>
-                        <input type="text" id="IS_Build"  class="form-control" placeholder="IS Build">
-                      </div>
-                      <div class="col">
-                          <label for="prod">PROD %:</label>
-                          <input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD %">
-                        </div>
-                        <div class="col">
-                          <label for="prod">PROD Build:</label>
-                          <input type="text" id="PROD_Build"  class="form-control" placeholder="PROD Build">
-                        </div>
-                  </div>
-                  <!-- <div class="row">
+        </div>
+        <div class="col">
+          <label for="newoutlook">New Outlook:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="New Outlook">
+            <label class="form-check-label" for="newoutlook">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="newoutlook" id="newoutlook" value="">
+            <label class="form-check-label" for="newoutlook">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments:</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="Debut_Build">Debut Build:</label>
+        <input class="form-control" id="Debut_Build" rows="3"></input>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="df">DF %:</label>
+          <input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
+        </div>
+        <div class="col">
+          <label for="df">DF Build:</label>
+          <input type="text" id="DF_Build" class="form-control" placeholder="DF Build">
+        </div>
+        <div class="col">
+          <label for="if">IF %:</label>
+          <input type="text" id="IF_PCT" class="form-control" placeholder="IF %">
+        </div>
+        <div class="col">
+          <label for="if">IF Build:</label>
+          <input type="text" id="IF_Build" class="form-control" placeholder="IF Build">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="is">IS %:</label>
+          <input type="text" id="IS_PCT" class="form-control" placeholder="IS %">
+        </div>
+        <div class="col">
+          <label for="is">IS Build:</label>
+          <input type="text" id="IS_Build" class="form-control" placeholder="IS Build">
+        </div>
+        <div class="col">
+          <label for="prod">PROD %:</label>
+          <input type="text" id="PROD_PCT" class="form-control" placeholder="PROD %">
+        </div>
+        <div class="col">
+          <label for="prod">PROD Build:</label>
+          <input type="text" id="PROD_Build" class="form-control" placeholder="PROD Build">
+        </div>
+      </div>
+      <!-- <div class="row">
                       <div class="col">
                         <input type="text" id="PROD_PCT"  class="form-control" placeholder="PROD %">
                       </div>
@@ -154,63 +162,83 @@
                         <input type="text" id="PROD_Build"  class="form-control" placeholder="PROD Build">
                       </div>
                   </div> -->
-                  <br>
-                  <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">Submit Feature</submit>
-                </form>
+      <br>
+      <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">
+        Submit Feature</submit>
+    </form>
+  </div>
+  <!-- Confirmation Modal for submitting -->
+  <div id="submit-confirm" class="modal" data-backdrop="static" data-keyboard="false">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
           </div>
-          <!-- Confirmation Modal for submitting -->
-          <div id="submit-confirm" class="modal"  data-backdrop="static" data-keyboard="false">
-              <div class="vertical-alignment-helper">
-                   <div class="modal-dialog vertical-align-center">
-                       <div class="modal-content">
-                           <div class="modal-header"> 
-                               <h4 class="modal-title  text-center">Add to Feature Matrix</h4>
-                           </div>
-                           <div class="modal-body">
-                             <p class="text-center">Are you sure you want to add this feature?</p>
-                             <p>Feature Name: </p><p id="confirmFeatureName"></p>
-                             <p> Subscription: </p><p id="confirmSubscription"></p>
-                             <p> New Outlook: </p><p id="confirmNewoutlook"></p>
-                             <p> Debut Build: </p><p id="confirmDebut_Build"></p>
-                             <p>Comments: </p><p id="confirmComments"></p>
-                             <p>DF PCT: </p><p id="confirmDF_PCT"></p>
-                             <p>DF Build: </p><p id="confirmDF_Build"></p>
-                             <p>IF PCT: </p><p id="confirmIF_PCT"></p>
-                             <p>IF Build: </p><p id="confirmIF_Build"></p>
-                             <p>IS PCT: </p><p id="confirmIS_PCT"></p>
-                             <p>IS Build: </p><p id="confirmIS_Build"></p>
-                             <p>PROD PCT: </p><p id="confirmPROD_PCT"></p>
-                             <p>PROD Build: </p><p id="confirmPROD_Build"></p>
-                             <div class="text-center" >
-                                 <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="addFeatureMac()">Submit</button>
-                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                             </div>
-                             </form>  
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-          <script>
-              $('#submit_id').on('click',function(){
-                   $('#submit-confirm').modal('show');
-                  });
-          </script>
-    <!-- Optional JavaScript -->
-    <script>
+          <div class="modal-body">
+            <p class="text-center">Are you sure you want to add this feature?</p>
+            <p>Feature Name: </p>
+            <p id="confirmFeatureName"></p>
+            <p> Subscription: </p>
+            <p id="confirmSubscription"></p>
+            <p> New Outlook: </p>
+            <p id="confirmNewoutlook"></p>
+            <p> Debut Build: </p>
+            <p id="confirmDebut_Build"></p>
+            <p>Comments: </p>
+            <p id="confirmComments"></p>
+            <p>DF PCT: </p>
+            <p id="confirmDF_PCT"></p>
+            <p>DF Build: </p>
+            <p id="confirmDF_Build"></p>
+            <p>IF PCT: </p>
+            <p id="confirmIF_PCT"></p>
+            <p>IF Build: </p>
+            <p id="confirmIF_Build"></p>
+            <p>IS PCT: </p>
+            <p id="confirmIS_PCT"></p>
+            <p>IS Build: </p>
+            <p id="confirmIS_Build"></p>
+            <p>PROD PCT: </p>
+            <p id="confirmPROD_PCT"></p>
+            <p>PROD Build: </p>
+            <p id="confirmPROD_Build"></p>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary" data-dismiss="modal"
+                onclick="addFeatureMac()">Submit</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('#submit_id').on('click', function () {
+      $('#submit-confirm').modal('show');
+    });
+  </script>
+  <!-- Optional JavaScript -->
+  <script>
     function showConfirm(show) {
-    var success = document.getElementById("successBlock");
-    success.style.display = show;
+      var success = document.getElementById("successBlock");
+      success.style.display = show;
     };
-    </script>
-    <script>
+  </script>
+  <script>
     function showFail(show) {
-    var fail = document.getElementById("failBlock");
-    fail.style.display = show;
+      var fail = document.getElementById("failBlock");
+      fail.style.display = show;
     };
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

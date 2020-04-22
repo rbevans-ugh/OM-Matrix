@@ -15,10 +15,10 @@
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 </head>
@@ -154,107 +154,107 @@
 				initialSort: [{
 					column: "feature",
 					dir: "asc"
-				}, , ],
+				}, ,],
 				columns: [{
-						formatter: editdataIcon,
-						width: 40,
-						hozAlign: "center",
-						cellClick: function (e, cell) {
-							$('#editModal').modal();
-							//alert(varFeatureName);
-							$("#featureName").val(cell.getRow().getData().feature)
-						}
-					},
-					{
-						title: "Feature",
-						field: "feature",
-						minWidth: 80,
-						width: 370
-					},
-					{
-						title: "O365",
-						field: "o365",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Outlook.com",
-						field: "outlook",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "O365 - GCC Mod",
-						field: "o365gcc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Gmail",
-						field: "gmail",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Gmail - CC",
-						field: "gmailcc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IMAP",
-						field: "imap",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IMAP - CC",
-						field: "imapcc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Yahoo",
-						field: "yahoo",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Yahoo - CC",
-						field: "yahoocc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "iCloud",
-						field: "icloud",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "iCloud - CC",
-						field: "icloudcc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "On-Prem",
-						field: "onprem",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "OPCC",
-						field: "onpremcc",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "POP3",
-						field: "pop3",
-						width: 120,
-						align: "center"
-					},
+					formatter: editdataIcon,
+					width: 40,
+					hozAlign: "center",
+					cellClick: function (e, cell) {
+						$('#editModal').modal();
+						//alert(varFeatureName);
+						$("#featureName").val(cell.getRow().getData().feature)
+					}
+				},
+				{
+					title: "Feature",
+					field: "feature",
+					minWidth: 80,
+					width: 370
+				},
+				{
+					title: "O365",
+					field: "o365",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Outlook.com",
+					field: "outlook",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "O365 - GCC Mod",
+					field: "o365gcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Gmail",
+					field: "gmail",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Gmail - CC",
+					field: "gmailcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IMAP",
+					field: "imap",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IMAP - CC",
+					field: "imapcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Yahoo",
+					field: "yahoo",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Yahoo - CC",
+					field: "yahoocc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "iCloud",
+					field: "icloud",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "iCloud - CC",
+					field: "icloudcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "On-Prem",
+					field: "onprem",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "OPCC",
+					field: "onpremcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "POP3",
+					field: "pop3",
+					width: 120,
+					align: "center"
+				},
 				],
 
 				ajaxResponse: function (url, params, response) {

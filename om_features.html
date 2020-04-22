@@ -16,7 +16,7 @@
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 </head>
@@ -117,126 +117,126 @@
 				initialSort: [{
 					column: "feature",
 					dir: "asc"
-				}, , ],
+				}, ,],
 				columns: [{
-						formatter: editdataIcon,
-						width: 40,
-						hozAlign: "center",
-						cellClick: function (e, cell) {
-							$('#editModal').modal();
-							$("#id").val(cell.getRow().getData().id)
-							$("#featureName").val(cell.getRow().getData().feature)
-							$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
-							$("#PM").val(cell.getRow().getData().PM)
-							$("#change_date").val(cell.getRow().getData().change_date)
-							$("#featureflag").val(cell.getRow().getData().featureflag)
-							$("#dashboards").val(cell.getRow().getData().dashboards)
-						}
-					},
-					{
-						title: "Feature",
-						field: "feature",
-						minWidth: 80,
-						width: 370,
-						cellClick: function (e, cell) {
-							$('#editModal').modal();
-							$("#id").val(cell.getRow().getData().id)
-							$("#featureName").val(cell.getRow().getData().feature)
-							$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
-							$("#PM").val(cell.getRow().getData().PM)
-							$("#change_date").val(cell.getRow().getData().change_date)
-							$("#featureflag").val(cell.getRow().getData().featureflag)
-							$("#dashboards").val(cell.getRow().getData().dashboards)
-						}
-					},
-					{
-						title: "ID",
-						field: "id",
-						minWidth: 80,
-						width: 120,
-						formatter: "link",
-						formatterParams: {
-							labelField: "id",
-							urlPrefix: "https://office.visualstudio.com/Outlook%20Mobile/_workitems/edit/",
-							target: "_blank",
-						}
-					},
-					{
-						title: "Status",
-						field: "status",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "DEV %",
-						field: "DEV",
-						width: 120,
-						align: "center",
-						formatter: "money",
-						formatterParams: {
-							symbol: "%",
-							symbolAfter: "p",
-							precision: false,
-						}
-					},
-					{
-						title: "DF %",
-						field: "DF",
-						width: 120,
-						align: "center",
-						formatter: "money",
-						formatterParams: {
-							symbol: "%",
-							symbolAfter: "p",
-							precision: false,
-						}
-					},
-					{
-						title: "PROD %",
-						field: "PROD",
-						width: 120,
-						align: "center",
-						formatter: "money",
-						formatterParams: {
-							symbol: "%",
-							symbolAfter: "p",
-							precision: false,
-						}
-					},
-					{
-						title: "GitHub",
-						field: "github",
-						minWidth: 80,
-						width: 200,
-						formatter: "link",
-						formatterParams: {
-							//labelField:"github",
-							target: "_blank",
-							//   label:"github"
-						}
-					},
-					{
-						title: "Dashboards",
-						field: "dashboards",
-						width: 350,
-						align: "center",
-						cellClick: function (e, cell) {
-							$('#editModal').modal();
-							$("#id").val(cell.getRow().getData().id)
-							$("#featureName").val(cell.getRow().getData().feature)
-							$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
-							$("#PM").val(cell.getRow().getData().PM)
-							$("#change_date").val(cell.getRow().getData().change_date)
-							$("#featureflag").val(cell.getRow().getData().featureflag)
-							$("#dashboards").val(cell.getRow().getData().dashboards)
-						}
-					},
-					{
-						title: "Figma",
-						field: "figma",
-						width: 120,
-						align: "center"
-					},
+					formatter: editdataIcon,
+					width: 40,
+					hozAlign: "center",
+					cellClick: function (e, cell) {
+						$('#editModal').modal();
+						$("#id").val(cell.getRow().getData().id)
+						$("#featureName").val(cell.getRow().getData().feature)
+						$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+						$("#PM").val(cell.getRow().getData().PM)
+						$("#change_date").val(cell.getRow().getData().change_date)
+						$("#featureflag").val(cell.getRow().getData().featureflag)
+						$("#dashboards").val(cell.getRow().getData().dashboards)
+					}
+				},
+				{
+					title: "Feature",
+					field: "feature",
+					minWidth: 80,
+					width: 370,
+					cellClick: function (e, cell) {
+						$('#editModal').modal();
+						$("#id").val(cell.getRow().getData().id)
+						$("#featureName").val(cell.getRow().getData().feature)
+						$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+						$("#PM").val(cell.getRow().getData().PM)
+						$("#change_date").val(cell.getRow().getData().change_date)
+						$("#featureflag").val(cell.getRow().getData().featureflag)
+						$("#dashboards").val(cell.getRow().getData().dashboards)
+					}
+				},
+				{
+					title: "ID",
+					field: "id",
+					minWidth: 80,
+					width: 120,
+					formatter: "link",
+					formatterParams: {
+						labelField: "id",
+						urlPrefix: "https://office.visualstudio.com/Outlook%20Mobile/_workitems/edit/",
+						target: "_blank",
+					}
+				},
+				{
+					title: "Status",
+					field: "status",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "DEV %",
+					field: "DEV",
+					width: 120,
+					align: "center",
+					formatter: "money",
+					formatterParams: {
+						symbol: "%",
+						symbolAfter: "p",
+						precision: false,
+					}
+				},
+				{
+					title: "DF %",
+					field: "DF",
+					width: 120,
+					align: "center",
+					formatter: "money",
+					formatterParams: {
+						symbol: "%",
+						symbolAfter: "p",
+						precision: false,
+					}
+				},
+				{
+					title: "PROD %",
+					field: "PROD",
+					width: 120,
+					align: "center",
+					formatter: "money",
+					formatterParams: {
+						symbol: "%",
+						symbolAfter: "p",
+						precision: false,
+					}
+				},
+				{
+					title: "GitHub",
+					field: "github",
+					minWidth: 80,
+					width: 200,
+					formatter: "link",
+					formatterParams: {
+						//labelField:"github",
+						target: "_blank",
+						//   label:"github"
+					}
+				},
+				{
+					title: "Dashboards",
+					field: "dashboards",
+					width: 350,
+					align: "center",
+					cellClick: function (e, cell) {
+						$('#editModal').modal();
+						$("#id").val(cell.getRow().getData().id)
+						$("#featureName").val(cell.getRow().getData().feature)
+						$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+						$("#PM").val(cell.getRow().getData().PM)
+						$("#change_date").val(cell.getRow().getData().change_date)
+						$("#featureflag").val(cell.getRow().getData().featureflag)
+						$("#dashboards").val(cell.getRow().getData().dashboards)
+					}
+				},
+				{
+					title: "Figma",
+					field: "figma",
+					width: 120,
+					align: "center"
+				},
 				],
 
 				ajaxResponse: function (url, params, response) {
