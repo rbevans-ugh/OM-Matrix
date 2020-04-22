@@ -51,4 +51,5 @@ function editFeatureMac() {
         //   return response.json();
         // })
         console.log("got the response from Flow");
+        setTimeout(() => {  location.reload(); }, 1000);
     }
