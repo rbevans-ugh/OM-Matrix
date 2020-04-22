@@ -26,5 +26,5 @@ function editFeature() {
       //   return response();
       // });
       console.log("got the response from Flow");
-      // location.reload(true);
+      setTimeout(() => {  location.reload(); }, 3000);
   }
