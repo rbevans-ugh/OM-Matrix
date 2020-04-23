@@ -21,17 +21,16 @@
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
 
 <script type="text/javascript">
-var authContext = new AuthenticationContext({
-        clientId: 'f3beae87-6d1b-4158-9151-720086ef8460',
-        postLogoutRedirectUri: window.location
-    });
-    console.log(authContext)
-    var user = authContext.getCachedUser();
-    if (user) {
-        window.alert("Signed in as " + user.userName);  
-    } else{
-        window.alert("Failed to get the user information");
-    }
+        $(document).ready(function ()
+        {
+            $.get("auth/me", function (data, status) {
+                for (var key in data[0]["user_claims"]) {
+                    var obj = data[0]["user_claims"][key];
+                    alert(obj["typ"]);   //claim type in user_claims
+                    alert(obj["val"])    //claim value in user_claims                 
+                }
+            });
+        });
 </script>
 
 <body>
