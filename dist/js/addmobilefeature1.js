@@ -16,10 +16,8 @@ function addFeature(flowStatus) {
         // console.log(obj["val"]); //claim value in user_claims
       }
     });
-  }
-  );
-
-  console.log("hi");
+  })
+  console.log("hi " + user);
   var confirm0 = document.getElementById("featureName").value;
   var checkboxes = document.getElementsByName('chkbox')
   var accts = []
