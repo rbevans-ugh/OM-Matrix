@@ -37,6 +37,7 @@ function addFeatureMac() {
       IS_Build: idText8,
       PROD_PCT: idText9,
       PROD_Build: idText10,
+      Debut_Build: idText11,
       new_outlook: idText12,
       
     };
