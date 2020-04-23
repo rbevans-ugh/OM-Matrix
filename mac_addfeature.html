@@ -84,6 +84,12 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny" style="display: none">
+            Unauthorized. Contact support.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         <label for="featureName">Feature Name:</label>
         <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
       </div>
@@ -230,6 +236,10 @@
   <script>
     function showFail(show) {
       var fail = document.getElementById("failBlock");
+      fail.style.display = show;
+    };
+    function showDeny(show) {
+      var fail = document.getElementById("failDeny");
       fail.style.display = show;
     };
   </script>

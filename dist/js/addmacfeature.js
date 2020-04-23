@@ -59,28 +59,32 @@ function addFeatureMac() {
     console.log(data);
     var url =
       "https://prod-09.westcentralus.logic.azure.com:443/workflows/bde242871bd24b8d839dda737d907f85/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wQ0lpFfxigdslnV8aCHbYsUipaTZS_f4PTFEolz6UVA";
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+      if (user.includes("@microsoft.com")) {
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+          .then(function (response) {
+            var flowStatus = response.status;
+            console.log(response.status);
+            console.log("the flowstatus is " + flowStatus);
+            // return response.status();
+            console.log(flowStatus);
+            if (flowStatus == 200) {
+              console.log("we should be here yo " + flowStatus);
+              showConfirm("block");
+            }
+            else {
+              console.log("ruh roh " + flowStatus);
+              showFail("block");
+            }
+          });
+      } else {
+        showDeny("block");
+      }
+      document.getElementById("addfeatureform").reset();
     })
-      .then(function (response) {
-        var flowStatus = response.status;
-        console.log(response.status);
-        console.log("the flowstatus is " + flowStatus);
-        // return response.status();
-        console.log(flowStatus);
-        if (flowStatus == 200) {
-          console.log("we should be here yo " + flowStatus);
-          showConfirm("block");
-        }
-        else {
-          console.log("ruh roh " + flowStatus);
-          showFail("block");
-        }
-      });
-    document.getElementById("addfeatureform").reset();
-  })
-}
+  }
