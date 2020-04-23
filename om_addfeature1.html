@@ -22,14 +22,17 @@
 <script type="text/javascript">
         $(document).ready(function ()
         {
-            $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
+            $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) 
+            {
                 for (var key in data[0]["user_claims"]) {
                     var obj = data[0]["user_claims"][key];
-                    alert(obj["typ"]);   //claim type in user_claims
+                    console.log(obj["typ"]);//claim type in user_claims
+                    // alert(obj["typ"]);   //claim type in user_claims
                     alert(obj["val"])    //claim value in user_claims                 
                 }
             });
-        });
+        }
+        );
 </script>
 
 <body>
