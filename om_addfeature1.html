@@ -20,16 +20,20 @@
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
 
 <script type="text/javascript">
-        $(document).ready(function ()
+      $(document).ready(function ()
         {
             $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) 
             {
                 for (var key in data[0]["user_claims"]) {
                     var obj = data[0]["user_claims"][key];
-                    console.log(obj["typ"]); //claim type in user_claims
-                    console.log(obj["val"]); //claim value in user_claims                 
-                    // alert(obj["typ"]);   //claim type in user_claims
-                    // alert()    //claim value in user_claims                 
+                    console.log(obj["val"]);
+                    if (obj["val"].includes("microsoft")){
+                      let user = obj["val"];
+                      console.log('I got the user ' + user)
+                      exit();
+                    };
+                    // console.log(obj["typ"]); //claim type in user_claims
+                    // console.log(obj["val"]); //claim value in user_claims
                 }
             });
         }
