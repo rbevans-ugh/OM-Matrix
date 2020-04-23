@@ -59,7 +59,7 @@ function addFeatureMac() {
     console.log(data);
     var url =
       "https://prod-09.westcentralus.logic.azure.com:443/workflows/bde242871bd24b8d839dda737d907f85/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wQ0lpFfxigdslnV8aCHbYsUipaTZS_f4PTFEolz6UVA";
-      if (user.includes("@icrosoft.com")) {
+      if (user.includes("@microsoft.com")) {
         fetch(url, {
           method: "POST",
           headers: {
