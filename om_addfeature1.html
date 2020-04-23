@@ -22,7 +22,7 @@
 <script type="text/javascript">
         $(document).ready(function ()
         {
-            jQuery.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
+            $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
                 for (var key in data[0]["user_claims"]) {
                     var obj = data[0]["user_claims"][key];
                     alert(obj["typ"]);   //claim type in user_claims
@@ -235,9 +235,9 @@
       }
     }
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
