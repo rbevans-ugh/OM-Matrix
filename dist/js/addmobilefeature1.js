@@ -12,7 +12,6 @@ function addFeature(flowStatus) {
           break;
         };
       }
-    })
   console.log("hi " + user);
   var confirm0 = document.getElementById("featureName").value;
   var checkboxes = document.getElementsByName('chkbox')
@@ -53,4 +52,5 @@ function addFeature(flowStatus) {
       }
     });
   document.getElementById("addfeatureform").reset();
+})
 }
