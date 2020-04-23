@@ -14,32 +14,7 @@
 </head>
 <script src="dist/js/jquery.js"></script>
 <script src="dist/js/confirmmobilefeature.js"></script>
-<script type="text/javascript">
-</script>
-
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
-
-<script type="text/javascript">
-      // $(document).ready(function ()
-      //   {
-      //       $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) 
-      //       {
-      //           for (var key in data[0]["user_claims"]) {
-      //               var obj = data[0]["user_claims"][key];
-      //               console.log(obj["val"]);
-      //               if (obj["val"].includes("microsoft")){
-      //                 let user = obj["val"];
-      //                 console.log('I got the user ' + user)
-      //                 break;
-      //               };
-      //               // console.log(obj["typ"]); //claim type in user_claims
-      //               // console.log(obj["val"]); //claim value in user_claims
-      //           }
-      //       });
-      //   }
-      //   );
-</script>
-
 <body>
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -115,6 +90,12 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny" style="display: none">
+            Unauthorized. Contact support.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         <label class="font-weight-bold" for="featureName" id="test">Feature Name:</label>
         <input type="text" class="form-control" id="featureName" placeholder="ex. Shared Mailbox" required>
       </div>
@@ -233,6 +214,10 @@
   <script>
     function showFail(show) {
       var fail = document.getElementById("failBlock");
+      fail.style.display = show;
+    };
+    function showDeny(show) {
+      var fail = document.getElementById("failDeny");
       fail.style.display = show;
     };
 
