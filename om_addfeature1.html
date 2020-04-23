@@ -12,24 +12,29 @@
 
   <title>Add Feature!</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="dist/js/confirmmobilefeature.js"></script>
 <script type="text/javascript">
 </script>
 
-<script>
-function refreshTokens() {
-  let refreshUrl = "/.auth/refresh";
-  $.ajax(refreshUrl) .done(function() {
-    console.log("Token refresh completed successfully.");
-  }) .fail(function() {
-    console.log("Token refresh failed. See application logs for details.");
-  });
-}
+<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
+
+<script type="text/javascript">
+var authContext = new AuthenticationContext({
+        clientId: 'f3beae87-6d1b-4158-9151-720086ef8460',
+        postLogoutRedirectUri: window.location
+    });
+    console.log(authContext)
+    var user = authContext.getCachedUser();
+    if (user) {
+        window.alert("Signed in as " + user.userName);  
+    } else{
+        window.alert("Failed to get the user information");
+    }
 </script>
 
 <body>
-  
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
@@ -177,7 +182,7 @@ function refreshTokens() {
         </div>
       </div>
       <br></br>
-      <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="refreshTokens()">
+      <submit id="submit_id" type="submit" class="btn btn-primary btn-lg btn-block btn-dark" onclick="confirmFeature()">
         Submit Feature</submit>
   </div>
   <!-- Confirmation Modal for submitting -->
@@ -232,9 +237,9 @@ function refreshTokens() {
       }
     }
   </script>
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script> -->
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
