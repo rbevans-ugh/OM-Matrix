@@ -1,5 +1,17 @@
 function editFeature() {
-  console.log("hi");
+  var user
+  // Here we're getting the user making the submission
+  $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
+    for (var key in data[0]["user_claims"]) {
+      var obj = data[0]["user_claims"][key];
+      if (obj["val"].includes("microsoft")) {
+        user = obj["val"];
+        console.log('I got the user ' + user)
+        // We should have gotten the user now.
+        break;
+      };
+    }
+    console.log("hi " + user);
   var confirm0 = document.getElementById("featureName").value;
   var checkboxes = document.getElementsByName("chkbox");
   var accts = [];
@@ -9,7 +21,7 @@ function editFeature() {
       object[checkboxes[i].id] = accts.push(checkboxes[i].id);
   }
   //var object = Object.assign({}, select1);
-  var data = { featureName: confirm0, selectedAccts: object };
+  var data = { featureName: confirm0, selectedAccts: object, auth_user: user };
   //url is hardcoded from flow.
   console.log(data);
   var url =
@@ -22,9 +34,6 @@ function editFeature() {
     },
     body: JSON.stringify(data)
   });
-  // .then(function(response) {
-  //   return response();
-  // });
   console.log("got the response from Flow");
   setTimeout(() => {
     location.reload();
