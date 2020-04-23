@@ -1,12 +1,14 @@
 function addFeature(flowStatus) {
+
+  var user
 // Here we're getting the user making the submission
-  $(document).ready(function (user) {
+  $(document).ready(function () {
     $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
       for (var key in data[0]["user_claims"]) {
         var obj = data[0]["user_claims"][key];
         console.log(obj["val"]);
         if (obj["val"].includes("microsoft")) {
-          let user = obj["val"];
+          var user = obj["val"];
           console.log('I got the user ' + user)
           break;
         };
