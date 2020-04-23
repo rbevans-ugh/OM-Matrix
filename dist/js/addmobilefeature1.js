@@ -29,6 +29,11 @@ function addFeature(flowStatus) {
   // Real URL
   // var url = "https://prod-19.westcentralus.logic.azure.com:443/workflows/8c948a552dea484196bb3275023e87b4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=a6__w3db5jkvbGJXIvT9G_YCDw3G2G7apfnfrR1OaxI";
   //clear old content out so we're not concating results on each run.
+  if (auth_user.includes("onmicrosoft.com")){
+    break;
+  }else{
+    console.log("send POST")
+  };
   fetch(url, {
     method: "POST",
     headers: {
