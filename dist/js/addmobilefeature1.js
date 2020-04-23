@@ -2,7 +2,7 @@ function addFeature(flowStatus) {
 
   var user
 // Here we're getting the user making the submission
-  $(document).ready(function () {
+  // $(document).ready(function () {
     $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
       for (var key in data[0]["user_claims"]) {
         var obj = data[0]["user_claims"][key];
@@ -10,13 +10,14 @@ function addFeature(flowStatus) {
         if (obj["val"].includes("microsoft")) {
           var user = obj["val"];
           console.log('I got the user ' + user)
+          // We should have gotten the user now.
           break;
         };
         // console.log(obj["typ"]); //claim type in user_claims
         // console.log(obj["val"]); //claim value in user_claims
       }
     });
-  })
+  // })
   console.log("hi " + user);
   var confirm0 = document.getElementById("featureName").value;
   var checkboxes = document.getElementsByName('chkbox')
