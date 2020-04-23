@@ -83,13 +83,14 @@
 	</div>
 	<div class="container-fluid">
 		<div class="col" id="tabulator-controls">
+			<div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny"
+				style="display: none">
+				Unauthorized. Contact support.
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
 			<div class="input-group mb-3">
-					<div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny" style="display: none">
-							Unauthorized. Contact support.
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-				</div>
 				<i class="fa fa-filter fa-fw"></i>
 				<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
 				<div class="input-group-append">
@@ -399,9 +400,9 @@
 				}
 			}
 			function showDeny(show) {
-      var fail = document.getElementById("failDeny");
-      fail.style.display = show;
-    };
+				var fail = document.getElementById("failDeny");
+				fail.style.display = show;
+			};
 		</script>
 </body>
 
