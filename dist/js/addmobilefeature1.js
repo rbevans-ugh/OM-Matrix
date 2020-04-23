@@ -12,7 +12,7 @@ function addFeature(flowStatus) {
           break;
         };
       }
-    });
+    })
   console.log("hi " + user);
   var confirm0 = document.getElementById("featureName").value;
   var checkboxes = document.getElementsByName('chkbox')
@@ -22,7 +22,7 @@ function addFeature(flowStatus) {
     if (checkboxes[i].checked == true)
       object[checkboxes[i].id] = accts.push(checkboxes[i].id);
   }
-  var data = { featureName: confirm0, selectedAccts: object, user: user };
+  var data = { featureName: confirm0, selectedAccts: object, auth_user: user };
   //url is hardcoded from flow. 
   console.log(data);
   // fake URL for testing
