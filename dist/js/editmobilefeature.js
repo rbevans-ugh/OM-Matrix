@@ -27,7 +27,7 @@ function editFeature() {
     var url =
       "https://prod-12.westcentralus.logic.azure.com:443/workflows/cfa4a35d41f045e2ba1bbeedda848c83/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AH4uTBll2IKhsiJ0UGRdkW1mnZBsnIiTgS68nhkUfEc";
     //clear old content out so we're not concating results on each run.
-    if (user.includes("@icrosoft.com")) {
+    if (user.includes("@microsoft.com")) {
       fetch(url, {
         method: "POST",
         headers: {
@@ -53,6 +53,5 @@ function editFeature() {
     } else {
       showDeny("block");
     }
-    document.getElementById("addfeatureform").reset();
   })
 }
