@@ -33,7 +33,7 @@ function addFeature(flowStatus) {
     break;
   }else{
     console.log("send POST")
-  };
+  }
   fetch(url, {
     method: "POST",
     headers: {
