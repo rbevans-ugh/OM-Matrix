@@ -31,7 +31,6 @@ function addFeature(flowStatus) {
     //clear old content out so we're not concating results on each run.
     if (user.includes("microsoft.com")) {
       showFail("block");
-      break
     } else {
       fetch(url, {
         method: "POST",
