@@ -6,7 +6,7 @@ function addFeature(flowStatus) {
       for (var key in data[0]["user_claims"]) {
         var obj = data[0]["user_claims"][key];
         if (obj["val"].includes("microsoft")) {
-          var user = obj["val"];
+          user = obj["val"];
           console.log('I got the user ' + user)
           // We should have gotten the user now.
           break;
