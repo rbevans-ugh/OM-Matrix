@@ -3,7 +3,7 @@ function addFeature(flowStatus) {
   var user
 // Here we're getting the user making the submission
   // $(document).ready(function () {
-    $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, status) {
+    $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data, user) {
       for (var key in data[0]["user_claims"]) {
         var obj = data[0]["user_claims"][key];
         console.log(obj["val"]);
