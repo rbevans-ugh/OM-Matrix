@@ -15,10 +15,10 @@
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+		</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 </head>
@@ -103,80 +103,80 @@
 				initialSort: [{
 					column: "Debut_Build",
 					dir: "desc"
-				}, , ],
+				}, ,],
 				columns: [{
-						title: "Feature",
-						field: "feature",
-						minWidth: 80,
-						width: 370
-					},
-					{
-						title: "Debut Build",
-						field: "Debut_Build",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Subscription Only",
-						field: "Subscription",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "DF %",
-						field: "DF_PCT",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "DF Build",
-						field: "DF_Build",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IF %",
-						field: "IF_PCT",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IF Build",
-						field: "IF_Build",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IS %",
-						field: "IS_PCT",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "IS Build",
-						field: "IS_Build",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "PROD %",
-						field: "PROD_PCT",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "PROD Build",
-						field: "PROD_Build",
-						width: 120,
-						align: "center"
-					},
-					{
-						title: "Comments",
-						field: "Comments",
-						width: 300,
-						align: "center",
-						formatter: "textarea"
-					},
+					title: "Feature",
+					field: "feature",
+					minWidth: 80,
+					width: 370
+				},
+				{
+					title: "Debut Build",
+					field: "Debut_Build",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Subscription Only",
+					field: "Subscription",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "DF %",
+					field: "DF_PCT",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "DF Build",
+					field: "DF_Build",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IF %",
+					field: "IF_PCT",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IF Build",
+					field: "IF_Build",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IS %",
+					field: "IS_PCT",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "IS Build",
+					field: "IS_Build",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "PROD %",
+					field: "PROD_PCT",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "PROD Build",
+					field: "PROD_Build",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Comments",
+					field: "Comments",
+					width: 300,
+					align: "center",
+					formatter: "textarea"
+				},
 					//   work new outlook column and filtering.  Waiting for JP Approval.
 					//{title:"New Outlook", field:"new_outlook", width:300,align:"center", editorParams:{values:{"New Outlook":"New Outlook", "No":"No"}}, headerFilter:true, headerFilterParams:{values:{"New Outlook":"New Outlook", "No":"No", "":""}}},
 				],
@@ -201,6 +201,18 @@
 				table.setFilter("feature", "like", $(this).val())
 			});
 		</script>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				</div>
+				<div class="col-sm-4" align="center">
+					<a href="mailto:robevans@microsoft.com">Contact</a>
+				</div>
+				<div class="col-sm-4">
+				</div>
+			</div>
+		</div>
 </body>
 
 </html>
