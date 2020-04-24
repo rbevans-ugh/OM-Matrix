@@ -252,14 +252,37 @@
 			$("#tabulator-controls input[name=feature]").on("keyup", function () {
 				table.setFilter("feature", "like", $(this).val())
 			});
-
 			//trigger download of data.xlsx file
 			document.getElementById("download-xlsx").addEventListener("click", function () {
 				table.download("xlsx", "om_data.xlsx", {
 					sheetName: "My Data"
 				});
 			});
+			$(function () {
+				$('[data-toggle="popover"]').popover()
+			})
 		</script>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				</div>
+				<div class="col-sm-4">
+					<a class="btn btn-link mx-auto" data-toggle="collapse" href="#collapseExample" role="button"
+						aria-expanded="false" aria-controls="collapseExample" style="width: 200px">
+						Help?
+					</a>
+					<a href="mailto:robevans@microsoft.com">Contact</a>
+					<div class="collapse" id="collapseExample">
+						<div class="card card-body">
+							Feature data is updated every six fours from ADO workitem.  <br>Completed workitems will appear in the <a href="/om_addfeature.html">feature matrix.</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+				</div>
+			</div>
+		</div>
 		<!-- Modal -->
 		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
 			aria-hidden="true" data-toggle="modal">
