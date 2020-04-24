@@ -20,6 +20,7 @@
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 		</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
+	<!-- Needed for downloading excel file -->
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 </head>
 <script src="dist/js/editmobilefeature.js"></script>
@@ -75,6 +76,7 @@
 			</div>
 		</div>
 	</nav>
+	<!-- beginning of body  -->
 	<div class="jumbotron text-center">
 		<div class="container">
 			<img src="dist/om.png" alt="Hey yo" width=10%>
@@ -83,6 +85,7 @@
 	</div>
 	<div class="container-fluid">
 		<div class="col" id="tabulator-controls">
+			<!-- Thrown if a non microsoft.com user tries to edit a feture -->
 			<div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny"
 				style="display: none">
 				Unauthorized. Contact support.
@@ -134,6 +137,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Tabulator code -->
 		<script type="text/javascript">
 			//define data
 			var data = []
@@ -285,7 +289,7 @@
 				});
 			});
 		</script>
-		<!-- Modal -->
+		<!-- Edit Feature Modal -->
 		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
 			aria-hidden="true">
 			<div class="vertical-alignment-helper">
@@ -392,6 +396,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- javascript for checkboxes and unauthorized edit users -->
 		<script>
 			function eventCheckBox() {
 				let checkboxs = document.getElementsByTagName("input");
