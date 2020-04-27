@@ -13,6 +13,7 @@
   <title>Add Feature!</title>
   <script src="dist/js/jquery.js"></script>
   <script>
+    // We're using this to prevent non-msft users from accessing this page and will redirect or post modal of access denied.
   var user
   // Here we're getting the user making the submission
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
@@ -21,9 +22,11 @@
       if (obj["val"].includes("microsoft")) {
         user = obj["val"];
         console.log('I got the user ' + user)
-        window.location.replace("index.html");
         // We should have gotten the user now.
         break;
+      }else{
+        // redirect non-msft users
+        window.location.replace("index.html");
       };
     }
   })
