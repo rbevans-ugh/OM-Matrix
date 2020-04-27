@@ -22,12 +22,11 @@
       if (obj["val"].includes("microsoft")) {
         user = obj["val"];
         console.log('I got the user ' + user)
-        window.location.replace("denied.html");
         // We should have gotten the user now.
         break;
       }else{
         // redirect non-msft users
-        window.location.replace("index.html");
+        window.location.replace("denied.html");
       };
     }
   })
