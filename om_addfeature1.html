@@ -19,14 +19,14 @@
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
       var obj = data[0]["user_claims"][key];
-      if (obj["val"].includes("microsoft")) {
+      if (!obj["val"].includes("@microsoft.com")) {
         user = obj["val"];
-        console.log('I got the user ' + user)
+        window.location.replace("denied.html");
         // We should have gotten the user now.
         break;
       }else{
         // redirect non-msft users
-        window.location.replace("denied.html");
+        console.log('I got the user ' + user);
       };
     }
   })
