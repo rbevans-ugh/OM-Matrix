@@ -24,7 +24,7 @@
       var obj = data[0]["user_claims"][key];
       if (obj["typ"].includes("user_id")) {
         user = obj["val"];
-        console.log(user_claims);
+        console.log(obj["val"]);
         if (user.includes("@microsoft.com")) {
           console.log("I got the MSFT user " + user);
           break;
