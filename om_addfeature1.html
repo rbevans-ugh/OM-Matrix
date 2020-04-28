@@ -22,17 +22,17 @@
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
       var obj = data[0]["user_claims"][key];
-      if (obj["val"].includes("@microsoft.com")) {
+      if (obj["typ"].includes("upn")) {
         user = obj["val"];
-        console.log("I got the MSFT user " + user);
-        //window.location.replace("denied.html");
+        if (user.includes("@microsoft.com")) {
+          console.log("I got the MSFT user " + user);
+          break;
+        } else {
+          console.log("we should break here");
+          window.location.replace("denied.html");
+        }
         // We should have gotten the user now.
-        break;
-      } else {
-        // redirect non-msft users
-        console.log("I got the  nonMSFT user " + user);
-        break;
-      };
+      }
     };
   });
   console.log("hi " + user);
