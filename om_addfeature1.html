@@ -22,7 +22,7 @@
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
       var obj = data[0]["user_claims"][key];
-      if (obj["typ"].includes("upn")) {
+      if (obj["typ"].includes("user_id")) {
         user = obj["val"];
         console.log(user);
         if (user.includes("@microsoft.com")) {
