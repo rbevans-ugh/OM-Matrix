@@ -35,6 +35,8 @@
           console.log("We have a valid user")
         } else {
           console.log("We don't have a valid user")
+          break;
+          window.location.replace("denied.html");
         }
       });
       console.log("hi " + user);
