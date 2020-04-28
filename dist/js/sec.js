@@ -10,7 +10,6 @@ function accessvalid() {
             if (obj["typ"].includes("claims/name")) {
                 user = obj["val"];
                 if (user.includes("@microsoft.com")) {
-                    console.log("I got the MSFT user " + user);
                     break;
                 }
             }
