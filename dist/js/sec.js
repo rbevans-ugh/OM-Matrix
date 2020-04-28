@@ -16,11 +16,10 @@ function accessvalid() {
             }
         };
         if (user.includes("@microsoft.com")) {
-            console.log("We have a valid user")
+            console.log("We have a valid user.  Hi " + user)
         } else {
             console.log("We don't have a valid user");
             window.location.replace("denied.html");
         }
     });
-    console.log("hi " + user);
 }
