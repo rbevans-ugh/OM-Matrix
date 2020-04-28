@@ -17,7 +17,7 @@
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
   <script>
     // We're using this to prevent non-msft users from accessing this page and will redirect or post modal of access denied.
-  var user
+  // var user
   // Here we're getting the user making the submission
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
