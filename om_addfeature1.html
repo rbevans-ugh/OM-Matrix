@@ -24,13 +24,13 @@
       var obj = data[0]["user_claims"][key];
       if (obj["val"].includes("@microsoft.com")) {
         user = obj["val"];
-        console.log('I got the MSFT user ' + user);
+        console.log("I got the MSFT user " + user);
         //window.location.replace("denied.html");
         // We should have gotten the user now.
         break;
       } else {
         // redirect non-msft users
-        console.log('I got the  nonMSFT user ' + user);
+        console.log("I got the  nonMSFT user " + user);
       };
     };
   });
