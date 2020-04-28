@@ -15,14 +15,14 @@
 <script src="dist/js/jquery.js"></script>
 <script src="dist/js/confirmmobilefeature.js"></script>
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
-<script>
+  <script>
     // We're using this to prevent non-msft users from accessing this page and will redirect or post modal of access denied.
   var user
   // Here we're getting the user making the submission
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
       var obj = data[0]["user_claims"][key];
-      if (!obj["val"].includes("@microsoft.com")) {
+      if (obj["val"].includes("@microsoft.com")) {
         user = obj["val"];
         console.log('I got the user ' + user);
         //window.location.replace("denied.html");
