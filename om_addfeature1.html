@@ -19,6 +19,7 @@
     // We're using this to prevent non-msft users from accessing this page and will redirect or post modal of access denied.
   var user
   // Here we're getting the user making the submission
+  // We can't always get claim/upn so relying on claim/name
   $.get("https://dev-omlc.azurewebsites.net/.auth/me", function (data) {
     for (var key in data[0]["user_claims"]) {
       var obj = data[0]["user_claims"][key];
@@ -31,7 +32,7 @@
           break;
         } else {
           console.log("we should break here");
-          window.location.replace("denied.html");
+          // window.location.replace("denied.html");
         }
         // We should have gotten the user now.
       }
