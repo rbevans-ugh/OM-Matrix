@@ -18,8 +18,11 @@
 <script src="dist/js/jquery.js"></script>
 <script src="dist/js/confirmfeature.js"></script>
 <script src="dist/js/addmacfeature.js"></script>
+<!-- Authentication access -->
+<script src="dist/js/sec.js"></script>
+<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
 
-<body>
+<body onload="accessvalid()">
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
