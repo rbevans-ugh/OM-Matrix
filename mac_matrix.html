@@ -108,6 +108,44 @@
 					dir: "desc"
 				}, ,],
 				columns: [
+				{
+						field: "editTableData",
+						formatter: editdataIcon,
+						width: 40,
+						hozAlign: "center",
+						cellClick: function (e, cell) {
+							$('#editModal').modal();
+							//   Here is where we get the data to serve confirmfeature.js
+							varSubscription = cell.getRow().getData().Subscription
+							varNewoutlook = cell.getRow().getData().newoutlook
+							varComments = cell.getRow().getData().Comments
+
+							//alert(varFeatureName);
+							$("#featureName").val(cell.getRow().getData().feature)
+							$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
+							$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
+							$("#DF_Build").val(cell.getRow().getData().DF_Build)
+							$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
+							$("#IF_Build").val(cell.getRow().getData().IF_Build)
+							$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
+							$("#IS_Build").val(cell.getRow().getData().IS_Build)
+							$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
+							$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
+							console.log("checking: " + varSubscription);
+							if (varSubscription == 'No') {
+								$("#subscription1").prop("checked", true);
+							} else {
+								$("#subscription").prop("checked", true);
+							}
+							if (varNewoutlook == 'Yes') {
+								$("#newoutlook").prop("checked", true);
+							} else {
+								$("#newoutlook1").prop("checked", true);
+							}
+							//   $("#subscription").prop("checked", varSubscription);
+							$("#comments").val(varComments)
+						}
+					},					
 					{
 					title: "Feature",
 					field: "feature",
