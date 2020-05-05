@@ -15,16 +15,19 @@
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-		</script>
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
+	</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+	<!-- auth JS -->
+	<script src="dist/js/sec.js"></script>
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 </head>
 <script src="dist/js/editmacfeature.js"></script>
 
-<body>
+<body onload="accessvalid()">
 	<!-- Nav Bar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
@@ -104,78 +107,117 @@
 					column: "Debut_Build",
 					dir: "desc"
 				}, ,],
-				columns: [{
-					title: "Feature",
-					field: "feature",
-					minWidth: 80,
-					width: 370
+				columns: [
+				{
+				field: "editTableData",
+				formatter: editdataIcon,
+				width: 40,
+				hozAlign: "center",
+				cellClick: function (e, cell) {
+				$('#editModal').modal();
+				// Here is where we get the data to serve confirmfeature.js
+				varSubscription = cell.getRow().getData().Subscription
+				varNewoutlook = cell.getRow().getData().newoutlook
+				varComments = cell.getRow().getData().Comments
+
+				//alert(varFeatureName);
+				$("#featureName").val(cell.getRow().getData().feature)
+				$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
+				$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
+				$("#DF_Build").val(cell.getRow().getData().DF_Build)
+				$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
+				$("#IF_Build").val(cell.getRow().getData().IF_Build)
+				$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
+				$("#IS_Build").val(cell.getRow().getData().IS_Build)
+				$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
+				$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
+				console.log("checking: " + varSubscription);
+				if (varSubscription == 'No') {
+				$("#subscription1").prop("checked", true);
+				} else {
+				$("#subscription").prop("checked", true);
+				}
+				if (varNewoutlook == 'Yes') {
+				$("#newoutlook").prop("checked", true);
+				} else {
+				$("#newoutlook1").prop("checked", true);
+				}
+				// $("#subscription").prop("checked", varSubscription);
+				$("#comments").val(varComments)
+				}
 				},
 				{
-					title: "Debut Build",
-					field: "Debut_Build",
-					width: 120,
-					align: "center"
+				title: "Feature",
+				field: "feature",
+				minWidth: 80,
+				width: 370
 				},
 				{
-					title: "Subscription Only",
-					field: "Subscription",
-					width: 120,
-					align: "center"
+				title: "Debut Build",
+				field: "Debut_Build",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "DF %",
-					field: "DF_PCT",
-					width: 120,
-					align: "center"
+				title: "Subscription Only",
+				field: "Subscription",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "DF Build",
-					field: "DF_Build",
-					width: 120,
-					align: "center"
+				title: "DF %",
+				field: "DF_PCT",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "IF %",
-					field: "IF_PCT",
-					width: 120,
-					align: "center"
+				title: "DF Build",
+				field: "DF_Build",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "IF Build",
-					field: "IF_Build",
-					width: 120,
-					align: "center"
+				title: "IF %",
+				field: "IF_PCT",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "IS %",
-					field: "IS_PCT",
-					width: 120,
-					align: "center"
+				title: "IF Build",
+				field: "IF_Build",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "IS Build",
-					field: "IS_Build",
-					width: 120,
-					align: "center"
+				title: "IS %",
+				field: "IS_PCT",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "PROD %",
-					field: "PROD_PCT",
-					width: 120,
-					align: "center"
+				title: "IS Build",
+				field: "IS_Build",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "PROD Build",
-					field: "PROD_Build",
-					width: 120,
-					align: "center"
+				title: "PROD %",
+				field: "PROD_PCT",
+				width: 120,
+				align: "center"
 				},
 				{
-					title: "Comments",
-					field: "Comments",
-					width: 300,
-					align: "center",
-					formatter: "textarea"
+				title: "PROD Build",
+				field: "PROD_Build",
+				width: 120,
+				align: "center"
+				},
+				{
+				title: "Comments",
+				field: "Comments",
+				width: 300,
+				align: "center",
+				formatter: "textarea"
 				},
 					//   work new outlook column and filtering.  Waiting for JP Approval.
 					//{title:"New Outlook", field:"new_outlook", width:300,align:"center", editorParams:{values:{"New Outlook":"New Outlook", "No":"No"}}, headerFilter:true, headerFilterParams:{values:{"New Outlook":"New Outlook", "No":"No", "":""}}},
@@ -207,7 +249,8 @@
 				<div class="col-sm-4">
 				</div>
 				<div class="col-sm-4" align="center">
-						<p>Questions? Email: </p><a href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
+					<p>Questions? Email: </p><a
+						href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
 				</div>
 				<div class="col-sm-4">
 				</div>
