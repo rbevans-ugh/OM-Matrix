@@ -107,118 +107,119 @@
 					column: "Debut_Build",
 					dir: "desc"
 				}, ,],
-				columns: [
-				{
-				field: "editTableData",
-				formatter: editdataIcon,
-				width: 40,
-				hozAlign: "center",
-				cellClick: function (e, cell) {
-				$('#editModal').modal();
-				// Here is where we get the data to serve confirmfeature.js
-				varSubscription = cell.getRow().getData().Subscription
-				varNewoutlook = cell.getRow().getData().newoutlook
-				varComments = cell.getRow().getData().Comments
+				columns: [{
+						field: "editTableData",
+						formatter: editdataIcon,
+						width: 40,
+						hozAlign: "center",
+						cellClick: function (e, cell) {
+							$('#editModal').modal();
+							//   Here is where we get the data to serve confirmfeature.js
+							varSubscription = cell.getRow().getData().Subscription
+							varNewoutlook = cell.getRow().getData().newoutlook
+							varComments = cell.getRow().getData().Comments
 
-				//alert(varFeatureName);
-				$("#featureName").val(cell.getRow().getData().feature)
-				$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
-				$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
-				$("#DF_Build").val(cell.getRow().getData().DF_Build)
-				$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
-				$("#IF_Build").val(cell.getRow().getData().IF_Build)
-				$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
-				$("#IS_Build").val(cell.getRow().getData().IS_Build)
-				$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
-				$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
-				console.log("checking: " + varSubscription);
-				if (varSubscription == 'No') {
-				$("#subscription1").prop("checked", true);
-				} else {
-				$("#subscription").prop("checked", true);
-				}
-				if (varNewoutlook == 'Yes') {
-				$("#newoutlook").prop("checked", true);
-				} else {
-				$("#newoutlook1").prop("checked", true);
-				}
-				// $("#subscription").prop("checked", varSubscription);
-				$("#comments").val(varComments)
-				}
-				},
-				{
-				title: "Feature",
-				field: "feature",
-				minWidth: 80,
-				width: 370
-				},
-				{
-				title: "Debut Build",
-				field: "Debut_Build",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "Subscription Only",
-				field: "Subscription",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "DF %",
-				field: "DF_PCT",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "DF Build",
-				field: "DF_Build",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "IF %",
-				field: "IF_PCT",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "IF Build",
-				field: "IF_Build",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "IS %",
-				field: "IS_PCT",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "IS Build",
-				field: "IS_Build",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "PROD %",
-				field: "PROD_PCT",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "PROD Build",
-				field: "PROD_Build",
-				width: 120,
-				align: "center"
-				},
-				{
-				title: "Comments",
-				field: "Comments",
-				width: 300,
-				align: "center",
-				formatter: "textarea"
-				},
+							//alert(varFeatureName);
+							$("#featureName").val(cell.getRow().getData().feature)
+							$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
+							$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
+							$("#DF_Build").val(cell.getRow().getData().DF_Build)
+							$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
+							$("#IF_Build").val(cell.getRow().getData().IF_Build)
+							$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
+							$("#IS_Build").val(cell.getRow().getData().IS_Build)
+							$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
+							$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
+							console.log("checking: " + varSubscription);
+							if (varSubscription == 'No') {
+								$("#subscription1").prop("checked", true);
+							} else {
+								$("#subscription").prop("checked", true);
+							}
+							if (varNewoutlook == 'Yes') {
+								$("#newoutlook").prop("checked", true);
+							} else {
+								$("#newoutlook1").prop("checked", true);
+							}
+							//   $("#subscription").prop("checked", varSubscription);
+							$("#comments").val(varComments)
+						}
+					},
+					//   {formatter:printIcon, width:40, hozAlign:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
+
+					{
+						title: "Feature",
+						field: "feature",
+						minWidth: 80,
+						width: 370
+					},
+					{
+						title: "Debut Build",
+						field: "Debut_Build",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Subscription Only",
+						field: "Subscription",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "DF %",
+						field: "DF_PCT",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "DF Build",
+						field: "DF_Build",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IF %",
+						field: "IF_PCT",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IF Build",
+						field: "IF_Build",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IS %",
+						field: "IS_PCT",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IS Build",
+						field: "IS_Build",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "PROD %",
+						field: "PROD_PCT",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "PROD Build",
+						field: "PROD_Build",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Comments",
+						field: "Comments",
+						width: 300,
+						align: "center",
+						formatter: "textarea"
+					},
 					//   work new outlook column and filtering.  Waiting for JP Approval.
 					//{title:"New Outlook", field:"new_outlook", width:300,align:"center", editorParams:{values:{"New Outlook":"New Outlook", "No":"No"}}, headerFilter:true, headerFilterParams:{values:{"New Outlook":"New Outlook", "No":"No", "":""}}},
 				],
