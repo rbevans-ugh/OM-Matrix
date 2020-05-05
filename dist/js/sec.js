@@ -16,10 +16,11 @@ function accessvalid() {
         };
         if (user.includes("@microsoft.com")) {
             console.log("We have a valid user.  Hi " + user)
-            table.hideColumn("editTableData")
         } else {
             console.log("We don't have a valid user");
             window.location.replace("denied.html");
+            // Mac matrix column
+            table.hideColumn("editTableData")
         }
     });
 }
