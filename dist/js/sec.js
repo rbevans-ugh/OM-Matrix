@@ -18,9 +18,9 @@ function accessvalid() {
             console.log("We have a valid user.  Hi " + user)
         } else {
             console.log("We don't have a valid user");
-            window.location.replace("denied.html");
+            // window.location.replace("denied.html");
             // Mac matrix column
-            table.hideColumn("editTableData")
+            table.hideColumn("id");
         }
     });
 };
