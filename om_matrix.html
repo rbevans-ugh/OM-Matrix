@@ -184,7 +184,17 @@
 					title: "Feature",
 					field: "feature",
 					minWidth: 80,
-					width: 370
+					width: 370,
+					cellClick: function (e, cell) {
+						$('#editModal').modal();
+						$("#id").val(cell.getRow().getData().id)
+						$("#featureName").val(cell.getRow().getData().feature)
+						$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
+						$("#PM").val(cell.getRow().getData().PM)
+						$("#change_date").val(cell.getRow().getData().change_date)
+						$("#featureflag").val(cell.getRow().getData().featureflag)
+						$("#dashboards").val(cell.getRow().getData().dashboards)
+					}
 				},
 				{
 					title: "O365",
@@ -422,6 +432,48 @@
 					<p>Questions? Email: </p><a href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
 				</div>
 				<div class="col-sm-4">
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+			aria-hidden="true" data-toggle="modal" style="display: none">
+			<div class="vertical-alignment-helper">
+				<div class="modal-dialog vertical-align-center">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title  text-center font-weight-bold">Feature Details</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<label class="font-weight-bold" for="featureName">Feature Name:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureName"
+									placeholder="ex. Shared Mailbox" disabled>
+								<div class="form-group">
+									<!-- Hiding this to use later -->
+									<input hidden type="text" readonly class="form-control-plaintext" id="id">
+									<label class="font-weight-bold" for="PM">PM Owner:</label>
+									<input type="text" readonly class="form-control-plaintext" id="PM"
+										placeholder="Womp womp no PM owner 🔎" disabled>
+									<label class="font-weight-bold" for="DEVOwner">DEV Owner:</label>
+									<input type="text" readonly class="form-control-plaintext"
+										placeholder="Womp womp no DEV owner 🔎" disabled>
+									<label class="font-weight-bold" for="featureflag">Feature Flag:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureflag"
+										placeholder="featureflag unknown 🔎" disabled>
+									<label class="font-weight-bold" for="change_date">Last Updated:</label>
+									<input type="text" readonly class="form-control-plaintext" id="change_date"
+										placeholder="Womp womp no DEV owner 🔎" disabled>
+									<label class="font-weight-bold" for="dashboards">Dashboards:</label>
+									<textarea class="form-control" readonly id="dashboards"
+										placeholder="Womp womp no dashboard 🔎" rows="6"></textarea>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
