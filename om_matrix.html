@@ -436,46 +436,108 @@
 				</div>
 			</div>
 		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-			aria-hidden="true" data-toggle="modal" style="display: none">
+		<!-- feature Modal -->
+		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+			aria-hidden="true">
 			<div class="vertical-alignment-helper">
 				<div class="modal-dialog vertical-align-center">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h4 class="modal-title  text-center font-weight-bold">Feature Details</h4>
+							<h4 class="modal-title  text-center">Edit Feature</h4>
 						</div>
 						<div class="modal-body">
 							<form>
-								<label for="featureName class="font-weight-bold" for="featureName">Feature Name:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureName"
-									placeholder="ex. Shared Mailbox" disabled>
-								<div class="form-group">
-									<!-- Hiding this to use later -->
-									<input hidden type="text" readonly class="form-control-plaintext" id="id">
-									<label class="font-weight-bold" for="PM">PM Owner:</label>
-									<input type="text" readonly class="form-control-plaintext" id="PM"
-										placeholder="Womp womp no PM owner 🔎" disabled>
-									<label class="font-weight-bold" for="DEVOwner">DEV Owner:</label>
-									<input type="text" readonly class="form-control-plaintext"
-										placeholder="Womp womp no DEV owner 🔎" disabled>
-									<label class="font-weight-bold" for="featureflag">Feature Flag:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureflag"
-										placeholder="featureflag unknown 🔎" disabled>
-									<label class="font-weight-bold" for="change_date">Last Updated:</label>
-									<input type="text" readonly class="form-control-plaintext" id="change_date"
-										placeholder="Womp womp no DEV owner 🔎" disabled>
-									<label class="font-weight-bold" for="DF">DF %</label>
-									<input type="text" readonly class="form-control-plaintext" id="DF"
-										placeholder="🔎" disabled>
-									<label class="font-weight-bold" for="PROD">PROD %</label>
-									<input type="text" readonly class="form-control-plaintext" id="PROD"
-										placeholder="🔎" disabled>	
+								<label for="featureName" class="font-weight-bold">Feature Name:</label>
+								<input type="text" class="form-control" id="featureName"
+									placeholder="ex. Shared Mailbox" required disabled>
+								<label for="featureName" class="font-weight-bold">Account Types:</label>
+								<div class="form-group row">
+									<div class="col-sm-10">
+										<div class="form-check" id="checkboxes1">
+											<div class="form-check form-check-inline" id="checkboxes2">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="o365"
+													value=" O365">
+												<label class="form-check-label" for="o365">O365</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="o365gcc" value=" O365 GCC">
+												<label class="form-check-label" for="o365gcc">O365 GCC</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="outlook" value=" Outlook">
+												<label class="form-check-label" for="outlook">Outlook</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="gmail"
+													value=" Gmail">
+												<label class="form-check-label" for="gmail">Gmail</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="gmailcc" value=" Gmail CC">
+												<label class="form-check-label" for="gmailcc">Gmail Cloud Cache</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="imap"
+													value=" IMAP">
+												<label class="form-check-label" for="imap">IMAP</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="imapcc" value=" IMAP CC">
+												<label class="form-check-label" for="imapcc">IMAP CC</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="yahoo"
+													value=" Yahoo">
+												<label class="form-check-label" for="yahoo">Yahoo</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="yahoocc" value=" Yahoo CC">
+												<label class="form-check-label" for="yahoocc">Yahoo Cloud Cache</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="icloud" value=" iCloud">
+												<label class="form-check-label" for="icloud">iCloud</label>
+											</div>
+										</div>
+										<div class="form-check">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox"
+													id="icloudcc" value=" iCloud CC">
+												<label class="form-check-label" for="icloudcc">iCloud CC</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="opcc"
+													value=" OPCC">
+												<label class="form-check-label" for="opcc">OPCC</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" name="chkbox" type="checkbox" id="pop3"
+													value=" POP3">
+												<label class="form-check-label" for="pop3">POP3</label>
+											</div>
+										</div>
+										<div class="form-check">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" id="selectall"
+													value="option14">
+												<label class="form-check-label" for="selectall"
+													onclick="eventCheckBox()">Select All</label>
+											</div>
+										</div>
+									</div>
 								</div>
 							</form>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+							<button type="submit" class="btn btn-primary" data-dismiss="modal"
+								onclick="editFeature()">Submit</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 						</div>
 					</div>
 				</div>
