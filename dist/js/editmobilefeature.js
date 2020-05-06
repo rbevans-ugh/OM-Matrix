@@ -44,7 +44,7 @@ function editFeature() {
             console.log("we should be here yo " + flowStatus);
             setTimeout(() => {
               location.reload();
-            }, 1000);
+            }, 1500);
           }
           else {
             console.log("ruh roh " + flowStatus);
