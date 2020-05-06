@@ -187,7 +187,12 @@
 					width: 370,
 					cellClick: function (e, cell) {
 						$('#featureModal').modal();
-						$("#featureName1").val(cell.getRow().getData().feature)
+						$("#featureNameInfo").val(cell.getRow().getData().feature)
+						$("#featureStatusInfo").val(cell.getRow().getData().status)
+						$("#featureDFInfo").val(cell.getRow().getData().DF)
+						$("#featurePRODInfo").val(cell.getRow().getData().PROD)
+						$("#featureFFInfo").val(cell.getRow().getData().featureflag)
+						$("#featureDateInfo").val(cell.getRow().getData().change_date)
 					}
 				},
 				{
@@ -440,10 +445,24 @@
 						</div>
 						<div class="modal-body">
 							<form>
-								<label for="featureName1" class="font-weight-bold">Feature Name:</label>
-								<input type="text" class="form-control" id="featureName1"
+								<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
 									placeholder="ex. Shared Mailbox" required disabled>
-								<label for="acctTypes" class="font-weight-bold">Account Types:</label>
+								<label for="featureStatusInfo" class="font-weight-bold">Status:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
+									placeholder="ex. Shared Mailbox" required disabled>
+								<label for="featureDFInfo" class="font-weight-bold">DF %:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureDFInfo"
+									placeholder="🔎" required disabled>
+								<label for="featurePRODInfo" class="font-weight-bold">Prod %:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featurePRODInfo"
+										placeholder="🔎" required disabled>		
+								<label for="featureFFInfo" class="font-weight-bold">Feature Flag:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureFFInfo"
+										placeholder="🔎" required disabled>	
+								<label for="featureDateInfo" class="font-weight-bold">Last Updated:</label>
+								<input type="text" readonly class="form-control-plaintext" id="featureDateInfo"
+										placeholder="🔎" required disabled>											
 						</div>
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
