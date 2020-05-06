@@ -16,11 +16,11 @@ function editaccess() {
         ;
         if (user.includes("@microsoft.com")) {
             console.log("We have a valid user.  Hi " + user);
-            table.hideColumn("editTableData");
         }
         else {
             console.log("We don't have a valid user");
             // Mac matrix column
+            table.hideColumn("editTableData");
         }
     });
 };
