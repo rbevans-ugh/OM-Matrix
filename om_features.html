@@ -141,7 +141,7 @@
 					minWidth: 80,
 					width: 370,
 					cellClick: function (e, cell) {
-						$('#featureModal').modal();
+						$('#editModal').modal();
 						$("#id").val(cell.getRow().getData().id)
 						$("#featureName").val(cell.getRow().getData().feature)
 						$("#DEVOwner").val(cell.getRow().getData().DEVOwner)
@@ -286,7 +286,7 @@
 			</div>
 		</div>
 		<!-- Modal -->
-		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
 			aria-hidden="true" data-toggle="modal" style="display: none">
 			<div class="vertical-alignment-helper">
 				<div class="modal-dialog vertical-align-center">
