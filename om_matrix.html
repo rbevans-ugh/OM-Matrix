@@ -22,6 +22,9 @@
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<!-- Needed for downloading excel file -->
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+	<!-- auth JS -->
+	<script src="dist/js/sec.js"></script>
+	<script src="dist/js/editaccess.js"></script>
 </head>
 <script src="dist/js/editmobilefeature.js"></script>
 
@@ -167,6 +170,7 @@
 					dir: "asc"
 				}, ,],
 				columns: [{
+					field: "editTableData",
 					formatter: editdataIcon,
 					width: 40,
 					hozAlign: "center",
