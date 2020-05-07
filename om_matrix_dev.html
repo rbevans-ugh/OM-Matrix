@@ -177,63 +177,64 @@
 					cellClick: function (e, cell) {
 						$('#editModal').modal();
 						//alert(varFeatureName);
-						// varo365 = cell.getRow().getData().o365
-						varoutlook = cell.getRow().getData().outlook
-						varo365gcc = cell.getRow().getData().o365gcc
-						vargmail = cell.getRow().getData().gmail
-						vargmailcc = cell.getRow().getData().gmailcc
-						varimap = cell.getRow().getData().imap
-						varimapcc = cell.getRow().getData().imapcc
-						varyahoo = cell.getRow().getData().yahoo
-						varyahoocc = cell.getRow().getData().yahoocc
-						varicloud = cell.getRow().getData().icloud
-						varicloudcc = cell.getRow().getData().icloudcc
-						varonprem = cell.getRow().getData().onprem
-						varonpremcc = cell.getRow().getData().onpremcc
-						varpop3 = cell.getRow().getData().pop3
+						// // varo365 = cell.getRow().getData().o365
+						// varoutlook = cell.getRow().getData().outlook
+						// varo365gcc = cell.getRow().getData().o365gcc
+						// vargmail = cell.getRow().getData().gmail
+						// vargmailcc = cell.getRow().getData().gmailcc
+						// varimap = cell.getRow().getData().imap
+						// varimapcc = cell.getRow().getData().imapcc
+						// varyahoo = cell.getRow().getData().yahoo
+						// varyahoocc = cell.getRow().getData().yahoocc
+						// varicloud = cell.getRow().getData().icloud
+						// varicloudcc = cell.getRow().getData().icloudcc
+						// varonprem = cell.getRow().getData().onprem
+						// varonpremcc = cell.getRow().getData().onpremcc
+						// varpop3 = cell.getRow().getData().pop3
 						// console.log("checking " + varo365)
 
 						$("#featureName").val(cell.getRow().getData().feature)
+						
 						if (cell.getRow().getData().o365 == "Y"){
 							$("#o365").prop("checked", true);
 						}
-						if (varoutlook == "Y"){
+						if (cell.getRow().getData().outlook == "Y"){
 							$("#outlook").prop("checked", true);
 						}
-						if (varo365gcc == "Y"){
+						if (cell.getRow().getData().o365gcc == "Y"){
 							$("#o365gcc").prop("checked", true);
 						}
-						if (vargmail == "Y"){
+						if (cell.getRow().getData().gmail == "Y"){
 							$("#gmail").prop("checked", true);
 						}
-						if (vargmailcc == "Y"){
+						if (cell.getRow().getData().gmailcc == "Y"){
 							$("#gmailcc").prop("checked", true);
 						}
-						if (varimap == "Y"){
+						if (cell.getRow().getData().imap == "Y"){
 							$("#imap").prop("checked", true);
 						}
-						if (varimapcc == "Y"){
+						if (cell.getRow().getData().imapcc == "Y"){
 							$("#imapcc").prop("checked", true);
 						}
-						if (varyahoo == "Y"){
+						if (cell.getRow().getData().yahoo == "Y"){
 							$("#yahoo").prop("checked", true);
 						}
-						if (varyahoocc == "Y"){
+						if (cell.getRow().getData().yahoocc == "Y"){
 							$("#yahoocc").prop("checked", true);
 						}
-						if (varicloud == "Y"){
+						if (cell.getRow().getData().icloud == "Y"){
 							$("#icloud").prop("checked", true);
 						}
-						if (varicloudcc == "Y"){
+						if (cell.getRow().getData().icloudcc == "Y"){
 							$("#icloudcc").prop("checked", true);
 						}
-						if (varonprem == "Y"){
+						if (cell.getRow().getData().onprem == "Y"){
 							$("#onprem").prop("checked", true);
 						}
-						if (varonpremcc == "Y"){
+						if (cell.getRow().getData().onpremcc == "Y"){
 							$("#opcc").prop("checked", true);
 						}
-						if (varpop3 == "Y"){
+						if (cell.getRow().getData().pop3 == "Y"){
 							$("#pop3").prop("checked", true);
 						}
 					}
@@ -475,14 +476,10 @@
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
 			};
-
+			// Clears checkboxes from modal so we don't carry over incorrect data.
 			$('#editModal').on('hidden.bs.modal', function (e) {
 				$("input:checkbox").prop('checked', false);
 			})
-
-		// 	$(document).ready(function resetcheckbox(){
-		// 		$("input:checkbox").prop('checked', false);
-		// });
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
