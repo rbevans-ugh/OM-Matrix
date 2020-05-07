@@ -25,10 +25,6 @@
 	<!-- auth JS -->
 	<script src="dist/js/sec.js"></script>
 	<script src="dist/js/editaccess.js"></script>
-	<script>			
-	$(document).ready(function resetcheckbox(){
-		$("input:checkbox").prop('checked', false);
-		});</script>
 </head>
 <script src="dist/js/editmobilefeature_dev.js"></script>
 
@@ -479,6 +475,14 @@
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
 			};
+
+			$('#editModal').on('hidden.bs.modal', function (e) {
+				$("input:checkbox").prop('checked', false);
+			})
+
+		// 	$(document).ready(function resetcheckbox(){
+		// 		$("input:checkbox").prop('checked', false);
+		// });
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
