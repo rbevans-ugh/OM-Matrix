@@ -177,6 +177,22 @@
 					cellClick: function (e, cell) {
 						$('#editModal').modal();
 						//alert(varFeatureName);
+						varo365 = cell.getRow().getData().o365
+						varoutlook = cell.getRow().getData().outlook
+						varo365gcc = cell.getRow().getData().o365gcc
+						vargmail = cell.getRow().getData().gmail
+						vargmailcc = cell.getRow().getData().gmailcc
+						varimap = cell.getRow().getData().imap
+						varimapcc = cell.getRow().getData().imapcc
+						varyahoo = cell.getRow().getData().yahoo
+						varyahoocc = cell.getRow().getData().yahoocc
+						varicloud = cell.getRow().getData().icloud
+						varicloudcc = cell.getRow().getData().icloudcc
+						varonprem = cell.getRow().getData().onprem
+						varonpremcc = cell.getRow().getData().onpremcc
+						varpop3 = cell.getRow().getData().pop3
+						console.log("checking " + varo365)
+
 						$("#featureName").val(cell.getRow().getData().feature)
 						$("#featureo365").val(cell.getRow().getData().o365)
 						$("#featureoutlook").val(cell.getRow().getData().outlook)
