@@ -461,7 +461,7 @@
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-primary" data-dismiss="modal"
 								onclick="editFeature()">Submit</button>
-							<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="resetcheckbox()">Cancel</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 						</div>
 					</div>
 				</div>
@@ -475,9 +475,9 @@
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
 			}
-			function resetcheckbox(){
+			$(document).ready(function resetcheckbox(){
 				$("input:checkbox").prop('checked', false);
-		}
+		})
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
