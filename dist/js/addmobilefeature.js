@@ -21,7 +21,16 @@ function addFeature(flowStatus) {
       if (checkboxes[i].checked == true)
         object[checkboxes[i].id] = accts.push(checkboxes[i].id);
     }
-    var data = { featureName: confirm0, selectedAccts: object, auth_user: user };
+    if (document.getElementById("ios").checked){
+      var varplat = "iOS"
+    }
+    if (document.getElementById("android").checked){
+      var varplat = "Android"
+    }
+    if (document.getElementById("bothplat").checked){
+      var varplat = "Both"
+    }
+    var data = { featureName: confirm0, selectedAccts: object, auth_user: user, platform: varplat };
     //url is hardcoded from flow. 
     console.log(data);
     var url = "https://prod-19.westcentralus.logic.azure.com:443/workflows/8c948a552dea484196bb3275023e87b4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=a6__w3db5jkvbGJXIvT9G_YCDw3G2G7apfnfrR1OaxI";
