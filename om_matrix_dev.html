@@ -194,20 +194,9 @@
 						console.log("checking " + varo365)
 
 						$("#featureName").val(cell.getRow().getData().feature)
-						$("#featureo365").val(cell.getRow().getData().o365)
-						$("#featureoutlook").val(cell.getRow().getData().outlook)
-						$("#featureo365gcc").val(cell.getRow().getData().o365gcc)
-						$("#featuregmail").val(cell.getRow().getData().gmail)
-						$("#featuregmailcc").val(cell.getRow().getData().gmailcc)
-						$("#featureimap").val(cell.getRow().getData().imap)
-						$("#featureimapcc").val(cell.getRow().getData().imapcc)
-						$("#featureyahoo").val(cell.getRow().getData().yahoo)
-						$("#featureyahoocc").val(cell.getRow().getData().yahoocc)
-						$("#featureicloud").val(cell.getRow().getData().icloud)
-						$("#featureicloudcc").val(cell.getRow().getData().icloudcc)
-						$("#featureonpre").val(cell.getRow().getData().onpre)
-						$("#featureonpremcc").val(cell.getRow().getData().onpremcc)
-						$("#featurepop3").val(cell.getRow().getData().pop)
+						if (varo365 == "Y"){
+							$("#o365").prop("checked", true);
+						}
 					}
 				},
 				{
