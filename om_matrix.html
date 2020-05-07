@@ -221,6 +221,9 @@
 						if (cell.getRow().getData().pop3 == "Y"){
 							$("#pop3").prop("checked", true);
 						}
+						if (cell.getRow().getData().gallatin == "Y"){
+							$("#gallatin").prop("checked", true);
+						}
 					}
 				},
 				{
@@ -253,6 +256,12 @@
 				{
 					title: "O365 - GCC Mod",
 					field: "o365gcc",
+					width: 120,
+					align: "center"
+				},
+				{
+					title: "Gallatin",
+					field: "gallatin",
 					width: 120,
 					align: "center"
 				},
@@ -431,6 +440,13 @@
 												<label class="form-check-label" for="pop3">POP3</label>
 											</div>
 										</div>
+										<div class="form-check">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" id="gallatin"
+													value="gallatin">
+												<label class="form-check-label" for="gallatin">Gallatin (coming soon)</label>
+											</div>
+											</div>
 										<div class="form-check">
 											<div class="form-check form-check-inline">
 												<input class="form-check-input" type="checkbox" id="selectall"
