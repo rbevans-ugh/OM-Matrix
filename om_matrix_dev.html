@@ -475,10 +475,9 @@
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
 			}
-			function resetcheckbox()
-			$('#uncheck-all').click(function(){
+			function resetcheckbox(){
 				$("input:checkbox").attr('checked', false);
-			});
+		}
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
