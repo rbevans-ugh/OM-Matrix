@@ -474,10 +474,10 @@
 				for (let i = 1; i < checkboxs.length; i++) {
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
-			}
+			};
 			$(document).ready(function resetcheckbox(){
 				$("input:checkbox").prop('checked', false);
-		})
+		});
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
