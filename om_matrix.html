@@ -176,8 +176,51 @@
 					hozAlign: "center",
 					cellClick: function (e, cell) {
 						$('#editModal').modal();
-						//alert(varFeatureName);
+
 						$("#featureName").val(cell.getRow().getData().feature)
+
+						if (cell.getRow().getData().o365 == "Y"){
+							$("#o365").prop("checked", true);
+						}
+						if (cell.getRow().getData().outlook == "Y"){
+							$("#outlook").prop("checked", true);
+						}
+						if (cell.getRow().getData().o365gcc == "Y"){
+							$("#o365gcc").prop("checked", true);
+						}
+						if (cell.getRow().getData().gmail == "Y"){
+							$("#gmail").prop("checked", true);
+						}
+						if (cell.getRow().getData().gmailcc == "Y"){
+							$("#gmailcc").prop("checked", true);
+						}
+						if (cell.getRow().getData().imap == "Y"){
+							$("#imap").prop("checked", true);
+						}
+						if (cell.getRow().getData().imapcc == "Y"){
+							$("#imapcc").prop("checked", true);
+						}
+						if (cell.getRow().getData().yahoo == "Y"){
+							$("#yahoo").prop("checked", true);
+						}
+						if (cell.getRow().getData().yahoocc == "Y"){
+							$("#yahoocc").prop("checked", true);
+						}
+						if (cell.getRow().getData().icloud == "Y"){
+							$("#icloud").prop("checked", true);
+						}
+						if (cell.getRow().getData().icloudcc == "Y"){
+							$("#icloudcc").prop("checked", true);
+						}
+						if (cell.getRow().getData().onprem == "Y"){
+							$("#onprem").prop("checked", true);
+						}
+						if (cell.getRow().getData().onpremcc == "Y"){
+							$("#opcc").prop("checked", true);
+						}
+						if (cell.getRow().getData().pop3 == "Y"){
+							$("#pop3").prop("checked", true);
+						}
 					}
 				},
 				{
@@ -416,7 +459,11 @@
 				for (let i = 1; i < checkboxs.length; i++) {
 					checkboxs[i].checked = !checkboxs[i].checked;
 				}
-			}
+			};
+		// Clears checkboxes from modal so we don't carry over incorrect data.
+		$('#editModal').on('hidden.bs.modal', function (e) {
+			$("input:checkbox").prop('checked', false);
+		})
 			function showDeny(show) {
 				var fail = document.getElementById("failDeny");
 				fail.style.display = show;
