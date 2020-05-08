@@ -13,13 +13,6 @@
 	<script src="dist/js/tabulator.min.js"></script>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
-	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-		</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
-	<script src="dist/bootstrap/bootstrap.min.js"></script>
 	<!-- Needed for downloading excel file -->
 	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 	<!-- auth JS -->
@@ -87,461 +80,483 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<div class="col" id="tabulator-controls">
-			<!-- Thrown if a non microsoft.com user tries to edit a feture -->
-			<div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny"
-				style="display: none">
-				Unauthorized. Contact support.
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="input-group mb-3">
-				<i class="fa fa-filter fa-fw"></i>
-				<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
-				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="button" id="download-xlsx">Download XLSX</button>
+		<div style="position: relative;">
+			<div class="toast" data-autohide="true" data-delay="3000"
+				style="position: absolute; top: -250px; right: 0;">
+				<div class="toast-header">
+					<svg class=" rounded mr-2" width="20" height="20" focusable="false" role="img">
+						<rect fill="#007aff" width="100%" height="100%" /></svg>
+					<strong class="mr-auto">Protip</strong>
+					<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="toast-body">
+					Click the feature title will reveal additional information!
 				</div>
 			</div>
-		</div>
-		<div id="tabulator-example"></div>
-		<!-- Cards -->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm">
-					<div class="card text-center" style="width: 18rem;">
-						<div class="card-body">
-							<h5 class="card-title">S\MIME 100%</h5>
-							<p class="card-text">S\MIME has rolled out to 100% to iOS & Android.</p>
-							<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/9577/S-MIME"
-								class="btn btn-primary">Support Wiki</a>
-						</div>
-					</div>
+			<div class="col" id="tabulator-controls">
+				<!-- Thrown if a non microsoft.com user tries to edit a feture -->
+				<div class="alert alert-danger alert-dismissible fade show" role="alert" id="failDeny"
+					style="display: none">
+					Unauthorized. Contact support.
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
-				<div class="col-sm">
-					<div class="card text-center" style="width: 18rem;">
-						<div class="card-body">
-							<h5 class="card-title">Shared Mailbox 100%</h5>
-							<p class="card-text">Shared Mailbox has rolled out to 100% to iOS & Android</p>
-							<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/9589/Shared-Mailboxes"
-								class="btn btn-primary">Support Wiki</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm">
-					<div class="card text-center" style="width: 18rem;">
-						<div class="card-body">
-							<h5 class="card-title">To-Do Integration - iOS</h5>
-							<p class="card-text">To-Do integration is at 10% for Production and 100% for Dogfood</p>
-							<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/14523/To-Do-Integration"
-								class="btn btn-primary">Support Wiki</a>
-						</div>
+				<div class="input-group mb-3">
+					<i class="fa fa-filter fa-fw"></i>
+					<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button" id="download-xlsx">Download
+							XLSX</button>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- Tabulator code -->
-		<script type="text/javascript">
-			//define data
-			var data = []
-			// Editing 
-			var editdataIcon = function (cell, formatterParams, onRendered) { //plain text value
-				return "<img class='infoImage' src='dist/editicon.png' width=100%>";
-			};
-			var table = new Tabulator("#tabulator-example", {
-				height: 450,
-				//data:data,
-				ajaxConfig: {
-					method: 'GET'
-				},
-				ajaxURL: "https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/omdata.json?st=2020-04-14T12%3A32%3A37Z&se=2021-04-14T12%3A32%3A00Z&sp=racwdl&sv=2018-03-28&sr=b&sig=n1o3QKSxkwftFQPoSiZJyhoOUyPzcbcyXspbqiQ5FWs%3D",
-				layout: "fitDataStretch",
-				// ajaxProgressiveLoad:"scroll",
-				// paginationSize:20,
-				placeholder: "No Data Set",
-				autoResize: true,
-				ajaxContentType: "application/json; charset=utf-8",
-				ajaxContentType: "json",
-				tooltips: true,
-				addRowPos: "top",
-				resizableRows: true,
-				initialSort: [{
-					column: "feature",
-					dir: "asc"
-				}, ,],
-				columns: [{
-					field: "editTableData",
-					formatter: editdataIcon,
-					width: 40,
-					hozAlign: "center",
-					cellClick: function (e, cell) {
-						$('#editModal').modal();
+			<div id="tabulator-example"></div>
+			<!-- Cards -->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<div class="card text-center" style="width: 18rem;">
+							<div class="card-body">
+								<h5 class="card-title">S\MIME 100%</h5>
+								<p class="card-text">S\MIME has rolled out to 100% to iOS & Android.</p>
+								<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/9577/S-MIME"
+									class="btn btn-primary">Support Wiki</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm">
+						<div class="card text-center" style="width: 18rem;">
+							<div class="card-body">
+								<h5 class="card-title">Shared Mailbox 100%</h5>
+								<p class="card-text">Shared Mailbox has rolled out to 100% to iOS & Android</p>
+								<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/9589/Shared-Mailboxes"
+									class="btn btn-primary">Support Wiki</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm">
+						<div class="card text-center" style="width: 18rem;">
+							<div class="card-body">
+								<h5 class="card-title">To-Do Integration - iOS</h5>
+								<p class="card-text">To-Do integration is at 10% for Production and 100% for Dogfood</p>
+								<a href="https://office.visualstudio.com/Outlook%20Mac%20-%20Support/_wiki/wikis/Outlook%20Support/14523/To-Do-Integration"
+									class="btn btn-primary">Support Wiki</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Tabulator code -->
+			<script type="text/javascript">
+				//define data
+				var data = []
+				// Editing 
+				var editdataIcon = function (cell, formatterParams, onRendered) { //plain text value
+					return "<img class='infoImage' src='dist/editicon.png' width=100%>";
+				};
+				var table = new Tabulator("#tabulator-example", {
+					height: 450,
+					//data:data,
+					ajaxConfig: {
+						method: 'GET'
+					},
+					ajaxURL: "https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/omdata.json?st=2020-04-14T12%3A32%3A37Z&se=2021-04-14T12%3A32%3A00Z&sp=racwdl&sv=2018-03-28&sr=b&sig=n1o3QKSxkwftFQPoSiZJyhoOUyPzcbcyXspbqiQ5FWs%3D",
+					layout: "fitDataStretch",
+					// ajaxProgressiveLoad:"scroll",
+					// paginationSize:20,
+					placeholder: "No Data Set",
+					autoResize: true,
+					ajaxContentType: "application/json; charset=utf-8",
+					ajaxContentType: "json",
+					tooltips: true,
+					addRowPos: "top",
+					resizableRows: true,
+					initialSort: [{
+						column: "feature",
+						dir: "asc"
+					}, ,],
+					columns: [{
+						field: "editTableData",
+						formatter: editdataIcon,
+						width: 40,
+						hozAlign: "center",
+						cellClick: function (e, cell) {
+							$('#editModal').modal();
 
-						$("#featureName").val(cell.getRow().getData().feature)
+							$("#featureName").val(cell.getRow().getData().feature)
 
-						if (cell.getRow().getData().o365 == "Y") {
-							$("#o365").prop("checked", true);
+							if (cell.getRow().getData().o365 == "Y") {
+								$("#o365").prop("checked", true);
+							}
+							if (cell.getRow().getData().outlook == "Y") {
+								$("#outlook").prop("checked", true);
+							}
+							if (cell.getRow().getData().o365gcc == "Y") {
+								$("#o365gcc").prop("checked", true);
+							}
+							if (cell.getRow().getData().gmail == "Y") {
+								$("#gmail").prop("checked", true);
+							}
+							if (cell.getRow().getData().gmailcc == "Y") {
+								$("#gmailcc").prop("checked", true);
+							}
+							if (cell.getRow().getData().imap == "Y") {
+								$("#imap").prop("checked", true);
+							}
+							if (cell.getRow().getData().imapcc == "Y") {
+								$("#imapcc").prop("checked", true);
+							}
+							if (cell.getRow().getData().yahoo == "Y") {
+								$("#yahoo").prop("checked", true);
+							}
+							if (cell.getRow().getData().yahoocc == "Y") {
+								$("#yahoocc").prop("checked", true);
+							}
+							if (cell.getRow().getData().icloud == "Y") {
+								$("#icloud").prop("checked", true);
+							}
+							if (cell.getRow().getData().icloudcc == "Y") {
+								$("#icloudcc").prop("checked", true);
+							}
+							if (cell.getRow().getData().onprem == "Y") {
+								$("#onprem").prop("checked", true);
+							}
+							if (cell.getRow().getData().onpremcc == "Y") {
+								$("#opcc").prop("checked", true);
+							}
+							if (cell.getRow().getData().pop3 == "Y") {
+								$("#pop3").prop("checked", true);
+							}
+							if (cell.getRow().getData().gallatin == "Y") {
+								$("#gallatin").prop("checked", true);
+							}
 						}
-						if (cell.getRow().getData().outlook == "Y") {
-							$("#outlook").prop("checked", true);
+					},
+					{
+						title: "Feature",
+						field: "feature",
+						minWidth: 80,
+						width: 370,
+						cellClick: function (e, cell) {
+							$('#featureModal').modal();
+							$("#featureNameInfo").val(cell.getRow().getData().feature)
+							$("#featureStatusInfo").val(cell.getRow().getData().status)
+							$("#featureDFInfo").val(cell.getRow().getData().DF)
+							$("#featurePRODInfo").val(cell.getRow().getData().PROD)
+							$("#featureFFInfo").val(cell.getRow().getData().featureflag)
+							$("#featureDateInfo").val(cell.getRow().getData().change_date)
 						}
-						if (cell.getRow().getData().o365gcc == "Y") {
-							$("#o365gcc").prop("checked", true);
-						}
-						if (cell.getRow().getData().gmail == "Y") {
-							$("#gmail").prop("checked", true);
-						}
-						if (cell.getRow().getData().gmailcc == "Y") {
-							$("#gmailcc").prop("checked", true);
-						}
-						if (cell.getRow().getData().imap == "Y") {
-							$("#imap").prop("checked", true);
-						}
-						if (cell.getRow().getData().imapcc == "Y") {
-							$("#imapcc").prop("checked", true);
-						}
-						if (cell.getRow().getData().yahoo == "Y") {
-							$("#yahoo").prop("checked", true);
-						}
-						if (cell.getRow().getData().yahoocc == "Y") {
-							$("#yahoocc").prop("checked", true);
-						}
-						if (cell.getRow().getData().icloud == "Y") {
-							$("#icloud").prop("checked", true);
-						}
-						if (cell.getRow().getData().icloudcc == "Y") {
-							$("#icloudcc").prop("checked", true);
-						}
-						if (cell.getRow().getData().onprem == "Y") {
-							$("#onprem").prop("checked", true);
-						}
-						if (cell.getRow().getData().onpremcc == "Y") {
-							$("#opcc").prop("checked", true);
-						}
-						if (cell.getRow().getData().pop3 == "Y") {
-							$("#pop3").prop("checked", true);
-						}
-						if (cell.getRow().getData().gallatin == "Y") {
-							$("#gallatin").prop("checked", true);
-						}
-					}
-				},
-				{
-					title: "Feature",
-					field: "feature",
-					minWidth: 80,
-					width: 370,
-					cellClick: function (e, cell) {
-						$('#featureModal').modal();
-						$("#featureNameInfo").val(cell.getRow().getData().feature)
-						$("#featureStatusInfo").val(cell.getRow().getData().status)
-						$("#featureDFInfo").val(cell.getRow().getData().DF)
-						$("#featurePRODInfo").val(cell.getRow().getData().PROD)
-						$("#featureFFInfo").val(cell.getRow().getData().featureflag)
-						$("#featureDateInfo").val(cell.getRow().getData().change_date)
-					}
-				},
-				{
-					title: "O365",
-					field: "o365",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Outlook.com",
-					field: "outlook",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "O365 - GCC Mod",
-					field: "o365gcc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Gallatin",
-					field: "gallatin",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Gmail",
-					field: "gmail",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Gmail - CC",
-					field: "gmailcc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IMAP",
-					field: "imap",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IMAP - CC",
-					field: "imapcc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Yahoo",
-					field: "yahoo",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Yahoo - CC",
-					field: "yahoocc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "iCloud",
-					field: "icloud",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "iCloud - CC",
-					field: "icloudcc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "On-Prem",
-					field: "onprem",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "OPCC",
-					field: "onpremcc",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "POP3",
-					field: "pop3",
-					width: 120,
-					align: "center"
-				},
-				],
+					},
+					{
+						title: "O365",
+						field: "o365",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Outlook.com",
+						field: "outlook",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "O365 - GCC Mod",
+						field: "o365gcc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Gallatin",
+						field: "gallatin",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Gmail",
+						field: "gmail",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Gmail - CC",
+						field: "gmailcc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IMAP",
+						field: "imap",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "IMAP - CC",
+						field: "imapcc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Yahoo",
+						field: "yahoo",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "Yahoo - CC",
+						field: "yahoocc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "iCloud",
+						field: "icloud",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "iCloud - CC",
+						field: "icloudcc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "On-Prem",
+						field: "onprem",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "OPCC",
+						field: "onpremcc",
+						width: 120,
+						align: "center"
+					},
+					{
+						title: "POP3",
+						field: "pop3",
+						width: 120,
+						align: "center"
+					},
+					],
 
-				ajaxResponse: function (url, params, response) {
-					//url - the URL of the request
-					//params - the parameters passed with the request
-					//response - the JSON object returned in the body of the response.
+					ajaxResponse: function (url, params, response) {
+						//url - the URL of the request
+						//params - the parameters passed with the request
+						//response - the JSON object returned in the body of the response.
 
-					return response.data; //pass the data array into Tabulator
-				},
+						return response.data; //pass the data array into Tabulator
+					},
 
-			});
-
-			$("#tabulator-controls input[name=feature]").on("keyup", function () {
-				table.setFilter("feature", "like", $(this).val())
-			});
-
-			//trigger download of data.xlsx file
-			document.getElementById("download-xlsx").addEventListener("click", function () {
-				table.download("xlsx", "om_data.xlsx", {
-					sheetName: "My Data"
 				});
-			});
-		</script>
-		<!-- Edit Feature Modal -->
-		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-			aria-hidden="true">
-			<div class="vertical-alignment-helper">
-				<div class="modal-dialog vertical-align-center">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title  text-center">Edit Feature Details</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<label for="featureName" class="font-weight-bold">Feature Name:</label>
-								<input type="text" class="form-control" id="featureName"
-									placeholder="ex. Shared Mailbox" required disabled>
-								<label for="featureName" class="font-weight-bold">Account Types:</label>
-								<div class="form-group row">
-									<div class="col-sm-10">
-										<div class="form-check" id="checkboxes1">
-											<div class="form-check form-check-inline" id="checkboxes2">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="o365"
-													value=" O365">
-												<label class="form-check-label" for="o365">O365</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="o365gcc" value=" O365 GCC">
-												<label class="form-check-label" for="o365gcc">O365 GCC</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="outlook" value=" Outlook">
-												<label class="form-check-label" for="outlook">Outlook</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="gmail"
-													value=" Gmail">
-												<label class="form-check-label" for="gmail">Gmail</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="gmailcc" value=" Gmail CC">
-												<label class="form-check-label" for="gmailcc">Gmail Cloud Cache</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="imap"
-													value=" IMAP">
-												<label class="form-check-label" for="imap">IMAP</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="imapcc" value=" IMAP CC">
-												<label class="form-check-label" for="imapcc">IMAP CC</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="yahoo"
-													value=" Yahoo">
-												<label class="form-check-label" for="yahoo">Yahoo</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="yahoocc" value=" Yahoo CC">
-												<label class="form-check-label" for="yahoocc">Yahoo Cloud Cache</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="icloud" value=" iCloud">
-												<label class="form-check-label" for="icloud">iCloud</label>
-											</div>
-										</div>
-										<div class="form-check">
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox"
-													id="icloudcc" value=" iCloud CC">
-												<label class="form-check-label" for="icloudcc">iCloud CC</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="opcc"
-													value=" OPCC">
-												<label class="form-check-label" for="opcc">OPCC</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="pop3"
-													value=" POP3">
-												<label class="form-check-label" for="pop3">POP3</label>
-											</div>
-										</div>
-										<div class="form-check">
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" name="chkbox" type="checkbox" id="gallatin"
-													value=" Gallatin">
-												<label class="form-check-label" for="gallatin">Gallatin</label>
+
+				$("#tabulator-controls input[name=feature]").on("keyup", function () {
+					table.setFilter("feature", "like", $(this).val())
+				});
+
+				//trigger download of data.xlsx file
+				document.getElementById("download-xlsx").addEventListener("click", function () {
+					table.download("xlsx", "om_data.xlsx", {
+						sheetName: "My Data"
+					});
+				});
+			</script>
+			<!-- Edit Feature Modal -->
+			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+				aria-hidden="true">
+				<div class="vertical-alignment-helper">
+					<div class="modal-dialog vertical-align-center">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title  text-center">Edit Feature Details</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<label for="featureName" class="font-weight-bold">Feature Name:</label>
+									<input type="text" class="form-control" id="featureName"
+										placeholder="ex. Shared Mailbox" required disabled>
+									<label for="featureName" class="font-weight-bold">Account Types:</label>
+									<div class="form-group row">
+										<div class="col-sm-10">
+											<div class="form-check" id="checkboxes1">
+												<div class="form-check form-check-inline" id="checkboxes2">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="o365" value=" O365">
+													<label class="form-check-label" for="o365">O365</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="o365gcc" value=" O365 GCC">
+													<label class="form-check-label" for="o365gcc">O365 GCC</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="outlook" value=" Outlook">
+													<label class="form-check-label" for="outlook">Outlook</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="gmail" value=" Gmail">
+													<label class="form-check-label" for="gmail">Gmail</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="gmailcc" value=" Gmail CC">
+													<label class="form-check-label" for="gmailcc">Gmail Cloud
+														Cache</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="imap" value=" IMAP">
+													<label class="form-check-label" for="imap">IMAP</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="imapcc" value=" IMAP CC">
+													<label class="form-check-label" for="imapcc">IMAP CC</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="yahoo" value=" Yahoo">
+													<label class="form-check-label" for="yahoo">Yahoo</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="yahoocc" value=" Yahoo CC">
+													<label class="form-check-label" for="yahoocc">Yahoo Cloud
+														Cache</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="icloud" value=" iCloud">
+													<label class="form-check-label" for="icloud">iCloud</label>
+												</div>
 											</div>
 											<div class="form-check">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" id="selectall"
-														value="option14">
-													<label class="form-check-label" for="selectall"
-														onclick="eventCheckBox()">Select All</label>
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="icloudcc" value=" iCloud CC">
+													<label class="form-check-label" for="icloudcc">iCloud CC</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="opcc" value=" OPCC">
+													<label class="form-check-label" for="opcc">OPCC</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="pop3" value=" POP3">
+													<label class="form-check-label" for="pop3">POP3</label>
+												</div>
+											</div>
+											<div class="form-check">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" name="chkbox" type="checkbox"
+														id="gallatin" value=" Gallatin">
+													<label class="form-check-label" for="gallatin">Gallatin</label>
+												</div>
+												<div class="form-check">
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="selectall"
+															value="option14">
+														<label class="form-check-label" for="selectall"
+															onclick="eventCheckBox()">Select All</label>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="submit" class="btn btn-primary" data-dismiss="modal"
-								onclick="editFeature()">Submit</button>
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- javascript for checkboxes and unauthorized edit users -->
-		<script>
-			function eventCheckBox() {
-				let checkboxs = document.getElementsByTagName("input");
-				for (let i = 1; i < checkboxs.length; i++) {
-					checkboxs[i].checked = !checkboxs[i].checked;
-				}
-			};
-			// Clears checkboxes from modal so we don't carry over incorrect data.
-			$('#editModal').on('hidden.bs.modal', function (e) {
-				$("input:checkbox").prop('checked', false);
-			})
-			function showDeny(show) {
-				var fail = document.getElementById("failDeny");
-				fail.style.display = show;
-			};
-		</script>
-		<hr>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-				</div>
-				<div class="col-sm-4" align="center">
-					<p>Questions? Email: </p><a
-						href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
-				</div>
-				<div class="col-sm-4">
-				</div>
-			</div>
-		</div>
-		<!-- feature Modal -->
-		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
-			aria-hidden="true">
-			<div class="vertical-alignment-helper">
-				<div class="modal-dialog vertical-align-center">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title  text-center">Feature Details</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
-									placeholder="ex. Shared Mailbox" required disabled>
-								<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
-									placeholder="ex. Shared Mailbox" required disabled>
-								<label for="featureDFInfo" class="font-weight-bold">DF Rollout %:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureDFInfo"
-									placeholder="❓" required disabled>
-								<label for="featurePRODInfo" class="font-weight-bold">Prod Rollout %:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featurePRODInfo"
-									placeholder="❓" required disabled>
-								<label for="featureFFInfo" class="font-weight-bold">Feature Flag:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureFFInfo"
-									placeholder="❓" required disabled>
-								<label for="featureDateInfo" class="font-weight-bold">Last Updated:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureDateInfo"
-									placeholder="❓" required disabled>
-						</div>
-						<div class="modal-footer">
-							<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary" data-dismiss="modal"
+									onclick="editFeature()">Submit</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous">
-		</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+			<!-- javascript for checkboxes and unauthorized edit users -->
+			<script>
+				function eventCheckBox() {
+					let checkboxs = document.getElementsByTagName("input");
+					for (let i = 1; i < checkboxs.length; i++) {
+						checkboxs[i].checked = !checkboxs[i].checked;
+					}
+				};
+				// Clears checkboxes from modal so we don't carry over incorrect data.
+				$('#editModal').on('hidden.bs.modal', function (e) {
+					$("input:checkbox").prop('checked', false);
+				})
+				function showDeny(show) {
+					var fail = document.getElementById("failDeny");
+					fail.style.display = show;
+				};
+				// Required for calling toast
+				$(document).ready(function () {
+					$('.toast').toast('show');
+				});
+			</script>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-4" align="center">
+						<p>Questions? Email: </p><a
+							href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
+					</div>
+					<div class="col-sm-4">
+					</div>
+				</div>
+			</div>
+			<!-- feature Modal -->
+			<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
+				aria-hidden="true">
+				<div class="vertical-alignment-helper">
+					<div class="modal-dialog vertical-align-center">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title  text-center">Feature Details</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
+										placeholder="ex. Shared Mailbox" required disabled>
+									<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
+										placeholder="ex. Shared Mailbox" required disabled>
+									<label for="featureDFInfo" class="font-weight-bold">DF Rollout %:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureDFInfo"
+										placeholder="❓" required disabled>
+									<label for="featurePRODInfo" class="font-weight-bold">Prod Rollout %:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featurePRODInfo"
+										placeholder="❓" required disabled>
+									<label for="featureFFInfo" class="font-weight-bold">Feature Flag:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureFFInfo"
+										placeholder="❓" required disabled>
+									<label for="featureDateInfo" class="font-weight-bold">Last Updated:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureDateInfo"
+										placeholder="❓" required disabled>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+				crossorigin="anonymous">
+				</script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+				integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+				crossorigin="anonymous"></script>
 </body>
 
 </html>
