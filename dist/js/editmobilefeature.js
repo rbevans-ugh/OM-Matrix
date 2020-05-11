@@ -13,6 +13,7 @@ function editFeature() {
     }
     console.log("hi " + user);
     var confirm0 = document.getElementById("featureName").value;
+    var confirm1 = document.getElementById("supportWiki").value;
     var checkboxes = document.getElementsByName("chkbox");
     var accts = [];
     var object = {};
@@ -21,7 +22,7 @@ function editFeature() {
         object[checkboxes[i].id] = accts.push(checkboxes[i].id);
     }
     //var object = Object.assign({}, select1);
-    var data = { featureName: confirm0, selectedAccts: object, auth_user: user };
+    var data = { featureName: confirm0, selectedAccts: object, auth_user: user, platform: varplat, supportWiki: confirm1 };
     //url is hardcoded from flow.
     console.log(data);
     var url =
