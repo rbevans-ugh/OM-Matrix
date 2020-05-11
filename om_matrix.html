@@ -188,6 +188,7 @@
 							$('#editModal').modal();
 
 							$("#featureName").val(cell.getRow().getData().feature)
+							$("#supportWiki").val(cell.getRow().getData().supportWiki)
 
 							if (cell.getRow().getData().o365 == "Y") {
 								$("#o365").prop("checked", true);
