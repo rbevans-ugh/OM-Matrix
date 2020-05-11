@@ -244,6 +244,7 @@
 						cellClick: function (e, cell) {
 							$('#featureModal').modal();
 							$("#featureNameInfo").val(cell.getRow().getData().feature)
+							$("#supportwikiInfo").val(cell.getRow().getData().supportWiki)
 							$("#featureStatusInfo").val(cell.getRow().getData().status)
 							$("#featureDFInfo").val(cell.getRow().getData().DF)
 							$("#featurePRODInfo").val(cell.getRow().getData().PROD)
@@ -530,7 +531,7 @@
 										placeholder="ex. Shared Mailbox" required disabled>
 									<label for="supportwikiInfo" class="font-weight-bold">Support Wiki:</label>
 									<input type="text" readonly class="form-control-plaintext" id="supportwikiInfo"
-											placeholder=""  disabled>
+											placeholder="" disabled>
 									<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
 									<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
 										placeholder="ex. Shared Mailbox" required disabled>
