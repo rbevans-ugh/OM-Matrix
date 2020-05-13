@@ -255,6 +255,7 @@
 							$("#featurePRODInfo").val(cell.getRow().getData().PROD)
 							$("#featureFFInfo").val(cell.getRow().getData().featureflag)
 							$("#featureDateInfo").val(cell.getRow().getData().change_date)
+							document.getElementById("abc").setAttribute("href",supportwikiInfo.value);
 							console.log(supportwikiInfo.value)
 						}
 					},
@@ -541,6 +542,7 @@
 									<label for="supportwikiInfo" class="font-weight-bold">Support Wiki:</label>
 									<input type="url" readonly class="form-control-plaintext" id="supportwikiInfo"
 											placeholder="" disabled>
+											<<a href="" id="abc">Place Holder</a>
 									<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
 									<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
 										placeholder="ex. Shared Mailbox" required disabled>
