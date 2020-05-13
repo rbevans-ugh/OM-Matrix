@@ -256,7 +256,9 @@
 							$("#featureFFInfo").val(cell.getRow().getData().featureflag)
 							$("#featureDateInfo").val(cell.getRow().getData().change_date)
 							document.getElementById("abc").setAttribute("href",supportwikiInfo.value);
-							console.log(supportwikiInfo.value)
+							if (supportwikiInfo.value.includes("visualstudio")){
+							document.getElementById("abc").removeAttribute.hidden
+							}
 						}
 					},
 					{
@@ -565,7 +567,7 @@
 										placeholder="❓" required disabled>
 							</div>
 							<div class="modal-footer">
-									<a href="#" id="abc" class="btn btn-primary" role="button" aria-pressed="true">Support Wiki</a>
+								<a href="" id="abc" class="btn btn-primary" role="button" aria-pressed="true">Support Wiki</a>
 								<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
 							</div>
 						</div>
