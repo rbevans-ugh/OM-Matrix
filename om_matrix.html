@@ -514,9 +514,6 @@
 				$('#editModal').on('hidden.bs.modal', function (e) {
 					$("input:checkbox").prop('checked', false);
 				})
-				$('#featureModal').on('hidden.bs.modal', function (e) {
-					document.getElementById("abc").setAttribute("hidden", true)
-				})
 			</script>
 			<hr>
 			<div class="container">
@@ -573,7 +570,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> 
+			<script>
+							$('#featureModal').on('hidden.bs.modal', function (e) {
+					document.getElementById("abc").setAttribute("hidden", true)
+				})
+				</script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 				crossorigin="anonymous">
