@@ -253,6 +253,9 @@
 							$("#featurePRODInfo").val(cell.getRow().getData().PROD)
 							$("#featureFFInfo").val(cell.getRow().getData().featureflag)
 							$("#featureDateInfo").val(cell.getRow().getData().change_date)
+							document.getElementById("abc").setAttribute("href",supportwikiInfo.value);
+							if (supportwikiInfo.value.includes("visualstudio")){
+							document.getElementById("abc").removeAttribute("hidden")
 						}
 					},
 					{
@@ -532,27 +535,29 @@
 							</div>
 							<div class="modal-body">
 								<form>
-									<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
-										placeholder="ex. Shared Mailbox" required disabled>
-									<label for="supportwikiInfo" class="font-weight-bold">Support Wiki:</label>
-									<input type="url" readonly class="form-control-plaintext" id="supportwikiInfo"
-											placeholder="" disabled>
-									<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
-										placeholder="ex. Shared Mailbox" required disabled>
-									<label for="featureDFInfo" class="font-weight-bold">DF Rollout %:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureDFInfo"
-										placeholder="❓" required disabled>
-									<label for="featurePRODInfo" class="font-weight-bold">Prod Rollout %:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featurePRODInfo"
-										placeholder="❓" required disabled>
-									<label for="featureFFInfo" class="font-weight-bold">Feature Flag:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureFFInfo"
-										placeholder="❓" required disabled>
-									<label for="featureDateInfo" class="font-weight-bold">Last Updated:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureDateInfo"
-										placeholder="❓" required disabled>
+										<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
+											placeholder="ex. Shared Mailbox" required disabled>
+										<!-- <label for="supportwikiInfo" class="font-weight-bold">Support Wiki:</label> -->
+										<input type="url" readonly class="form-control-plaintext" id="supportwikiInfo"
+												placeholder="" disabled hidden>
+												<!-- <a class="font-weight-bold" href="" id="abc">Support Wiki</a>
+												<br> -->
+										<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featureStatusInfo"
+											placeholder="ex. Shared Mailbox" required disabled>
+										<label for="featureDFInfo" class="font-weight-bold">DF Rollout %:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featureDFInfo"
+											placeholder="❓" required disabled>
+										<label for="featurePRODInfo" class="font-weight-bold">Prod Rollout %:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featurePRODInfo"
+											placeholder="❓" required disabled>
+										<label for="featureFFInfo" class="font-weight-bold">Feature Flag:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featureFFInfo"
+											placeholder="❓" required disabled>
+										<label for="featureDateInfo" class="font-weight-bold">Last Updated:</label>
+										<input type="text" readonly class="form-control-plaintext" id="featureDateInfo"
+											placeholder="❓" required disabled>
 							</div>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
