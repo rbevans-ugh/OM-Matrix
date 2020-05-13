@@ -251,7 +251,6 @@
 							$("#featurePRODInfo").val(cell.getRow().getData().PROD)
 							$("#featureFFInfo").val(cell.getRow().getData().featureflag)
 							$("#featureDateInfo").val(cell.getRow().getData().change_date)
-						}
 					},
 					{
 						title: "O365",
@@ -505,6 +504,12 @@
 				$(document).ready(function () {
 					$('.toast').toast('show');
 				});
+				
+				document.getElementById("myLink").onclick = function() {
+					// document.getElementById("abc").href="xyz.php"; 
+					console.log(supportWiki);
+					return false;
+				};
 			</script>
 			<hr>
 			<div class="container">
@@ -534,6 +539,7 @@
 									<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
 										placeholder="ex. Shared Mailbox" required disabled>
 									<label for="supportwikiInfo" class="font-weight-bold">Support Wiki:</label>
+									<a href="#" id="abc">Placeholder</a>
 									<input type="url" readonly class="form-control-plaintext" id="supportwikiInfo"
 											placeholder="" disabled>
 									<label for="featureStatusInfo" class="font-weight-bold">Work Item Status:</label>
