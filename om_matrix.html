@@ -511,6 +511,12 @@
 				$(document).ready(function () {
 					$('.toast').toast('show');
 				});
+				$('#editModal').on('hidden.bs.modal', function (e) {
+					$("input:checkbox").prop('checked', false);
+				})
+				$('#featureModal').on('hidden.bs.modal', function (e) {
+					document.getElementById("abc").setAttribute("hidden", true)
+				})
 			</script>
 			<hr>
 			<div class="container">
