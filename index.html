@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<link rel="shortcut icon" type="image/png" href="dist/favicon.ico"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
+
+<head>
+	<link rel="shortcut icon" type="image/png" href="dist/favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css" />
 	<link rel="stylesheet" href="dist/css/semantic-ui/tabulator_semantic-ui.css">
 	<title>One Outlook</title>
 	<!-- jQuery -->
@@ -12,130 +13,130 @@
 	<script src="dist/js/tabulator.min.js"></script>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
-	<script src="dist/bootstrap/query-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
-  </head>
-  <body>
-	  <!-- Nav Bar -->
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
+</head>
+
+<body>
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="https://dev-omlc.azurewebsites.net/">One Outlook</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Client
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
-					<a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
-					<a class="dropdown-item" href="#" disabled>Outlook Web</a>
-					<a class="dropdown-item" href="#" disabled>Outlook Desktop</a>
-					</div>	
+						<a class="dropdown-item" href="om_matrix.html">Outlook Mobile</a>
+						<a class="dropdown-item" href="mac_matrix.html">Outlook Mac</a>
+						<a class="dropdown-item" href="#" disabled>Outlook Web</a>
+						<a class="dropdown-item" href="#" disabled>Outlook Desktop</a>
+					</div>
 				</li>
 			</ul>
 			<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
+				<ul class="navbar-nav">
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Add Feature
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
-						<a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
-						<a class="dropdown-item" href="#">Outlook Web</a>
-						<a class="dropdown-item" href="#">Outlook Desktop</a>
-						</div>	
+							<a class="dropdown-item" href="om_addfeature.html">Outlook Mobile</a>
+							<a class="dropdown-item" href="mac_addfeature.html">Outlook Mac</a>
+							<a class="dropdown-item" href="#">Outlook Web</a>
+							<a class="dropdown-item" href="#">Outlook Desktop</a>
+						</div>
 					</li>
 				</ul>
-				</div>
 			</div>
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+		</div>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
 			What's New!
 		</button>
-		
+
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 			<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">What's New!</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">What's New!</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>
+							<ul>
+								<li>Updated the landing page.</li>
+								<li>Outlook Mobile feature matrix has popout options when clicking the faeture title.</li>
+								<li>Updated the Outlook Mobile add feature page to include support wiki</li>
+								<li>Added Gallatin account type to Outlook Mobile</li>
+							  </ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+					</div>
 				</div>
-				<div class="modal-body">
-				Add a feature for <a href="om_addfeature.html">Outlook Mobile</a> and <a href="mac_addfeature.html">Outlook Mac</a> are now working.  </br></br> Want to edit existing feature details?  You can now with the pencil icon.  Want to donwload the data to Excel?  Download Excel button added! </br> Data updating is now instant! Get that 20 seconds back! </br></br> Contact <a href="mailto:robevans@microsoft.com">robevans@microsoft.com</a> for questions or issues.
-				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
-				</div>
-			</div>
 			</div>
 		</div>
 	</nav>
-	  <div class="jumbotron text-center">
-		  <div class="container">
-			  <img src="dist/om.png" alt="Hey yo" width=10%>
-			  <h1>One Outlook</h1>
-			</div>
+	<div class="jumbotron text-center">
+		<div class="container">
+			<img src="dist/om.png" alt="Hey yo" width=10%>
+			<h1>One Outlook</h1>
 		</div>
-		<div class="container-fluid">
-				<div class="col" id="tabulator-controls">
-						<div class="input-group mb-3">
-							<i class="fa fa-filter fa-fw"></i>
-							<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
+	</div>
+	<div class="container text-center">
+		<div class="col" id="tabulator-controls">
+			<main role="main" class="inner cover">
+				<h1 class="cover-heading">Outlook Feature Matrix</h1>
+				<p class="lead">Get started by picking a client:</p>
+				<hr>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Outlook Mobile</h5>
+								<p class="card-text">Exisitng and actively rolling out feature status</p>
+								<a href="om_matrix.html" class="btn btn-primary">Feature Matrix</a>
+								<a href="om_addfeature.html" class="btn btn-primary">Add Feature</a>
+							</div>
 						</div>
 					</div>
-			<div id="tabulator-example"></div>
-		<script type="text/javascript">
-	//define data
-	var data = [ ]
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Outlook Mac</h5>
+								<p class="card-text">Exisitng and actively rolling out feature status. </p>
+								<a href="mac_matrix.html" class="btn btn-primary">Feature Matrix</a>
+								<a href="mac_addfeature.html" class="btn btn-primary">Add Feature</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
 
-    var table = new Tabulator("#tabulator-example", {
-        height:400,
-		ajaxConfig:{
-			method: 'GET'
-		},
-		ajaxURL:"https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/oneoutlook.json?st=2020-04-08T18%3A27%3A46Z&se=2021-04-08T18%3A30%3A00Z&sp=racwdl&sv=2018-03-28&sr=b&sig=iC%2FiiXelRtbVJ2znUsP1aAtRRJvRyhM8kcwwRbLjkKk%3D",
-        // layout:"fitDataStretch",
-		// ajaxProgressiveLoad:"scroll",
-		// paginationSize:20,
-		placeholder:"No Data Set",
-        autoResize:true,
-		ajaxContentType : "application/json; charset=utf-8",
-		ajaxContentType:"json",
-        tooltips:true,
-        addRowPos:"top",
-        resizableRows:true,
-      initialSort:[
-         {column:"feature", dir:"asc"},,
-      ],
-      columns:[
-      {title:"Feature", field:"feature", minWidth:80, width:500},
-	  {title:"Outlook Mobile", field:"om", width:250,align:"center"},
-	  {title:"Outlook Web", field:"owa", width:250,align:"center"},
-	  {title:"Outlook Mac", field:"mac", width:250,align:"center"},
-	  {title:"Outlook Desktop", field:"desktop", width:250,align:"center"},
-	  ],
+				<p>Questions? Email: </p><a
+					href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
 
-	  ajaxResponse:function(url, params, response){
-        //url - the URL of the request
-        //params - the parameters passed with the request
-        //response - the JSON object returned in the body of the response.
 
-        return response.data; //pass the data array into Tabulator
-    },
+			</main>
 
-	});
-
-    $("#tabulator-controls input[name=feature]").on("keyup", function(){
-      table.setFilter( "feature", "like", $(this).val())
-	});
-</script>
+		</div>
 </body>
+
 </html>
