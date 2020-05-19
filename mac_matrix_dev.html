@@ -15,12 +15,12 @@
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
 	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-		</script>
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
+	</script>
 	<script src="dist/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+	<script src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 	<!-- auth JS -->
 	<script src="dist/js/sec.js"></script>
 	<script src="dist/js/editaccess.js"></script>
@@ -125,9 +125,8 @@
 					initialSort: [{
 						column: "Debut_Build",
 						dir: "desc"
-					}, ,],
-					columns: [
-						{
+					}, , ],
+					columns: [{
 							field: "editTableData",
 							formatter: editdataIcon,
 							width: 40,
@@ -176,7 +175,7 @@
 								// varComments = cell.getRow().getData().Comments
 								//alert(varFeatureName);
 								$("#featureName").val(cell.getRow().getData().feature)
-								$("#comments").val(cell.getRow().getData().Comments)
+								$("#comments").val(cell.getRow().getData().comments)
 							}
 						},
 						{
@@ -392,13 +391,13 @@
 				});
 			</script>
 			<!-- feature Modal -->
-			<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModalHeader"
+			<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
 				aria-hidden="true">
 				<div class="vertical-alignment-helper">
 					<div class="modal-dialog vertical-align-center">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h4 class="modal-title  text-center" id="featureModalHeader">Feature Details</h4>
+								<h4 class="modal-title  text-center">Feature Details</h4>
 							</div>
 							<div class="modal-body">
 								<form>
@@ -422,7 +421,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 				crossorigin="anonymous">
-				</script>
+			</script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 				integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 				crossorigin="anonymous"></script>
