@@ -267,6 +267,34 @@
 				</div>
 			</div>
 		</div>
+				<!-- feature Modal -->
+				<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
+				aria-hidden="true">
+				<div class="vertical-alignment-helper">
+					<div class="modal-dialog vertical-align-center">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title  text-center">Feature Details</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
+										placeholder="ex. Shared Mailbox" required disabled>
+									<label for="featureComments" class="font-weight-bold">Comments:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureComments"
+										placeholder="❓" required disabled>
+										</form>
+							</div>
+							<div class="modal-footer">
+								<a href="" id="abc" class="btn btn-primary" role="button" aria-pressed="true"
+									target=”_blank” hidden>One Pager</a>
+								<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		<!--Edit Modal -->
 		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editmodalHeader"
 			aria-hidden="true">
@@ -366,34 +394,6 @@
 						<button type="submit" class="btn btn-primary" data-dismiss="modal"
 							onclick="editFeatureMac()">Submit</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- feature Modal -->
-		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
-			aria-hidden="true">
-			<div class="vertical-alignment-helper">
-				<div class="modal-dialog vertical-align-center">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title  text-center">Feature Details</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
-									placeholder="ex. Shared Mailbox" required disabled>
-								<label for="featureComments" class="font-weight-bold">Comments:</label>
-								<input type="text" readonly class="form-control-plaintext" id="featureComments"
-									placeholder="❓" required disabled>
-									</form>
-						</div>
-						<div class="modal-footer">
-							<a href="" id="abc" class="btn btn-primary" role="button" aria-pressed="true"
-								target=”_blank” hidden>One Pager</a>
-							<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
-						</div>
 					</div>
 				</div>
 			</div>
