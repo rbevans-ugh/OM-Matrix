@@ -157,8 +157,6 @@
 						cellClick: function (e, cell) {
 							$('#featureModal').modal();
 							//   Here is where we get the data to serve confirmfeature.js
-							varSubscription = cell.getRow().getData().Subscription
-							varNewoutlook = cell.getRow().getData().newoutlook
 							varComments = cell.getRow().getData().Comments
 
 							//alert(varFeatureName);
@@ -268,13 +266,13 @@
 				</div>
 			</div>
 		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+		<!--Edit Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editmodalHeader"
 			aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLongTitle">Edit Feature</h5>
+						<h5 class="modal-title" id="editmodalHeader">Edit Feature</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
