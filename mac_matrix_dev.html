@@ -75,6 +75,20 @@
 		</div>
 	</div>
 	<div class="container-fluid">
+			<div class="toast" data-autohide="true" data-delay="4000"
+			style="position: absolute; top: -250px; right: 0;">
+			<div class="toast-header">
+				<svg class=" rounded mr-2" width="20" height="20" focusable="false" role="img">
+					<rect fill="#00A4EF" width="100%" height="100%" /></svg>
+				<strong class="mr-auto">Protip 🎉</strong>
+				<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="toast-body">
+				Clicking the feature title will reveal additional information!
+			</div>
+		</div>
 		<div class="col" id="tabulator-controls">
 			<div class="input-group mb-3">
 				<i class="fa fa-filter fa-fw"></i>
@@ -267,6 +281,12 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			// Required for calling toast
+			$(document).ready(function () {
+				$('.toast').toast('show');
+			});
+		</script>
 		<!-- feature Modal -->
 		<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
 			aria-hidden="true">
@@ -284,7 +304,8 @@
 								<label for="comments" class="font-weight-bold">Comments:</label>
 								<!-- <input type="text" readonly class="form-control-plaintext" id="comments"
 									placeholder="❓" required disabled> -->
-								<textarea readonly class="form-control-plaintext" id="comments" rows="3" placeholder="❓" required disabled></textarea>
+								<textarea readonly class="form-control-plaintext" id="comments" rows="3" placeholder="❓"
+									required disabled></textarea>
 							</form>
 						</div>
 						<div class="modal-footer">
