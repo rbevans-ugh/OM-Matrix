@@ -171,8 +171,8 @@
 								//   Here is where we get the data to serve confirmfeature.js
 								// varComments = cell.getRow().getData().Comments
 								//alert(varFeatureName);
-								$("#featureName").val(cell.getRow().getData().feature)
-								$("#comments").val(cell.getRow().getData().comments)
+								$("#featureNameInfo").val(cell.getRow().getData().feature)
+								$("#commentsInfo").val(cell.getRow().getData().comments)
 							}
 						},
 						{
@@ -398,11 +398,11 @@
 							</div>
 							<div class="modal-body">
 								<form>
-									<label for="featureName" class="font-weight-bold">Feature Name:</label>
-									<input type="text" readonly class="form-control-plaintext" id="featureName"
+									<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+									<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
 										placeholder="ex. Shared Mailbox" required disabled>
-									<label for="comments" class="font-weight-bold">Comments:</label>
-									<textarea readonly class="form-control-plaintext" id="comments" rows="3"
+									<label for="commentsInfo" class="font-weight-bold">Comments:</label>
+									<textarea readonly class="form-control-plaintext" id="commentsInfo" rows="3"
 										placeholder="❓" required disabled></textarea>
 								</form>
 							</div>
