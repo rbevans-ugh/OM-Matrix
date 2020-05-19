@@ -172,11 +172,10 @@
 						cellClick: function (e, cell) {
 							$('#featureModal').modal();
 							//   Here is where we get the data to serve confirmfeature.js
-							varComments = cell.getRow().getData().Comments
-							console.log("we made it here")
+							// varComments = cell.getRow().getData().Comments
 							//alert(varFeatureName);
 							$("#featureName").val(cell.getRow().getData().feature)
-							$("#comments").val(varComments)
+							$("#comments").val(cell.getRow().getData().Comments)
 							console.log("we made it here" + varComments)
 						}
 					},
