@@ -4,6 +4,9 @@
 <head>
 	<link rel="shortcut icon" type="image/png" href="dist/favicon.ico" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
 	<link rel="stylesheet" type="text/css" href="dist/css/style.css" />
 	<link rel="stylesheet" href="dist/css/semantic-ui/tabulator_semantic-ui.css">
 	<title>MAC</title>
@@ -13,14 +16,8 @@
 	<script src="dist/js/tabulator.min.js"></script>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="dist/bootstrap theme/bootstrap.min.css">
-	<script src="dist/bootstrap/query-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-		</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
-	<script src="dist/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+	<!-- Needed for downloading excel file -->
+	<script src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 	<!-- auth JS -->
 	<script src="dist/js/sec.js"></script>
 	<script src="dist/js/editaccess.js"></script>
@@ -75,290 +72,356 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<div class="col" id="tabulator-controls">
-			<div class="input-group mb-3">
-				<i class="fa fa-filter fa-fw"></i>
-				<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
-				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="button" id="download-xlsx">Download XLSX</button>
+		<div style="position: relative;">
+			<div class="toast" data-autohide="true" data-delay="4000"
+				style="position: absolute; top: -250px; right: 0;">
+				<div class="toast-header">
+					<svg class=" rounded mr-2" width="20" height="20" focusable="false" role="img">
+						<rect fill="#00A4EF" width="100%" height="100%" /></svg>
+					<strong class="mr-auto">Protip 🎉</strong>
+					<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="toast-body">
+					Clicking the feature title will reveal additional information!
 				</div>
 			</div>
-		</div>
-		<div id="tabulator-example"></div>
-		<script type="text/javascript">
-			//define data
-			var data = []
-			// Editing - commenting this out till new function is complete.
-			var editdataIcon = function (cell, formatterParams, onRendered) { //plain text value
-				return "<img class='infoImage' src='dist/editicon.png' width=100%>";
-			};
-			var table = new Tabulator("#tabulator-example", {
-				height: 450,
-				data: data,
-				ajaxConfig: {
-					method: 'GET'
-				},
-				ajaxURL: "https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/macdata.json?st=2020-04-01T17%3A50%3A34Z&se=2021-04-01T17%3A50%3A00Z&sp=racwl&sv=2018-03-28&sr=b&sig=Y49HQCX6n2NllSiFFxnWDurcdRfWR8YNZMzMTaHgLqI%3D",
-				placeholder: "No Data Set",
-				autoResize: true,
-				ajaxContentType: "application/json; charset=utf-8",
-				ajaxContentType: "json",
-				tooltips: true,
-				addRowPos: "top",
-				resizableRows: true,
-				initialSort: [{
-					column: "Debut_Build",
-					dir: "desc"
-				}, ,],
-				columns: [
-				{
-						field: "editTableData",
-						formatter: editdataIcon,
-						width: 40,
-						hozAlign: "center",
-						cellClick: function (e, cell) {
-							$('#editModal').modal();
-							//   Here is where we get the data to serve confirmfeature.js
-							varSubscription = cell.getRow().getData().Subscription
-							varNewoutlook = cell.getRow().getData().newoutlook
-							varComments = cell.getRow().getData().Comments
+			<div class="col" id="tabulator-controls">
+				<div class="input-group mb-3">
+					<i class="fa fa-filter fa-fw"></i>
+					<input class="form-control" name="feature" type="text" placeholder="Filter Table By Feature">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button" id="download-xlsx">Download
+							XLSX</button>
+					</div>
+				</div>
+			</div>
+			<div id="tabulator-example"></div>
+			<script type="text/javascript">
+				//define data
+				var data = []
+				// Editing - commenting this out till new function is complete.
+				var editdataIcon = function (cell, formatterParams, onRendered) { //plain text value
+					return "<img class='infoImage' src='dist/editicon.png' width=100%>";
+				};
+				var table = new Tabulator("#tabulator-example", {
+					height: 600,
+					data: data,
+					ajaxConfig: {
+						method: 'GET'
+					},
+					ajaxURL: "https://omfeaturematrix.blob.core.windows.net/omfeaturematrix/macdata.json?st=2020-04-01T17%3A50%3A34Z&se=2021-04-01T17%3A50%3A00Z&sp=racwl&sv=2018-03-28&sr=b&sig=Y49HQCX6n2NllSiFFxnWDurcdRfWR8YNZMzMTaHgLqI%3D",
+					placeholder: "No Data Set",
+					autoResize: true,
+					ajaxContentType: "application/json; charset=utf-8",
+					ajaxContentType: "json",
+					tooltips: true,
+					addRowPos: "top",
+					resizableRows: true,
+					initialSort: [{
+						column: "Debut_Build",
+						dir: "desc"
+					}, , ],
+					columns: [{
+							field: "editTableData",
+							formatter: editdataIcon,
+							width: 40,
+							hozAlign: "center",
+							cellClick: function (e, cell) {
+								$('#editModal').modal();
+								//   Here is where we get the data to serve confirmfeature.js
+								varSubscription = cell.getRow().getData().Subscription
+								varNewoutlook = cell.getRow().getData().newoutlook
+								varComments = cell.getRow().getData().Comments
 
-							//alert(varFeatureName);
-							$("#featureName").val(cell.getRow().getData().feature)
-							$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
-							$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
-							$("#DF_Build").val(cell.getRow().getData().DF_Build)
-							$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
-							$("#IF_Build").val(cell.getRow().getData().IF_Build)
-							$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
-							$("#IS_Build").val(cell.getRow().getData().IS_Build)
-							$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
-							$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
-							console.log("checking: " + varSubscription);
-							if (varSubscription == 'No') {
-								$("#subscription1").prop("checked", true);
-							} else {
-								$("#subscription").prop("checked", true);
+								//alert(varFeatureName);
+								$("#featureName").val(cell.getRow().getData().feature)
+								$("#Debut_Build").val(cell.getRow().getData().Debut_Build)
+								$("#DF_PCT").val(cell.getRow().getData().DF_PCT)
+								$("#DF_Build").val(cell.getRow().getData().DF_Build)
+								$("#IF_PCT").val(cell.getRow().getData().IF_PCT)
+								$("#IF_Build").val(cell.getRow().getData().IF_Build)
+								$("#IS_PCT").val(cell.getRow().getData().IS_PCT)
+								$("#IS_Build").val(cell.getRow().getData().IS_Build)
+								$("#PROD_PCT").val(cell.getRow().getData().PROD_PCT)
+								$("#PROD_Build").val(cell.getRow().getData().PROD_Build)
+								console.log("checking: " + varSubscription);
+								if (varSubscription == 'No') {
+									$("#subscription1").prop("checked", true);
+								} else {
+									$("#subscription").prop("checked", true);
+								}
+								if (varNewoutlook == 'Yes') {
+									$("#newoutlook").prop("checked", true);
+								} else {
+									$("#newoutlook1").prop("checked", true);
+								}
+								//   $("#subscription").prop("checked", varSubscription);
+								$("#comments").val(varComments)
 							}
-							if (varNewoutlook == 'Yes') {
-								$("#newoutlook").prop("checked", true);
-							} else {
-								$("#newoutlook1").prop("checked", true);
+						},
+						{
+							title: "Feature",
+							field: "feature",
+							minWidth: 80,
+							width: 370,
+							cellClick: function (e, cell) {
+								$('#featureModal').modal();
+								//   Here is where we get the data to serve confirmfeature.js
+								// varComments = cell.getRow().getData().Comments
+								//alert(varFeatureName);
+								$("#featureNameInfo").val(cell.getRow().getData().feature)
+								$("#commentsInfo").val(cell.getRow().getData().Comments)
 							}
-							//   $("#subscription").prop("checked", varSubscription);
-							$("#comments").val(varComments)
-						}
-					},					
-					{
-					title: "Feature",
-					field: "feature",
-					minWidth: 80,
-					width: 370
-				},
-				{
-					title: "Debut Build",
-					field: "Debut_Build",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Subscription Only",
-					field: "Subscription",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "DF %",
-					field: "DF_PCT",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "DF Build",
-					field: "DF_Build",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IF %",
-					field: "IF_PCT",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IF Build",
-					field: "IF_Build",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IS %",
-					field: "IS_PCT",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "IS Build",
-					field: "IS_Build",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "PROD %",
-					field: "PROD_PCT",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "PROD Build",
-					field: "PROD_Build",
-					width: 120,
-					align: "center"
-				},
-				{
-					title: "Comments",
-					field: "Comments",
-					width: 300,
-					align: "center",
-					formatter: "textarea"
-				},
-				],
+						},
+						{
+							title: "Debut Build",
+							field: "Debut_Build",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "Subscription Only",
+							field: "Subscription",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "DF %",
+							field: "DF_PCT",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "DF Build",
+							field: "DF_Build",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "IF %",
+							field: "IF_PCT",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "IF Build",
+							field: "IF_Build",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "IS %",
+							field: "IS_PCT",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "IS Build",
+							field: "IS_Build",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "PROD %",
+							field: "PROD_PCT",
+							width: 120,
+							align: "center"
+						},
+						{
+							title: "PROD Build",
+							field: "PROD_Build",
+							width: 120,
+							align: "center"
+						},
+						// {
+						// 	title: "Comments",
+						// 	field: "Comments",
+						// 	width: 300,
+						// 	align: "center",
+						// 	formatter: "textarea"
+						// },
+					],
 
-				ajaxResponse: function (url, params, response) {
-					//url - the URL of the request
-					//params - the parameters passed with the request
-					//response - the JSON object returned in the body of the response.
+					ajaxResponse: function (url, params, response) {
+						//url - the URL of the request
+						//params - the parameters passed with the request
+						//response - the JSON object returned in the body of the response.
 
-					return response.data; //pass the data array into Tabulator
-				},
+						return response.data; //pass the data array into Tabulator
+					},
 
-			});
-			//trigger download of data.xlsx file
-			document.getElementById("download-xlsx").addEventListener("click", function () {
-				table.download("xlsx", "mac_data.xlsx", {
-					sheetName: "My Data"
 				});
-			});
-			// Filtering
-			$("#tabulator-controls input[name=feature]").on("keyup", function () {
-				table.setFilter("feature", "like", $(this).val())
-			});
-		</script>
-		<hr>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-				</div>
-				<div class="col-sm-4" align="center">
-						<p>Questions? Email: </p><a href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
-				</div>
-				<div class="col-sm-4">
+				//trigger download of data.xlsx file
+				document.getElementById("download-xlsx").addEventListener("click", function () {
+					table.download("xlsx", "mac_data.xlsx", {
+						sheetName: "My Data"
+					});
+				});
+				// Filtering
+				$("#tabulator-controls input[name=feature]").on("keyup", function () {
+					table.setFilter("feature", "like", $(this).val())
+				});
+			</script>
+						<!-- feature Modal -->
+						<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
+						aria-hidden="true">
+						<div class="vertical-alignment-helper">
+							<div class="modal-dialog vertical-align-center">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="modal-title  text-center">Feature Details</h4>
+									</div>
+									<div class="modal-body">
+										<form>
+											<label for="featureNameInfo" class="font-weight-bold">Feature Name:</label>
+											<input type="text" readonly class="form-control-plaintext" id="featureNameInfo"
+												placeholder="ex. Shared Mailbox" required disabled>
+											<label for="commentsInfo" class="font-weight-bold">Comments:</label>
+											<textarea readonly class="form-control-plaintext" id="commentsInfo" rows="3"
+												placeholder="❓" required disabled></textarea>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<a href="" id="abc" class="btn btn-primary" role="button" aria-pressed="true"
+											target=”_blank” hidden>One Pager</a>
+										<button type="submit" class="btn btn-primary" data-dismiss="modal">OK</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			<!--Edit Modal -->
+			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editmodalHeader"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="editmodalHeader">Edit Feature</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="featureName">Feature Name:</label>
+									<input type="text" class="form-control" id="featureName"
+										placeholder="ex. Shared Mailbox" value="" required disabled>
+								</div>
+								<div class="row">
+									<div class="col">
+										<label for="subscription">Subscription Feature:</label>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="subscription"
+												id="subscription" value="Yes">
+											<label class="form-check-label" for="subscription">Yes</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="subscription"
+												id="subscription1" value="No">
+											<label class="form-check-label" for="subscription1">No</label>
+										</div>
+									</div>
+									<div class="col">
+										<label for="newoutlook">New Outlook:</label>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="newoutlook"
+												id="newoutlook" value="New Outlook">
+											<label class="form-check-label" for="subscription">Yes</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="newoutlook"
+												id="newoutlook1" value="">
+											<label class="form-check-label" for="newoutlook1">No</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="comments">Comments:</label>
+									<textarea class="form-control" id="comments" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="Debut_Build">Debut Build:</label>
+									<input class="form-control" id="Debut_Build" rows="3"></input>
+								</div>
+								<div class="row">
+									<div class="col">
+										<label for="df">DF %:</label>
+										<input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
+									</div>
+									<div class="col">
+										<label for="df">DF Build:</label>
+										<input type="text" id="DF_Build" class="form-control" placeholder="DF Build">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<label for="df">IF %:</label>
+										<input type="text" id="IF_PCT" class="form-control" placeholder="IF %">
+									</div>
+									<div class="col">
+										<label for="df">IF Build:</label>
+										<input type="text" id="IF_Build" class="form-control" placeholder="IF Build">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<label for="df">IS %:</label>
+										<input type="text" id="IS_PCT" class="form-control" placeholder="IS %">
+									</div>
+									<div class="col">
+										<label for="df">IS Build:</label>
+										<input type="text" id="IS_Build" class="form-control" placeholder="IS Build">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<label for="df">PROD %:</label>
+										<input type="text" id="PROD_PCT" class="form-control" placeholder="PROD %">
+									</div>
+									<div class="col">
+										<label for="df">PROD Build:</label>
+										<input type="text" id="PROD_Build" class="form-control"
+											placeholder="PROD Build">
+									</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary" data-dismiss="modal"
+								onclick="editFeatureMac()">Submit</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-			aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLongTitle">Edit Feature</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
 					</div>
-					<div class="modal-body">
-						<form>
-							<div class="form-group">
-								<label for="featureName">Feature Name:</label>
-								<input type="text" class="form-control" id="featureName"
-									placeholder="ex. Shared Mailbox" value="" required disabled>
-							</div>
-							<div class="row">
-								<div class="col">
-									<label for="subscription">Subscription Feature:</label>
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="subscription"
-											id="subscription" value="Yes">
-										<label class="form-check-label" for="subscription">Yes</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="subscription"
-											id="subscription1" value="No">
-										<label class="form-check-label" for="subscription1">No</label>
-									</div>
-								</div>
-								<div class="col">
-									<label for="newoutlook">New Outlook:</label>
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="newoutlook" id="newoutlook"
-											value="New Outlook">
-										<label class="form-check-label" for="subscription">Yes</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="newoutlook" id="newoutlook1"
-											value="">
-										<label class="form-check-label" for="newoutlook1">No</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="comments">Comments:</label>
-								<textarea class="form-control" id="comments" rows="3"></textarea>
-							</div>
-							<div class="form-group">
-								<label for="Debut_Build">Debut Build:</label>
-								<input class="form-control" id="Debut_Build" rows="3"></input>
-							</div>
-							<div class="row">
-								<div class="col">
-									<label for="df">DF %:</label>
-									<input type="text" id="DF_PCT" class="form-control" placeholder="DF %">
-								</div>
-								<div class="col">
-									<label for="df">DF Build:</label>
-									<input type="text" id="DF_Build" class="form-control" placeholder="DF Build">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<label for="df">IF %:</label>
-									<input type="text" id="IF_PCT" class="form-control" placeholder="IF %">
-								</div>
-								<div class="col">
-									<label for="df">IF Build:</label>
-									<input type="text" id="IF_Build" class="form-control" placeholder="IF Build">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<label for="df">IS %:</label>
-									<input type="text" id="IS_PCT" class="form-control" placeholder="IS %">
-								</div>
-								<div class="col">
-									<label for="df">IS Build:</label>
-									<input type="text" id="IS_Build" class="form-control" placeholder="IS Build">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<label for="df">PROD %:</label>
-									<input type="text" id="PROD_PCT" class="form-control" placeholder="PROD %">
-								</div>
-								<div class="col">
-									<label for="df">PROD Build:</label>
-									<input type="text" id="PROD_Build" class="form-control" placeholder="PROD Build">
-								</div>
-						</form>
+					<div class="col-sm-4" align="center">
+						<p>Questions? Email: </p><a
+							href="mailto:om-support-tech@microsoft.com">om-support-tech@microsoft.com</a>
 					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" data-dismiss="modal"
-							onclick="editFeatureMac()">Submit</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					<div class="col-sm-4">
 					</div>
 				</div>
 			</div>
-		</div>		
+			<script>
+				// Required for calling toast
+				$(document).ready(function () {
+					$('.toast').toast('show');
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+				crossorigin="anonymous">
+			</script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+				integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+				crossorigin="anonymous"></script>
 </body>
 
 </html>
