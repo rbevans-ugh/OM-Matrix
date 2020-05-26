@@ -64,6 +64,12 @@
   <div class="container">
     <form id="addfeatureform">
       <div class="form-group">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failBlock">
+          <p align="center">If there is an ADO Work Item the feature will be added automatically and this is not needed. See the following <a href="https://office.visualstudio.com/Outlook%20Mobile/_wiki/wikis/Outlook-Mobile.wiki/15498/Outlook-Mobile-Feature-Matrix?anchor=how-to-add-a-feature">wiki </a>for more information.</p> 
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
         <!-- Successful add banner-->
         <div class="alert alert-primary alert-dismissible fade show" role="alert" id="successBlock"
           style="display: none">
